@@ -1,0 +1,153 @@
+<style>
+    #home-rich-text-{{ section.id }} {
+        padding-bottom: {{ section.settings.margin_bottom_mb }}px;
+    }
+    #home-rich-text-{{ section.id }} .rich-text {
+        color: {{ section.settings.color_text }};
+        font-size: {{ section.settings.font_size }};
+    }
+    #home-rich-text-{{ section.id }} .rich-text.text_center {
+        text-align: center;
+    }
+    #home-rich-text-{{ section.id }} .rich-text.text_right {
+        text-align: right;
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        #home-rich-text-{{ section.id }} {
+            padding-bottom: {{ section.settings.margin_bottom_tab }}px;
+        }
+    }
+    @media (min-width: 1200px) {
+        #home-rich-text-{{ section.id }} {
+            padding-bottom: {{ section.settings.margin_bottom }}px;
+        }
+    }
+</style>
+
+<div class="home-rich-text" id="home-rich-text-{{ section.id }}">
+    <div class="container">
+        <div class="rich-text{% if section.settings.text_alignment == 'left' %} text_left{% elsif section.settings.text_alignment == 'right'%} text_right{% else %} text_center{% endif %}">
+            {% if section.settings.content_top != blank %}
+                <div class="rich-text__top">
+                    {{ section.settings.content_top }}
+                </div>
+            {% endif %}
+            {% if section.settings.content_bottom != blank and section.settings.button_text_more != blank %}
+                <div class="rich-text__bottom">
+                    {{ section.settings.content_bottom }}
+                </div>
+                <div class="btn--lessMore">
+                    <a href="javascript:void(0)" class="btn" id="rich-text__lessMore" data-more="{{ section.settings.button_text_more }}" data-less="{{ section.settings.button_text_less }}">{{ section.settings.button_text_more }}</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Rich text",
+    "class": "home-rich-text-sections",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "content_top",
+            "label": "Content top"
+        },
+        {
+            "type": "textarea",
+            "id": "content_bottom",
+            "label": "Content bottom"
+        },
+        {
+            "type" : "text",
+            "id" : "font_size",
+            "label" : "Font Size ",
+            "default" : "14px"
+        },
+        {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text Alignment",
+            "default": "center",
+            "options": [
+            {
+                "value": "left",
+                "label": "Left"
+            },
+            {
+                "value": "center",
+                "label": "Center"
+            },
+            {
+                "value": "right",
+                "label": "Right"
+            }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "text",
+            "id": "button_text_more",
+            "label": "Text More",
+            "default": "Read More"
+        },
+        {
+            "type": "text",
+            "id": "button_text_less",
+            "label": "Text Less",
+            "default": "Read Less"
+        },
+        {
+            "type": "header",
+            "content": "Custom Color"
+        },
+        {
+            "type": "color",
+            "id": "color_text",
+            "label": "Description Color"
+        },
+        {
+            "type": "header",
+            "content": "Margin Bottom:"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_mb",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_tab",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 65
+        },             
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 65
+        }
+    ],
+    "presets": [
+        {
+            "name": "Rich text",
+            "category": "text"
+        }
+    ]
+}
+{% endschema %}

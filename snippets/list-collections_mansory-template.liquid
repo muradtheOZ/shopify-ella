@@ -1,0 +1,35 @@
+{% case section.settings.list_collection_results_per_row %}
+  {% when '2' %}
+  	{%- assign rows = 'columns-2 columns' -%}
+  {% when '3' %}
+  	{%- assign rows = 'columns-3 columns' -%}
+  {% when '4' %}
+  	{%- assign rows = 'columns-4 columns' -%}
+{% endcase %}
+
+<div id="shopify-section-list-collections_mansory-template" class="shopify-section col-12 col-xl-9 col-main">
+  <div class="list-categories list-categories-mansory">
+    <div class="row {{ rows }}">
+      {% if section.settings.style_categories == 'style_show_all' %}
+        {% for collection in collections %}
+          {% if collection.handle != 'frontpage' and collection.all_products_count > 0 %}
+            {% render 'list-collection-item-2', collection: collection %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          {% if block.type == 'collection_list' %}
+            {% assign collection = collections[block.settings.collection] %}
+            {% render 'list-collection-item-2', block: block, collection: collection %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>  
+  .collections-wrapper .collection-title {
+    font-size: {{ section.settings.list_collection_title_size }}px;
+  }
+</style>

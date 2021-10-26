@@ -1,0 +1,233 @@
+{% assign blocks = section.blocks | where: 'type', 'sidebar_product' %}
+{% assign block = blocks[0] %}
+<style>  
+  .product-template-supermarket .tabs__product-page .list-tabs {
+    padding-left: 20px;
+  }
+  .tabs__product-page .list-tabs:after,
+  .tabs__product-page .list-tabs:before {
+    display: none;
+  }
+  {% unless block.settings.display_sidebar %}
+  .halo-product-content .pro-page {
+    padding-top: 10px;
+  }
+  {% endunless %}
+  
+  @media (min-width: 1200px) { 
+    {% unless block.settings.display_sidebar %}
+    .list-collections .col-main,
+    .halo-product-content .pro-page .col-main {
+      width: 100%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    .halo-product-content .product .product-photos,
+    .halo-product-content .product .product-shop {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    
+    {% else %}
+    
+    {% if block.settings.show_sidebar == 'right' %}
+    .list-collections > .row,
+    .halo-product-content .pro-page {
+      -webkit-flex-direction: row-reverse;
+      -moz-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+    }
+    {% endif %}
+    {% endunless %}
+  }  
+</style>
+{% if block.settings.display_sidebar %}
+<div id="shopify-section-sidebar-section" class="shopify-section col-12 col-xl-3 col-sidebar">
+  <div class="sidebar-label">
+    <span class="icon-filter">
+    	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xml:space="preserve"><g><path d="M6,48c-0.552,0-1-0.447-1-1v-7c0-0.553,0.448-1,1-1s1,0.447,1,1v7C7,47.553,6.552,48,6,48z"></path><path d="M6,31c-0.552,0-1-0.447-1-1V1c0-0.553,0.448-1,1-1s1,0.447,1,1v29C7,30.553,6.552,31,6,31z"></path><g><path d="M6,41c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S9.309,41,6,41z M6,31c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4    S8.206,31,6,31z"></path><path d="M42,48c-0.552,0-1-0.447-1-1V26c0-0.553,0.448-1,1-1s1,0.447,1,1v21C43,47.553,42.552,48,42,48z"></path><path d="M42,17c-0.552,0-1-0.447-1-1V1c0-0.553,0.448-1,1-1s1,0.447,1,1v15C43,16.553,42.552,17,42,17z"></path><path d="M42,27c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S45.309,27,42,27z M42,17c-2.206,0-4,1.794-4,4s1.794,4,4,4    s4-1.794,4-4S44.206,17,42,17z"></path><path d="M24,48c-0.552,0-1-0.447-1-1V21c0-0.553,0.448-1,1-1s1,0.447,1,1v26C25,47.553,24.552,48,24,48z"></path><path d="M24,12c-0.552,0-1-0.447-1-1V1c0-0.553,0.448-1,1-1s1,0.447,1,1v10C25,11.553,24.552,12,24,12z"></path><path d="M24,22c-3.309,0-6-2.691-6-6s2.691-6,6-6c3.309,0,6,2.691,6,6S27.309,22,24,22z M24,12c-2.206,0-4,1.794-4,4s1.794,4,4,4    s4-1.794,4-4S26.206,12,24,12z"></path></g></g></svg>
+    </span>
+    <span class="sidebar_more" {% if settings.enable_multilang %}data-translate="general.sidebar.sidebar_more"{% endif %}>
+      {{ 'general.sidebar.sidebar_more' | t }}
+    </span>
+  </div>
+
+  <div class="sidebar" {% if block.settings.display_sidebar and block.settings.show_sidebar == 'right' %} data-has-right-sidebar{% endif %}>
+    <a href="javascript:void(0)" title="{{ 'cart.general.close_cart' | t }}" class="close-sidebar close">
+      {% render 'icon-close' %}    
+    </a>
+
+    {% if block.settings.enable_categories %}
+    <div class="widget sidebar-links">
+      {% if block.settings.title_categories != blank %}
+      <div class="widget-title">
+        <h3 class="sidebar-title">
+          {{ block.settings.title_categories }}
+        </h3>
+      </div>
+      {% endif %}
+
+      <div class="widget-content">
+        <ul>
+          {% if block.settings.style_categories == 'style_show_all' %}
+            {% for category in collections %}
+              <li>
+                <a href="{{ category.url }}" {% if collection.handle == category.handle %}class="active"{% endif %}>              
+                  {% render 'multilang' with category.title %}
+                </a>
+              </li>     
+            {% endfor %}
+          {% else %}
+            {% assign cat_link_list = block.settings.link_list | handleize %}
+            {% for link in linklists[cat_link_list].links %}
+              <li class="sidebar-link-lv1{% if linklists[link.handle] != empty %} dropdown{% if collection.handle == link.handle %} open{% endif %}{% endif %}">
+                <a href="{{ link.url }}" {% if collection.handle == link.handle %}class="active"{% endif %}>
+                  {{ link.title }}
+                </a>
+
+                {% if linklists[link.handle] != empty %}
+                <span class="icon-dropdown">
+                  <i class="fa fa-angle-down"></i>
+                </span>
+                {% assign link_child = link.handle %}
+                {% render 'dropdown-cat' with link_child as link_child %}
+                {% endif %}
+              </li>        
+            {% endfor %}        
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if block.settings.enable_product %}
+    <div class="widget sidebar-widget-product" data-sidebar-product>
+      {% if block.settings.title_product != blank %}
+      <div class="widget-title">   
+        <h3 class="sidebar-title">
+          {{ block.settings.title_product }}
+        </h3>
+      </div>
+      {% endif %}
+      
+      {% if block.settings.collection == blank %}
+      <div class="widget-product">
+        <div class="grid-item {{ grid_item_width }}">
+          <div class="grid-view-item no-product">
+            <div class="product-top">
+              <div class="not_img">
+                Product Img
+              </div>
+            </div>
+
+            <div class="product-bottom">
+              <div class="product-title">
+                <span>
+                  Your product's name
+                </span>
+              </div>
+
+              <div class="price-box">
+                <span> $250.00 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {% else %}
+      <div class="widget-product">
+        <div class="products-grid row">
+          {% for product in collections[block.settings.collection].products limit:block.settings.limit %}
+          <div class="grid-item col-12{% if settings.product_image_border %} grid-item-border{% endif %} ">
+            {% if settings.layout_style == 'layout_style_1170' or settings.layout_style == 'layout_style_flower' %}
+              {% render 'product-grid-item-style-2' with product as product %}
+            {% elsif settings.layout_style == 'layout_style_fullwidth' %}
+              {% render 'product-grid-item-style-3' with product as product %}
+            {% elsif settings.layout_style == 'layout_style_suppermarket' %}
+              {% render 'product-grid-item-style-4' with product as product %}
+            {% else %}
+              {% render 'sidebar-product-grid' with product as product %}
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div> 
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    
+    {% if block.settings.enable_img_1 %}  
+    <div class="widget sidebar-banner">
+      {% if block.settings.image_img_1 != blank %}
+        {%- assign img_url = block.settings.image_img_1 | img_url: 'original', crop: 'center' -%}
+        
+        {% if block.settings.link_img_1 != blank %}
+        <a class="animate-scale" href="{{ block.settings.link_img_1 }}">
+          {% endif %}
+          <img data-src="{{ img_url }}"
+                       src="{{ img_url }}" alt="{{ block.settings.image_img_1.alt | default: shop.name }}"
+                       class="lazyautosizes lazyloaded" data-sizes="auto">
+          {% if block.settings.link_img_1 != blank %}
+        </a>
+        {% endif %}
+      {% else %}
+        <div class="not_img">
+          210 x 165px
+        </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if block.settings.enable_img_2 %}  
+    <div class="widget sidebar-banner">
+      {% if block.settings.image_img_2 != blank %}
+      {%- assign img_url = block.settings.image_img_2 | img_url: 'original', crop: 'center' -%}
+      
+      {% if block.settings.link_img_2 != blank %}
+      <a class="animate-scale" href="{{ block.settings.link_img_2 }}">
+        {% endif %}
+        <img data-src="{{ img_url }}"
+                     src="{{ img_url }}" alt="{{ block.settings.image_img_1.alt | default: shop.name }}"
+                     class="lazyautosizes lazyloaded" data-sizes="auto">
+        {% if block.settings.link_img_2 != blank %}
+      </a>
+      {% endif %}
+      
+      {% else %}
+      <div class="not_img">
+        210 x 165px
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if block.settings.enable_custom_block %}
+    <div class="widget sidebar-cms-custom">
+      {% if block.settings.title_custom_block != blank %}
+      <div class="widget-title">   
+        <h3 class="sidebar-title">
+          {{ block.settings.title_custom_block | escape }}
+        </h3>
+      </div>
+      {% endif %}
+
+      <div class="widget-content">
+        {% if block.settings.quote_custom_block != blank %}
+        <div class="rte-setting">
+          {{ block.settings.quote_custom_block | split: '|' | first }}
+        </div>
+        {% endif %}
+      </div>
+    </div>  
+    {% endif %}
+  </div>
+</div>
+
+{% endif %}

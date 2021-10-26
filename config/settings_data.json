@@ -1,0 +1,3404 @@
+{
+  "current": {
+    "layout_body": "default",
+    "custom_width_size": 1600,
+    "bg_body_boxed": "#f8f8f8",
+    "header_layout": "08",
+    "list_collections_layout": "collections_01_grid",
+    "category_layout": "default",
+    "product_layout": "default",
+    "blog_layout": "default",
+    "footer_layout": "default",
+    "password_layout": "default",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "body_font_size": "12",
+    "enable_opengraph": true,
+    "image_share": "",
+    "enable_backtotop": false,
+    "display_breadcrumb": true,
+    "breadcrumb_text_transform": "capitalize",
+    "page_title_font_size": "20",
+    "page_title_text_align": "left",
+    "layout_style": "layout_style_fullwidth",
+    "product_name_text_align": "center",
+    "product_name_text_transform": "none",
+    "product_title_line_text": "2",
+    "type_label_sale": "discount_sale",
+    "enable_label_bundle": true,
+    "enable_hover_image": true,
+    "enable_hover_product_image": true,
+    "use_color_swatch": true,
+    "option_color_swatch": "Color",
+    "color_swatch_style": "variant",
+    "enable_checkbox": true,
+    "checkbox_text": "I agree with the",
+    "terms_conditions_content": "<p><strong>What is Lorem Ipsum?<\/strong><\/p><p><\/p><p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#x27;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br\/><strong>Why do we use it?<\/strong><br\/>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#x27;Content here, content here&#x27;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#x27;lorem ipsum&#x27; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<\/p>",
+    "embed_code_share": "<div class=\"addthis_inline_share_toolbox\"><\/div>\n  <script type=\"text\/javascript\" src=\"\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=ra-595b0ea2fb9c5869\"><\/script>",
+    "register_text_desc": "Sign up for a free account at Ella Boutique.",
+    "login_text_desc": "Register with us for a faster checkout, <br> to track the status of your order and more.",
+    "image_swap": true,
+    "product_image_border": false,
+    "product_image_border_color": "#e6e6e6",
+    "product_image_resize": false,
+    "product_image_crop": false,
+    "product_image_height": "130",
+    "show_vendor": true,
+    "display_product_reviews": true,
+    "display_item_size": true,
+    "display_item_swatch": true,
+    "display_button": true,
+    "collection_infinite_scrolling": true,
+    "infinity_scroll_feature": true,
+    "display_size_chart": true,
+    "display_size_chart_at": "Size",
+    "size_guide_text": "Size Guide",
+    "custom_size_chart_header": "Size Chart",
+    "size_chart": "none",
+    "custom_size_chart": "shopify:\/\/shop_images\/size-chart-compressor.jpg",
+    "img_trust": "shopify:\/\/shop_images\/trust_800x-compressor.png",
+    "enable_wishlist": true,
+    "display_sticky": true,
+    "display_sticky_mb": true,
+    "display_countdown": true,
+    "enable_quick_shop": true,
+    "enable_notify_form": true,
+    "enable_quick_view": true,
+    "qv_display_product_reviews": true,
+    "qv_show_sold_in": true,
+    "qv_item_prd": "3,5,6,7,8,10,12,15",
+    "qv_item_prds": "sold in last",
+    "qv_hours_prs": "10,15,16,17,18,20,25,35",
+    "qv_item_hours": "hours",
+    "display_quickview_vendor": true,
+    "quickview_text_vendor": "Brand:",
+    "display_quickview_product_sku": true,
+    "text_quickview_product_sku": "Product Code:",
+    "display_quickview_availability": true,
+    "quickview_text_availability": "Availability",
+    "display_quickview_product_type": false,
+    "quickview_text_product_type": "Product Type",
+    "quickview_text_countdown": "Limited-Time Offers, End in:",
+    "display_quickview_short_desc": true,
+    "display_quickview_subtotal": true,
+    "display_quickview_qty": true,
+    "dpl_customers_view_qv": true,
+    "title_view_qv": "customers are viewing this product",
+    "number_view_qv": "283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18",
+    "display_product_detail_share": true,
+    "share_text": "Share",
+    "ajax_popup_cart": "upsell",
+    "cart_popup_related_title": "YOU MAY ALSO LIKE",
+    "show_shipping_calculator": true,
+    "shipping_calculator_heading": "Get shipping estimates | Holen Versand Schätzungen",
+    "shipping_calculator_default_country": "United States",
+    "redirect_button": "link_to",
+    "link_to_redirect": "\/collections\/all",
+    "font_2": "shopify_fonts",
+    "fonts_name_2": "Roboto",
+    "header_font_new": "roboto_slab_n4",
+    "font": "shopify_fonts",
+    "fonts_name": "Poppins",
+    "base_font_new": "roboto_slab_n4",
+    "enable_multilang_shopify": true,
+    "lange_1": "en",
+    "lange_2": "de",
+    "lange_3": "",
+    "lange_4": "",
+    "lange_5": "",
+    "lange_6": "",
+    "enable_shopify_payments_currencies": false,
+    "enable_multiple_currencies": true,
+    "enable_auto_currency": false,
+    "currency_1_unit": "USD",
+    "currency_2_unit": "EUR",
+    "currency_3_unit": "GBP",
+    "currency_4_unit": "CHF",
+    "currency_5_unit": "",
+    "currency_6_unit": "",
+    "currency_7_unit": "",
+    "currency_8_unit": "",
+    "currency_9_unit": "",
+    "currency_10_unit": "",
+    "enable_search": true,
+    "search_1": "Your search for | Ihre Suche nach",
+    "search_2": "did not yield any results. | hat keine Ergebnisse hervorgebracht.",
+    "search_3": "Your search for | Ihre Suche nach",
+    "search_4": "revealed the following: | hat folgende Ergebnisse hervorgebracht:",
+    "enable_search_trending": true,
+    "trending_search_title": "trending",
+    "trending_search_item_1": "dempus",
+    "trending_search_item_2": "sample",
+    "trending_search_item_3": "magnis",
+    "trending_search_item_4": "loremous saliduar",
+    "trending_search_item_5": "naminos",
+    "trending_search_item_6": "dinterdum",
+    "enable_search_popular_products": true,
+    "popular_products_search_title": "Popular Products",
+    "popular_products_collection": "new-in",
+    "popular_products_limit": 3,
+    "display_popup_newsletter": true,
+    "when_to_show": "all_the_time",
+    "popup_newsletter_expire": "2",
+    "popup_newsletter_delay": "20",
+    "newsletter": "shopify:\/\/shop_images\/newsletter-compressor.jpg",
+    "popup_newsletter_title": "Join Our Mailing List",
+    "popup_newsletter_des": "Sign Up for exclusive updates,  <br>new arrivals & insider-only discounts",
+    "popup_newsletter_text_note": "No, thanks",
+    "newssletter_success_text": "You have successfully subscribed!",
+    "newssletter_error_text": "This email has been registered",
+    "display_newsletter_toolbar": false,
+    "display_popup_social": true,
+    "enable_ask_an_expert": true,
+    "ask_an_expert": "<i class=\"fa fa-question-circle\"><\/i><a href=\"javascript:void(0)\" title=\"Ask An Expert\">Ask An Expert<\/a>",
+    "ask_an_expert_header": "Have Questions?",
+    "ask_an_expert_title": "Ask the Fashion Expert anything on Ella Boutique",
+    "ask_an_expert_des": "We will follow up with you via email within 24-36 hours",
+    "ask_an_expert_questions": "Please answer the following questionnaire",
+    "enable_ask_do_you_need": true,
+    "ask_do_you_need": "Do You Need:",
+    "ask_do_you_need_1": "Pricing",
+    "ask_do_you_need_2": "Answers",
+    "ask_do_you_need_3": "Both",
+    "ask_form_mess": "What can i help you with today ?",
+    "enable_how_would_you_like_me_to_contact_you": true,
+    "how_would_you_like_me_to_contact_you": "How would you like me to contact you?",
+    "contact_with_you_1": "Phone",
+    "contact_with_you_2": "Email",
+    "contact_with_you_3": "Both",
+    "enable_recently_viewed_products": true,
+    "enable_recently_viewed_products_mb": true,
+    "layout_recently": "default",
+    "icon_logo_empty": "",
+    "logo_empty_svg": "<!--?xml version=\"1.0\" encoding=\"iso-8859-1\"?-->\n            <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n            \n            <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" x=\"0px\" y=\"0px\" viewbox=\"0 0 455 455\" style=\"enable-background:new 0 0 455 455;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n              <g>\n                <path d=\"M360.967,130.599c-4.06-0.818-8.018,1.8-8.841,5.86c-0.823,4.06,1.801,8.018,5.86,8.841\n                         c1.147,0.232,2.013,1.286,2.013,2.45v160c0,1.355-1.145,2.5-2.5,2.5H179.676c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5,7.5,7.5H357.5\n                         c9.649,0,17.5-7.851,17.5-17.5v-160C375,139.46,369.099,132.247,360.967,130.599z\"><\/path>\n                <path d=\"M274.824,130.25H97.5c-9.649,0-17.5,7.851-17.5,17.5v160c0,8.063,5.48,15.046,13.326,16.982\n                         c0.604,0.149,1.208,0.221,1.803,0.221c3.369,0,6.432-2.287,7.276-5.705c0.992-4.021-1.463-8.086-5.484-9.078\n                         c-0.955-0.235-1.92-1.143-1.92-2.42v-160c0-1.355,1.145-2.5,2.5-2.5h177.324c4.142,0,7.5-3.357,7.5-7.5\n                         S278.966,130.25,274.824,130.25z\"><\/path>\n                <path d=\"M235.363,170.798c-2.655-0.363-5.3-0.548-7.863-0.548c-31.706,0-57.5,25.794-57.5,57.5c0,2.563,0.185,5.209,0.548,7.863\n                         c0.515,3.759,3.731,6.483,7.421,6.483c0.339,0,0.682-0.023,1.027-0.07c4.104-0.562,6.975-4.345,6.413-8.448\n                         c-0.271-1.982-0.409-3.943-0.409-5.828c0-23.435,19.065-42.5,42.5-42.5c1.884,0,3.845,0.138,5.828,0.409\n                         c4.108,0.564,7.886-2.309,8.448-6.413C242.338,175.143,239.467,171.359,235.363,170.798z\"><\/path>\n                <path d=\"M219.127,284.636c2.789,0.407,5.605,0.614,8.373,0.614c31.706,0,57.5-25.794,57.5-57.5c0-2.77-0.207-5.587-0.613-8.373\n                         c-0.599-4.099-4.408-6.934-8.505-6.337c-4.099,0.599-6.936,4.406-6.337,8.505c0.303,2.071,0.456,4.158,0.456,6.205\n                         c0,23.435-19.065,42.5-42.5,42.5c-2.044,0-4.132-0.153-6.205-0.456c-4.099-0.6-7.907,2.238-8.505,6.337\n                         S215.028,284.037,219.127,284.636z\"><\/path>\n                <path d=\"M318.5,203.25c9.098,0,16.5-7.402,16.5-16.5c0-8.318-6.227-15.355-14.484-16.37c-2.293-0.277-4.585,0.509-6.218,2.142\n                         l-10.027,10.027c-1.633,1.632-2.422,3.926-2.141,6.217C303.145,197.023,310.183,203.25,318.5,203.25z\"><\/path>\n                <path d=\"M117.5,114.75h30c4.142,0,7.5-3.357,7.5-7.5s-3.358-7.5-7.5-7.5h-30c-4.142,0-7.5,3.357-7.5,7.5\n                         S113.358,114.75,117.5,114.75z\"><\/path>\n                <path d=\"M388.367,66.633C345.397,23.664,288.268,0,227.5,0S109.603,23.664,66.633,66.633C23.664,109.603,0,166.732,0,227.5\n                         s23.664,117.897,66.633,160.867C109.603,431.336,166.732,455,227.5,455s117.897-23.664,160.867-66.633\n                         C431.336,345.397,455,288.268,455,227.5S431.336,109.603,388.367,66.633z M15,227.5C15,110.327,110.327,15,227.5,15\n                         c55.894,0,106.807,21.703,144.783,57.11L72.11,372.283C36.703,334.307,15,283.395,15,227.5z M227.5,440\n                         c-55.894,0-106.807-21.703-144.783-57.11L382.89,82.717C418.297,120.693,440,171.606,440,227.5C440,344.673,344.673,440,227.5,440z\n                         \"><\/path>\n              <\/g>\n            <\/svg>",
+    "empty_text": "Sorry, there are no products.",
+    "recently_viewed_products_title": "Recently Viewed",
+    "recently_viewed_products_cart": true,
+    "number_of_recently_viewed_products": 10,
+    "recently_viewed_products_expires_date": 5,
+    "enable_promotion": true,
+    "background_pro": "#edebf7",
+    "color_pro": "#3c3c3c",
+    "promotion_text_1": "Free shipping on order $50",
+    "promotion_text_2": "Mid-season sale up to 70% off.  <a href=\"collections\/all\">Show now<\/a>",
+    "promotion_text_3": "Free shipping, 30 Days Returns and 2 year Warranty",
+    "btt_text": "Top",
+    "enable_compare_product": false,
+    "social_facebook_link": "http:\/\/facebook.com\/shopify",
+    "social_twitter_link": "http:\/\/twitter.com\/shopify",
+    "social_vimeo_link": "",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_google_plus_link": "http:\/\/plus.google.com\/+shopify",
+    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "https:\/\/www.snapchat.com\/add\/shopify",
+    "social_youtube_link": "",
+    "body_bg": "#ffffff",
+    "body_color": "#3c3c3c",
+    "link_color": "#0688e2",
+    "link_color_hover": "#232323",
+    "bg_color_lazyload": "#f6f8f9",
+    "breadcrumb_color": "#999999",
+    "page_title_color": "#ffffff",
+    "btn_1_bg_color": "#232323",
+    "btn_1_border_color": "#ffffff",
+    "btn_1_text_color": "#ffffff",
+    "btn_2_bg_color": "#ffffff",
+    "btn_2_border_color": "#232323",
+    "btn_2_text_color": "#232323",
+    "btn_3_bg_color": "#e95144",
+    "btn_3_border_color": "#e95144",
+    "btn_3_text_color": "#ffffff",
+    "bg_menu_mb": "#ffffff",
+    "color_menu_mb": "#232323",
+    "border_color_menu_mb": "#ebebeb",
+    "color_menu_mb_lv1": "#232323",
+    "color_menu_mb_lv1_hover": "#0688e2",
+    "bg_color_menu_mb_lv1_hover": "#f8f8f8",
+    "color_menu_mb_lv2": "#232323",
+    "color_menu_mb_lv2_hover": "#232323",
+    "color_menu_mb_lv3": "#3c3c3c",
+    "color_menu_mb_lv3_hover": "#0688e2",
+    "color_title_product": "#232323",
+    "color_title_product_hover": "#232323",
+    "color_vendor": "#232323",
+    "color_price": "#232323",
+    "color_price_sale": "#e95144",
+    "color_compare_price": "#969696",
+    "color_quick_view": "#ffffff",
+    "bg_quick_view": "#000000",
+    "color_wishlist": "#232323",
+    "bg_wishlist": "#ffffff",
+    "color_compare_product": "#3c3c3c",
+    "sale_text": "#ffffff",
+    "bg_sale": "#e95144",
+    "custom_label_text": "#ffffff",
+    "custom_label_bg": "#323232",
+    "bundle_label_text": "#ffffff",
+    "bundle_label_bg": "#232323",
+    "new_label_text": "#323232",
+    "new_label_bg": "#ffffff",
+    "new_label_border": "#f6f6f6",
+    "sold_out_text": "#ffffff",
+    "bg_sold_out": "#c1c1c1",
+    "bg_sticky": "#ffffff",
+    "color_sticky": "#3c3c3c",
+    "color_variants": "#646464",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#2d2d2d",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#ff6d6d",
+    "enable_sidebar_multiple_choice": true,
+    "secure_text": "Secure Shopping Guarantee.",
+    "license": "demohalothemes",
+    "tid": "9691007",
+    "enable_multilang": false,
+    "enable_rtl_lang_1": true,
+    "enable_rtl_lang_2": true,
+    "mailing_list_form_action": "\/\/myshopify.us9.list-manage.com\/subscribe\/post?u=f03cabb421b3912425cda25cc&amp;id=2b084b0139",
+    "checkout_use_header_image": true,
+    "checkout_logo": "checkout_logo.png",
+    "checkout_use_body_background_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "checkout_banner_background_color": "#ffffff",
+    "checkout_headline": "",
+    "checkout_call_to_action_color": "#000000",
+    "customer_layout": "theme",
+    "search_placeholder": "Suche | search",
+    "sections": {
+      "portfolio-1-section": {
+        "type": "portfolio-1-section",
+        "blocks": {
+          "1558324452667": {
+            "type": "images",
+            "settings": {
+              "categories": "Suitó;blazero;glamos",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-1.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/2-1_1024x1024_625c703d-a2af-44b2-8c09-9272c7acfd74.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-1_1024x1024_7d429e3c-0fd1-4269-8249-56406c0fabf6.jpg",
+              "image_3": "shopify:\/\/shop_images\/19_1024x1024_501330cf-5ab4-4731-9a2b-c70058750cec.jpg",
+              "image_4": "shopify:\/\/shop_images\/26_1024x1024_51a98744-f47e-4a83-becb-d46af337ebc0.jpg",
+              "image_5": "shopify:\/\/shop_images\/9-4_1024x1024_7c3d5edb-5bc0-4f81-a9a3-09de519e77ee.jpg",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558324515012": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;blazero; glamos",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-2.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/26_1024x1024_51a98744-f47e-4a83-becb-d46af337ebc0.jpg",
+              "image_2": "shopify:\/\/shop_images\/6_1024x1024_c86dc08c-0db2-4400-aaee-d7b88bf0be4d.jpg",
+              "image_3": "shopify:\/\/shop_images\/19_1024x1024_501330cf-5ab4-4731-9a2b-c70058750cec.jpg",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558324568762": {
+            "type": "images",
+            "settings": {
+              "categories": "Suitó;Milancelos;blazero; glamos",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-4.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/5-3_1024x1024_ae2aff3e-6b47-463d-9f2f-5154297aa65f.jpg",
+              "image_2": "shopify:\/\/shop_images\/6-5_1024x1024_4cd96d63-2643-44c7-8490-28acb52d3f52.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558324605932": {
+            "type": "images",
+            "settings": {
+              "categories": "Cosmopolis;Suitó;",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-3.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/26_1024x1024_51a98744-f47e-4a83-becb-d46af337ebc0.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-6_1024x1024_f133524e-10f0-483e-a75c-b5c9f2d8b136.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558324658499": {
+            "type": "images",
+            "settings": {
+              "categories": "Suitó;Milancelos;blazero;",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-6.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/5-3_1024x1024_ae2aff3e-6b47-463d-9f2f-5154297aa65f.jpg",
+              "image_2": "shopify:\/\/shop_images\/6-5_1024x1024_4cd96d63-2643-44c7-8490-28acb52d3f52.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558324939452": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;blazero;",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-5.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/6_1024x1024_c86dc08c-0db2-4400-aaee-d7b88bf0be4d.jpg",
+              "image_2": "shopify:\/\/shop_images\/2-4_1024x1024_a07f0e84-0319-46d0-af23-95bf13eec193.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558325577740": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;glamos",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-8.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/2-1_1024x1024_625c703d-a2af-44b2-8c09-9272c7acfd74.jpg",
+              "image_2": "shopify:\/\/shop_images\/6-5_1024x1024_4cd96d63-2643-44c7-8490-28acb52d3f52.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558325626778": {
+            "type": "images",
+            "settings": {
+              "categories": "Cosmopolis;blazero;",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-2-7.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/2-4_1024x1024_a07f0e84-0319-46d0-af23-95bf13eec193.jpg",
+              "image_2": "shopify:\/\/shop_images\/19_1024x1024_501330cf-5ab4-4731-9a2b-c70058750cec.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          }
+        },
+        "block_order": [
+          "1558324452667",
+          "1558324515012",
+          "1558324568762",
+          "1558324605932",
+          "1558324658499",
+          "1558324939452",
+          "1558325577740",
+          "1558325626778"
+        ],
+        "settings": {
+          "background": "shopify:\/\/shop_images\/page-header.jpg",
+          "header_text_color": "#ffffff",
+          "page_description": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam praesent murna de tellus laoreet cosmopolis. Quisque hendrerit nibh an purus...",
+          "display_filter": true,
+          "filter_list": "Cosmopolis         ;\nSuitó;\nMilancelos;\nBlazero;\nGlamos",
+          "text_color": "#fff",
+          "overlay_color": "#232323",
+          "overlay_opacity": "0.7"
+        }
+      },
+      "portfolio-2-section": {
+        "type": "portfolio-2-section",
+        "blocks": {
+          "1558322256428": {
+            "type": "images",
+            "settings": {
+              "categories": "Suitó;Milancelos;blazero;glamos",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-1.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/2-1_1024x1024_625c703d-a2af-44b2-8c09-9272c7acfd74.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-6_1024x1024_3b07d729-ac72-4df1-9420-7a91a3c91512.jpg",
+              "image_3": "shopify:\/\/shop_images\/1-1_1024x1024_7d429e3c-0fd1-4269-8249-56406c0fabf6.jpg",
+              "image_4": "shopify:\/\/shop_images\/19_1024x1024_501330cf-5ab4-4731-9a2b-c70058750cec.jpg",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558322304470": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;blazero;glamos",
+              "thumbernail": "shopify:\/\/shop_images\/port-2.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/26_1024x1024_51a98744-f47e-4a83-becb-d46af337ebc0.jpg",
+              "image_2": "shopify:\/\/shop_images\/9-4_1024x1024_7c3d5edb-5bc0-4f81-a9a3-09de519e77ee.jpg",
+              "image_3": "shopify:\/\/shop_images\/2-1_1024x1024_625c703d-a2af-44b2-8c09-9272c7acfd74.jpg",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558322736925": {
+            "type": "images",
+            "settings": {
+              "categories": "Cosmopolis",
+              "thumbernail": "shopify:\/\/shop_images\/port-9.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/9-4_1024x1024_7c3d5edb-5bc0-4f81-a9a3-09de519e77ee.jpg",
+              "image_2": "shopify:\/\/shop_images\/6_1024x1024_c86dc08c-0db2-4400-aaee-d7b88bf0be4d.jpg",
+              "image_3": "shopify:\/\/shop_images\/1-1_1024x1024_7d429e3c-0fd1-4269-8249-56406c0fabf6.jpg",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558322835166": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;blazero",
+              "thumbernail": "shopify:\/\/shop_images\/port-3.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/19_1024x1024_501330cf-5ab4-4731-9a2b-c70058750cec.jpg",
+              "image_2": "shopify:\/\/shop_images\/26_1024x1024_51a98744-f47e-4a83-becb-d46af337ebc0.jpg",
+              "image_3": "shopify:\/\/shop_images\/5-3_1024x1024_ae2aff3e-6b47-463d-9f2f-5154297aa65f.jpg",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558322991365": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;blazero",
+              "thumbernail": "shopify:\/\/shop_images\/port-4.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/19_1024x1024_501330cf-5ab4-4731-9a2b-c70058750cec.jpg",
+              "image_2": "shopify:\/\/shop_images\/2-4_1024x1024_a07f0e84-0319-46d0-af23-95bf13eec193.jpg",
+              "image_3": "shopify:\/\/shop_images\/about-3.png",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323108644": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos;blazero",
+              "thumbernail": "shopify:\/\/shop_images\/port-5.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/1-1_1024x1024_7d429e3c-0fd1-4269-8249-56406c0fabf6.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-6_1024x1024_f133524e-10f0-483e-a75c-b5c9f2d8b136.jpg",
+              "image_3": "shopify:\/\/shop_images\/2-4_1024x1024_a07f0e84-0319-46d0-af23-95bf13eec193.jpg",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323239997": {
+            "type": "images",
+            "settings": {
+              "categories": "Suitó;Milancelos;blazero;glamos",
+              "thumbernail": "shopify:\/\/shop_images\/port-6.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/5-3_1024x1024_ae2aff3e-6b47-463d-9f2f-5154297aa65f.jpg",
+              "image_2": "shopify:\/\/shop_images\/about-3.png",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323352604": {
+            "type": "images",
+            "settings": {
+              "categories": "Suitó;blazero",
+              "thumbernail": "shopify:\/\/shop_images\/port-7.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/1-1_1024x1024_7d429e3c-0fd1-4269-8249-56406c0fabf6.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-6_1024x1024_3b07d729-ac72-4df1-9420-7a91a3c91512.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323495084": {
+            "type": "images",
+            "settings": {
+              "categories": "",
+              "thumbernail": "shopify:\/\/shop_images\/port-8.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/2-4_1024x1024_a07f0e84-0319-46d0-af23-95bf13eec193.jpg",
+              "image_2": "shopify:\/\/shop_images\/2-1_1024x1024_625c703d-a2af-44b2-8c09-9272c7acfd74.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323581180": {
+            "type": "images",
+            "settings": {
+              "categories": "",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-5.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/2-1_1024x1024_625c703d-a2af-44b2-8c09-9272c7acfd74.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-1_1024x1024_7d429e3c-0fd1-4269-8249-56406c0fabf6.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323611166": {
+            "type": "images",
+            "settings": {
+              "categories": "Milancelos",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-8.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/1-6_1024x1024_3b07d729-ac72-4df1-9420-7a91a3c91512.jpg",
+              "image_2": "",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          },
+          "1558323651755": {
+            "type": "images",
+            "settings": {
+              "categories": "",
+              "thumbernail": "shopify:\/\/shop_images\/pfl-7.jpg",
+              "title": "Habitasse Molateas",
+              "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+              "link_to": "shopify:\/\/collections\/all",
+              "image_1": "shopify:\/\/shop_images\/6_1024x1024_c86dc08c-0db2-4400-aaee-d7b88bf0be4d.jpg",
+              "image_2": "shopify:\/\/shop_images\/1-6_1024x1024_3b07d729-ac72-4df1-9420-7a91a3c91512.jpg",
+              "image_3": "",
+              "image_4": "",
+              "image_5": "",
+              "image_6": "",
+              "image_7": "",
+              "image_8": "",
+              "image_9": "",
+              "image_10": ""
+            }
+          }
+        },
+        "block_order": [
+          "1558322256428",
+          "1558322304470",
+          "1558322736925",
+          "1558322835166",
+          "1558322991365",
+          "1558323108644",
+          "1558323239997",
+          "1558323352604",
+          "1558323495084",
+          "1558323581180",
+          "1558323611166",
+          "1558323651755"
+        ],
+        "settings": {
+          "display_filter": true,
+          "filter_list": "Cosmopolis;\nSuitó;\nMilancelos;\nBlazero;\nGlamos;",
+          "text_color": "#fff",
+          "overlay_color": "#232323",
+          "overlay_opacity": "0.7"
+        }
+      },
+      "contact-us-2-template": {
+        "type": "contact-us-2-template",
+        "settings": {
+          "contact_title": "Drop Us A Line",
+          "contact_text_desc": "We’re here to quickly provide you with the info and services you need & answer any question you may have",
+          "form_title": "Send us an email:",
+          "form_subtitle": "ASK US ANYTHING! WE'LL GET BACK TO YOU WITHIN 24-48 HOURS.",
+          "contact_your_name": "",
+          "contact_phone_number": "",
+          "contact_your_email": "",
+          "display_location": true,
+          "background_color": "#fafafa",
+          "top_title": "Chat with us:",
+          "top_content": "IF YOU HAVE AN ISSUE OR QUESTION THAT REQUIRES IMMEDIATE ASSISTANCE, YOU CAN CLICK BELOW TO CHAT LIVE WITH A CUSTOMER SERVICE REPRESENTATIVE. IF WE AREN'T AVAILABLE, DROP US AN EMAIL TO THE LEFT AND WE'LL RESPOND WITHIN 24-48 HOURS.",
+          "email_button": "Message us",
+          "email": "",
+          "email_button_bgc": "rgba(250,250,250,0)",
+          "email_button_txtc": "#232323",
+          "email_button_bdc": "#232323",
+          "email_button_bgc_h": "#232323",
+          "email_button_txtc_h": "#fff",
+          "email_button_bdc_h": "#232323",
+          "bot_title": "Chat with us:",
+          "bot_content": "<p>Call Toll-Free<\/p>\n<p>+1.900.000.6690<\/p>\n<p>Monday to Saturday: 9am - 10pm<\/p>\n<p>Sundays: 10am - 6pm<\/p>\n<p>Or you can reach us via email at support@halothemes.com <br> and expect a response within 24-48 hours.<\/p>"
+        }
+      },
+      "about-us-2-content": {
+        "type": "about-us-2-content",
+        "blocks": {
+          "1558321537764": {
+            "type": "top_content",
+            "settings": {
+              "display_banner": true,
+              "banner": "shopify:\/\/shop_images\/about-2-1.jpg",
+              "alignment": "right",
+              "title_1": "Title",
+              "content_1": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam praesent murna de tellus laoreet cosmopolis. Quisque hendrerit nibh an purus...",
+              "title_2": "",
+              "content_2": "",
+              "title_3": "",
+              "content_3": "",
+              "title_4": "",
+              "content_4": "",
+              "title_5": "",
+              "content_5": ""
+            }
+          },
+          "1558321585461": {
+            "type": "top_content",
+            "settings": {
+              "display_banner": true,
+              "banner": "shopify:\/\/shop_images\/about-2-2.jpg",
+              "alignment": "left",
+              "title_1": "Our Story",
+              "content_1": "lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh",
+              "title_2": "Our Story",
+              "content_2": "Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris",
+              "title_3": "Our Story",
+              "content_3": "Quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae congue eu consequat ac felis donec et",
+              "title_4": "",
+              "content_4": "",
+              "title_5": "",
+              "content_5": ""
+            }
+          },
+          "1558321696901": {
+            "type": "top_content",
+            "settings": {
+              "display_banner": true,
+              "banner": "shopify:\/\/shop_images\/about-2-3.jpg",
+              "alignment": "right",
+              "title_1": "Our Approach",
+              "content_1": "Dolor purus non enim praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus",
+              "title_2": "",
+              "content_2": "",
+              "title_3": "",
+              "content_3": "",
+              "title_4": "",
+              "content_4": "",
+              "title_5": "",
+              "content_5": ""
+            }
+          },
+          "1558321757469": {
+            "type": "bottom_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/about-1.png",
+              "title": "Alisa",
+              "subtitle": "Managing Director",
+              "url": "shopify:\/\/collections\/all"
+            }
+          },
+          "1558321779765": {
+            "type": "bottom_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/about-2.png",
+              "title": "Monica",
+              "subtitle": "Art Director",
+              "url": "shopify:\/\/collections\/all"
+            }
+          },
+          "1558321799252": {
+            "type": "bottom_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/about-3.png",
+              "title": "Tracy",
+              "subtitle": "Fashion Designer",
+              "url": "shopify:\/\/collections\/all"
+            }
+          }
+        },
+        "block_order": [
+          "1558321537764",
+          "1558321585461",
+          "1558321696901",
+          "1558321757469",
+          "1558321779765",
+          "1558321799252"
+        ],
+        "settings": {
+          "display_top_content": true,
+          "top_heading": "Behind the scene",
+          "top_subheading": "Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom.",
+          "border_color": "#a6a6a6",
+          "top_content_bgc": "#fafafa",
+          "top_content_tt_size": "30",
+          "top_content_ttc": "#232323",
+          "top_content_txtc": "#3c3c3c",
+          "dots_color": "#9c9c9c",
+          "display_bottom_content": true,
+          "bot_heading": "Behind the scene",
+          "bot_subheading": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros."
+        }
+      },
+      "page-header": {
+        "type": "page-header",
+        "settings": {
+          "background": "shopify:\/\/shop_images\/page-header.jpg",
+          "text_color": "#ffffff",
+          "menu": "page-menu",
+          "menu_bar_background": "#ffffff",
+          "menu_bar_border": "#e6e6e6",
+          "menu_item_background": "#ffffff",
+          "menu_item_text_color": "#323232",
+          "menu_item_background_color_h": "#ffffff",
+          "menu_item_text_color_h": "#323232"
+        }
+      },
+      "about-us-1-content": {
+        "type": "about-us-1-content",
+        "settings": {
+          "left_heading": "About Store",
+          "left_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros. Vivamus pellentesque duiex a interdum.",
+          "right_heading": "Contact Us",
+          "right_content": "<p>8808 Ave Dermentum Blvd., Onsec Adipiscing Dist.,Tortor Sagittis City,<br> \nCA 880986, United States<\/p>\n\n<p>Toll-free: +1.900.000.6690<br>\nEmail: support@halothemes.com<br>\nMonday to Saturday: 9am - 10pm<br>\nSundays: 10am - 6pm\n<\/p>"
+        }
+      },
+      "about-us-1-slideshow": {
+        "type": "about-us-1-slideshow",
+        "blocks": {
+          "1558320968126": {
+            "type": "content",
+            "settings": {
+              "title": "Cosmopolis de Milance",
+              "content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros. Vivamus pellentesque dui ex, a interdum orci dignissim vel.",
+              "dpl_qoute": true,
+              "profile_picture": "shopify:\/\/shop_images\/avatar.png",
+              "qoute_heading": "Managing Director",
+              "name": "Anne.l",
+              "qoute_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies...",
+              "button_text": "Meet The Team",
+              "button_link": "shopify:\/\/collections"
+            }
+          },
+          "1558321035661": {
+            "type": "content",
+            "settings": {
+              "title": "Excepteur sint occaecat",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "dpl_qoute": true,
+              "profile_picture": "shopify:\/\/shop_images\/avatar.png",
+              "qoute_heading": "Head of Division",
+              "name": "Anne.l",
+              "qoute_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies...",
+              "button_text": "Meet The Team",
+              "button_link": "shopify:\/\/collections"
+            }
+          },
+          "1558321230310": {
+            "type": "content",
+            "settings": {
+              "title": "Tortor id aliquet",
+              "content": "Vitae purus faucibus ornare suspendisse sed nisi. Tincidunt arcu non sodales neque sodales. Sociis natoque penatibus et magnis dis parturient montes. Mauris augue neque gravida in fermentum et sollicitudin ac. Habitant morbi tristique senectus et netus. Tortor id aliquet lectus proin nibh nisl condimentum. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Sodales ut etiam sit amet. Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Non odio euismod lacinia at quis risus sed. Nunc pulvinar sapien et ligula ullamcorper. Amet est placerat in egestas erat imperdiet sed euismod.",
+              "dpl_qoute": true,
+              "profile_picture": "shopify:\/\/shop_images\/avatar.png",
+              "qoute_heading": "Managing Director",
+              "name": "Anne.l",
+              "qoute_content": "Faucibus turpis in eu mi bibendum neque egestas congue quisque. Sodales ut etiam sit amet. Viverra ipsum nunc aliquet bibendum enim facilisis gravida.",
+              "button_text": "Vice president",
+              "button_link": ""
+            }
+          },
+          "1558321270294": {
+            "type": "content",
+            "settings": {
+              "title": "Tempor nec feugiat",
+              "content": "Ultrices dui sapien eget mi proin sed. Ullamcorper velit sed ullamcorper morbi. Eget sit amet tellus cras adipiscing enim. Quis hendrerit dolor magna eget est. Neque egestas congue quisque egestas. Velit aliquet sagittis id consectetur purus ut faucibus. Egestas purus viverra accumsan in nisl nisi scelerisque. Lacus vestibulum sed arcu non. Sollicitudin nibh sit amet commodo. Odio euismod lacinia at quis risus sed vulputate. Sed pulvinar proin gravida hendrerit lectus.",
+              "dpl_qoute": true,
+              "profile_picture": "shopify:\/\/shop_images\/avatar.png",
+              "qoute_heading": "Tempor nec feugiat",
+              "name": "John Doe",
+              "qoute_content": "Mi bibendum neque egestas congue quisque egestas diam in. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna.",
+              "button_text": "Meet The Team",
+              "button_link": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "1558320968126",
+          "1558321035661",
+          "1558321230310",
+          "1558321270294"
+        ],
+        "settings": {
+          "autoplay": true,
+          "slideshow_speed": "5000",
+          "background_image": "shopify:\/\/shop_images\/about-1.jpg",
+          "text_color": "#fff",
+          "title_size": "40",
+          "button_bg_color": "rgba(0,0,0,0)",
+          "button_text_color": "#fff",
+          "button_bd_color": "#fff",
+          "button_bg_color_h": "rgba(0,0,0,0)",
+          "button_text_color_h": "#fff",
+          "button_bd_color_h": "#fff"
+        }
+      },
+      "navigation": {
+        "type": "navigation",
+        "blocks": {
+          "1542706946591": {
+            "type": "style_1",
+            "settings": {
+              "megamenu_items_1": "Trend",
+              "title_featured_product": "Featured Products",
+              "featured_product": "dinterdum-pretium-condimento-1",
+              "link_banner_first_style_1": "shopify:\/\/collections\/all"
+            }
+          },
+          "1542772636356": {
+            "type": "style_2",
+            "settings": {
+              "megamenu_items_2": "New In",
+              "banner_first_style_2": "shopify:\/\/shop_images\/nba_PNG8_2.png",
+              "link_banner_first_style_2": "shopify:\/\/collections\/cosmopolis",
+              "banner_second_style_2": "shopify:\/\/shop_images\/b1.png",
+              "link_banner_second_style_2": "shopify:\/\/collections\/mlb-custom-fitted-baseball-hats-and-caps",
+              "banner_third_style_2": "shopify:\/\/shop_images\/cool-caps.png",
+              "link_banner_third_style_2": "shopify:\/\/collections\/suito"
+            }
+          },
+          "1542783537505": {
+            "type": "style_3",
+            "settings": {
+              "megamenu_items_3": "Collections",
+              "link_banner_first_style_3": "",
+              "link_banner_second_style_3": "",
+              "link_banner_third_style_3": "",
+              "link_banner_four_style_3": "",
+              "link_banner_five_style_3": ""
+            }
+          },
+          "1542796773039": {
+            "type": "style_4",
+            "settings": {
+              "megamenu_items_4": "Demo",
+              "link_banner_first_style_4": ""
+            }
+          },
+          "67862844-ec51-49d9-8be7-b0e90eaa39b6": {
+            "type": "style_2",
+            "settings": {
+              "megamenu_items_2": "Catalog",
+              "link_banner_first_style_2": "",
+              "link_banner_second_style_2": "",
+              "link_banner_third_style_2": ""
+            }
+          }
+        },
+        "block_order": [
+          "1542706946591",
+          "1542772636356",
+          "1542783537505",
+          "1542796773039",
+          "67862844-ec51-49d9-8be7-b0e90eaa39b6"
+        ],
+        "settings": {
+          "display_fixtop_menu": true,
+          "logo_fix": "shopify:\/\/shop_images\/nba_PNG8_2.png",
+          "horizontal_linklist": "mlb",
+          "alignment": "left",
+          "bg_menu": "#232323",
+          "bg_dropdown_menu": "#ffffff",
+          "color_menu_lv1": "#ffffff",
+          "hover_color_mnu_lv1": "#ffffff",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "Collections",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#ffffff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "Demo",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#ffffff",
+          "enable_hot": false,
+          "lb_hot": "Hot",
+          "hot_item": "Pages",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#ffffff",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1541579674639": {
+            "type": "footer_link",
+            "settings": {
+              "footer_title": "Services",
+              "footer_linklist": "services"
+            }
+          },
+          "1541579687499": {
+            "type": "footer_link",
+            "settings": {
+              "footer_title": "Company",
+              "footer_linklist": "company"
+            }
+          },
+          "1541579706355": {
+            "type": "footer_link",
+            "settings": {
+              "footer_title": "help",
+              "footer_linklist": "help"
+            }
+          }
+        },
+        "block_order": [
+          "1541579674639",
+          "1541579687499",
+          "1541579706355"
+        ],
+        "settings": {
+          "bg_footer_img": "none",
+          "bg_footer_color": "#ffffff",
+          "bg_footer_position_x": "left",
+          "bg_footer_position_y": "top",
+          "bg_footer_repeat": "repeat",
+          "bg_footer_attachment": "scroll",
+          "footer_title_color": "#0a0a0a",
+          "footer_link_color": "#0a0a0a",
+          "footer_link_hover_color": "#fe5335",
+          "bg_footer_line_color": "#fe5335",
+          "footer_newsletter_enable": true,
+          "footer_newsletter_title": "Sign up for our Newsletter",
+          "footer_newsletter_des": "",
+          "bg_newsletter_color": "rgba(0,0,0,0)",
+          "newsletter_color": "#717171",
+          "newsletter_border_color": "#3b3b3b",
+          "bg_newsletter_button_color": "#3b3b3b",
+          "newsletter_button_color": "#ffffff",
+          "footer_social_enable": true,
+          "footer_social_title": "Stay Connected",
+          "fb_like_code_text": "<span>LIKE US <i>on <\/i> FACEBOOK<\/span>",
+          "fb_like_code": "<div id=\"fb-root\"><\/div>\n<script async=\"\" defer crossorigin=\"anonymous\" src=\"https:\/\/connect.facebook.net\/en_US\/sdk.js#xfbml=1&version=v8.0\" nonce=\"\"><\/script>\n<div class=\"fb-like\" data-href=\"https:\/\/www.facebook.com\/pages\/Halothemes-Premium-Magento-Themes\/469058089834105\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-share=\"true\"><\/div>",
+          "social_icon_color": "#141414",
+          "social_icon_bg_color": "#ffffff",
+          "bg_footer_bottom_color": "#f8f8f8",
+          "footer_bottom_color": "#969696",
+          "footer_address_code": "",
+          "show_payment_icons": true,
+          "payment_display_visa": true,
+          "payment_display_visa_electron": false,
+          "payment_display_american_express": false,
+          "payment_display_master": true,
+          "payment_display_maestro": false,
+          "payment_display_solo": false,
+          "payment_display_paypal": true,
+          "payment_display_amazon_payments": false,
+          "payment_display_apple_pay": false,
+          "payment_display_bitcoin": false,
+          "payment_display_cirrus": false,
+          "payment_display_dankort": false,
+          "payment_display_diners_club": false,
+          "payment_display_discover": false,
+          "payment_display_dogecoin": false,
+          "payment_display_dwolla": false,
+          "payment_display_forbrugsforeningen": false,
+          "payment_display_interac": false,
+          "payment_display_jcb": false,
+          "payment_display_litecoin": false,
+          "payment_display_stripe": false,
+          "payment_display_sage": false,
+          "payment_display_wallet": false,
+          "payment_display_western": false,
+          "icon_visa": "shopify:\/\/shop_images\/visa_1.png",
+          "icon_master": "shopify:\/\/shop_images\/mastercard_1.png",
+          "icon_paypal": "shopify:\/\/shop_images\/paypal.png"
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "display_recently_viewed_products": true,
+          "recently_viewed_products_title": "Recently Viewed Products",
+          "number_of_recently_viewed_products": "10"
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "display_google_map": true,
+          "google_map_code": "<iframe src=\"https:\/\/maps.google.com\/maps?f=q&source=s_q&hl=vi&geocode=&q=4+Nguy%E1%BB%85n+%C4%90%C3%ACnh+chi%E1%BB%83u,+%C4%90a+Kao,+Qu%E1%BA%ADn+1&aq=&sll=37.0625,-95.677068&sspn=41.903538,86.572266&ie=UTF8&hq=&hnear=4+Nguy%E1%BB%85n+%C4%90%C3%ACnh+Chi%E1%BB%83u,+%C4%90a+Kao,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam&t=m&ll=10.797518,106.700377&spn=0.014754,0.071197&z=15&iwloc=A&output=embed\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" width=\"100%\" height=\"350\"><\/iframe>",
+          "contact_title": "DROP US A LINE | Schreiben Sie uns",
+          "contact_text_desc": "Have a question or comment? Use the form below to send us a message or contact us by mail at:",
+          "contact_your_name": "",
+          "contact_phone_number": "",
+          "contact_your_email": "",
+          "display_location": true,
+          "location_code": "<h4>Store Information<\/h4>\n<p>We'd love to hear from you - please use the form to send us your message or ideas. Or simply pop in for a cup of fresh tea and a cookie:<\/p>\n<p class=\"addr\">8808 Ave Dermentum, Onsectetur Adipiscing<br>Tortor Sagittis, CA 880986,<br>United States\n<\/p>\n\n<p class=\"addr\">Email: <a href=\"mailto:support@halothemes.com\">support@halothemes.com<\/a><br>Toll-free: <strong>1-888-699-8900<\/strong><\/p><div class=\"open-hours\">\n<strong>Opening Hours:<\/strong>\n<br>Monday to Saturday: 9am - 10pm\n<br>Sundays: 10am - 6pm\n<p><\/p>\n<\/div>"
+        }
+      },
+      "lookbook": {
+        "type": "lookbook",
+        "blocks": {
+          "1489975455753": {
+            "type": "image",
+            "settings": {
+              "dpl_slide_img": true,
+              "image_slide": "shopify:\/\/shop_images\/lookbook-1-compressor.jpg",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#ffffff",
+              "lb_product_1": "loremous-saliduar-a-cosmopolito-1",
+              "top_position_1": "41",
+              "left_position_1": "55",
+              "dots_color_1": "#ffffff",
+              "dots_bg_color_1": "#323232",
+              "dots_shadow_color_1": "#323232",
+              "lb_product_2": "",
+              "top_position_2": "10",
+              "left_position_2": "10",
+              "dots_color_2": "#ffffff",
+              "dots_bg_color_2": "#323232",
+              "dots_shadow_color_2": "#ffffff",
+              "lb_product_3": "",
+              "top_position_3": "10",
+              "left_position_3": "10",
+              "dots_color_3": "#ffffff",
+              "dots_bg_color_3": "#323232",
+              "dots_shadow_color_3": "#ffffff"
+            }
+          },
+          "1489975477125": {
+            "type": "image",
+            "settings": {
+              "dpl_slide_img": true,
+              "image_slide": "shopify:\/\/shop_images\/lookbook-2-compressor.jpg",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#ffffff",
+              "lb_product_1": "dempus-lortis-cosmo-sapiendo-1",
+              "top_position_1": "34",
+              "left_position_1": "19",
+              "dots_color_1": "#ffffff",
+              "dots_bg_color_1": "#323232",
+              "dots_shadow_color_1": "#323232",
+              "lb_product_2": "dempus-lortis-cosmo-sapiendo-2",
+              "top_position_2": "81",
+              "left_position_2": "48",
+              "dots_color_2": "#ffffff",
+              "dots_bg_color_2": "#323232",
+              "dots_shadow_color_2": "#323232",
+              "lb_product_3": "",
+              "top_position_3": "10",
+              "left_position_3": "10",
+              "dots_color_3": "#ffffff",
+              "dots_bg_color_3": "#323232",
+              "dots_shadow_color_3": "#ffffff"
+            }
+          },
+          "1532404848065": {
+            "type": "image",
+            "settings": {
+              "dpl_slide_img": true,
+              "image_slide": "shopify:\/\/shop_images\/lookbook-3-compressor.jpg",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#ffffff",
+              "lb_product_1": "dempus-an-lortis-tempus-sapiendos",
+              "top_position_1": "28",
+              "left_position_1": "33.5",
+              "dots_color_1": "#ffffff",
+              "dots_bg_color_1": "#323232",
+              "dots_shadow_color_1": "#323232",
+              "lb_product_2": "dempus-lortis-cosmo-sapiendo-4",
+              "top_position_2": "84",
+              "left_position_2": "40",
+              "dots_color_2": "#ffffff",
+              "dots_bg_color_2": "#323232",
+              "dots_shadow_color_2": "#323232",
+              "lb_product_3": "",
+              "top_position_3": "10",
+              "left_position_3": "10",
+              "dots_color_3": "#ffffff",
+              "dots_bg_color_3": "#323232",
+              "dots_shadow_color_3": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "1489975455753",
+          "1489975477125",
+          "1532404848065"
+        ],
+        "settings": {
+          "display_product_detail_share": true,
+          "share_text": "Share",
+          "button": "Shop LookBook",
+          "link": "shopify:\/\/collections\/all",
+          "autoplay": false,
+          "speed": "5000",
+          "transition": "true",
+          "arrow_color": "#727272",
+          "arrow_border_color": "#d3d3d3",
+          "arrow_bg_color": "#ffffff",
+          "position_slick_arrow": "-35px"
+        }
+      },
+      "faq-page": {
+        "type": "faq-page",
+        "blocks": {
+          "1507878888245": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Will your template be fully compatible with Shopify?",
+              "answer_faqs": "Yes it is."
+            }
+          },
+          "1507879452149": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "I cannot upload the theme to my Shopify store \/ Shopify alerts that the file is too big to upload, what is the problem?",
+              "answer_faqs": "<p>Please make sure that you follow below steps:<\/p>\n\n<p>1\/ Download the package from themeforest.net (the file is in zip format)\n<br>\n<br>\n2\/ Extract the file you've just downloaded.\n<br>\n<br>\n3\/ Find this file: ella-x.x.x-sections-ready.zip in the folder Ella Sections Ready X.X.X, then you just need to upload ella-x.x.x-sections-ready.zip file to your Shopify store.\n<\/p>"
+            }
+          },
+          "1507879511326": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "What I have to do when I need your support?",
+              "answer_faqs": "<p>To save your time and reach our support quickly, please follow below steps:\n<\/p><p>1\/ Create a staff account for us (with Themes permission and Settings permission) <a href=\"http:\/\/docs.shopify.com\/manual\/settings\/account\/staff-members\" target=\"_blank\" style=\"color: #e66f65;\" rel=\"noopener noreferrer\">http:\/\/docs.shopify.com\/manual\/settings\/account\/staff-members<\/a><\/p>\n<p>2\/ Capture screenshot or video for the issue you get.<\/p>\n<p>3\/ Specify which template and version you are using.<\/p>\n<p>4\/ Describe clearly how to reproduce the issue.<\/p>\n<p>5\/ Send all information (staff account, screenshot, video, template name and version, description of the issues, link) to <a href=\"mailto:support@halothemes.com\" target=\"_blank\" style=\"color: #e66f65;\" rel=\"noopener noreferrer\">support@halothemes.com<\/a><\/p>\n<p><\/p>"
+            }
+          },
+          "1507879518615": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Would assistance be available to upload the template if needed?",
+              "answer_faqs": "Yes, we will assist you to install the template if needed"
+            }
+          },
+          "1507879528740": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Do you guys offer customisation services for your themes?",
+              "answer_faqs": "Yes, we do. Please send your customisation requests to support@halothemes.com, we will give you our quote. Thank you."
+            }
+          },
+          "1507879543697": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Can I turn on\/off Item Animation \/ Effect if item on theme?",
+              "answer_faqs": "Yes. You can turn on\/off the animation in the Setting page."
+            }
+          },
+          "1507879557094": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Can I turn on\/off some blocks on the page?",
+              "answer_faqs": "Yes. You can turn on\/off almost any blocks on the page (featured products, slideshow, banners, related products, recent products,...)."
+            }
+          },
+          "1507879567640": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "I want to have the dropdown cart displayed automatically every time clients hover over it (instead of clicking on it). Is it possible?",
+              "answer_faqs": "Yes, we have a setting for you to switch between these two options: Display on Hover and Display on Click."
+            }
+          },
+          "1507879577808": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "What is included in the theme package?",
+              "answer_faqs": "The theme package includes Theme source, Photoshop design files and manual guide."
+            }
+          },
+          "1507879582861": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "I notice that the images used in the theme are all portrait. Will that be a problem if I use square images for our products? How will they be displayed in the theme?",
+              "answer_faqs": "That is not a problem. You just need to modify the width\/height ratio in theme settings."
+            }
+          },
+          "1507879597073": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Does the theme support image resizing and cropping?",
+              "answer_faqs": "Yes. Normally, the theme will resize images to a default size (based on your width\/height ratio setting). We also have Crop setting if you don’t want to scale the image."
+            }
+          },
+          "1507879608326": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Can I add borders around our product images?",
+              "answer_faqs": "Yes, you can. You can also set image border colours."
+            }
+          },
+          "1507879613494": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Can I have multi level menu?",
+              "answer_faqs": "Yes, you can. Just simply follow the instructions in our Manual Guide, you will be able to easily create a multi-level menu."
+            }
+          },
+          "1507879626512": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Do you guys provide customer support during weekends \/ holidays?",
+              "answer_faqs": "Normally we don't provide support during weekends, except for urgent cases. In these cases, you only need to mark “Urgent” in your email, we will get back to you ASAP."
+            }
+          },
+          "1507879632829": {
+            "type": "text",
+            "settings": {
+              "question_faqs": "Does the theme support Variant Image?",
+              "answer_faqs": "Yes, it does. Please check it out here to see how it works: <a href=\"https:\/\/new-ella.myshopify.com\/products\/dinterdum-pretium-condimento?variant=16867481452642\">https:\/\/new-ella.myshopify.com\/products\/dinterdum-pretium-condimento?variant=16867481452642<\/a>"
+            }
+          }
+        },
+        "block_order": [
+          "1507878888245",
+          "1507879452149",
+          "1507879511326",
+          "1507879518615",
+          "1507879528740",
+          "1507879543697",
+          "1507879557094",
+          "1507879567640",
+          "1507879577808",
+          "1507879582861",
+          "1507879597073",
+          "1507879608326",
+          "1507879613494",
+          "1507879626512",
+          "1507879632829"
+        ],
+        "settings": {
+          "des_faqs": "Below FAQ are some common concerns of our clients before purchasing the theme, if you have other questions, please just send it to <a href=\"mailto:support@halothemes.com\" target=\"_blank\">support@halothemes.com<\/a>",
+          "contact_text": "Unable to find satisfactory answers ?",
+          "contact_link_text": "Contact Support",
+          "contact_link": "https:\/\/www.halothemes.com\/",
+          "icon_faqs": "Question",
+          "bg_icon_qs": "#ef6454",
+          "color_icon_qs": "#ffffff",
+          "bg_question": "#fafafa",
+          "color_question": "#323232",
+          "font_size_qs": "12",
+          "bg_question_acitve": "#232323",
+          "color_question_acitve": "#ffffff",
+          "icon_answer": "Answer",
+          "bg_icon_answer": "#69c69c",
+          "color_icon_answer": "#ffffff",
+          "color_question_answer": "#3c3c3c",
+          "font_size_answer": "12",
+          "color_question_link": "#0688e2",
+          "icon_show": "Show",
+          "icon_hide": "Hide"
+        }
+      },
+      "brands-page": {
+        "type": "brands-page",
+        "blocks": {
+          "1546921086313": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-1-compressor.jpg",
+              "title": "Loremous",
+              "link": ""
+            }
+          },
+          "1546921152681": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-2-compressor.jpg",
+              "title": "Isablella",
+              "link": ""
+            }
+          },
+          "1546921217742": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-3-compressor.jpg",
+              "title": "Benjamin Button",
+              "link": ""
+            }
+          },
+          "1546921256644": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-4-compressor.jpg",
+              "title": "Fermends",
+              "link": ""
+            }
+          },
+          "1546921290795": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-5-compressor.jpg",
+              "title": "conseqaur",
+              "link": ""
+            }
+          },
+          "1546921315910": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-3-compressor.jpg",
+              "title": "Benjamin Button",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1546921086313",
+          "1546921152681",
+          "1546921217742",
+          "1546921256644",
+          "1546921290795",
+          "1546921315910"
+        ],
+        "settings": {
+          "display_brand": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Mid-Season Sale Up to 70% OFF. <a href=\"\/collections\/all\">Shop Now<\/a>",
+          "bg_header_top": "#ffe8e8",
+          "text_header_top_color": "#b05d5d",
+          "brand_type": "image",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000000",
+          "max_height_logo_pc": "80px",
+          "max_height_logo_mb": "50px",
+          "bg_search_color": "#fafafa",
+          "search_color": "#323232",
+          "search_border_color": "#e7e7e7",
+          "bg_header_bottom_color": "#ffffff",
+          "header_bottom_link_color": "#232323",
+          "header_bottom_text_color": "#323232",
+          "display_customer_service": true,
+          "customer_service_text": "Customer Service +018 900 6690",
+          "display_free_shipping": true,
+          "free_shipping_text": "Free shipping on All Orders. No Minimum Purchase",
+          "bg_cart_color": "#ffe5e5",
+          "cart_color": "#323232",
+          "dropdowncart_type": "hover"
+        }
+      },
+      "shop-instagram": {
+        "type": "shop-instagram",
+        "settings": {
+          "title": "Shop Instagram",
+          "des": "Nullam aliquet vestibulum augue non varius cras de congue elitos. Duis tristique delos ante an daliquam. Praesent urna tellus laoreet an tellus ullamcorper fermentum facilisis.",
+          "embed_code": "<script src=\"https:\/\/snapppt.com\/widgets\/widget_loader\/33732d63-5077-4f49-a869-7d4ddc227b6f\/grid.js\" defer class=\"snapppt-widget\"><\/script>"
+        }
+      },
+      "someone-purchased": {
+        "type": "someone-purchased",
+        "blocks": {
+          "1548643650260": {
+            "type": "image",
+            "settings": {
+              "product": "copy-of-1998-inaugural-season-pink-bottom-black-arizona-diamondbacksb-new-era-9fifty-snapback",
+              "from_ago": "Blackburn, UK",
+              "time_ago": "20 minutes"
+            }
+          },
+          "1548643708120": {
+            "type": "image",
+            "settings": {
+              "product": "arizona-diamondbacks-mitchell-ness-mesh-v-neck-black-jersey",
+              "from_ago": "Washington, US",
+              "time_ago": "30 minutes"
+            }
+          },
+          "1548643726643": {
+            "type": "image",
+            "settings": {
+              "product": "atlanta-hawks-mitchell-ness-scorer-fleece-crew-sweatshirt",
+              "from_ago": "Blumenau, Brazil",
+              "time_ago": "10 minutes"
+            }
+          },
+          "1548643747526": {
+            "type": "image",
+            "settings": {
+              "product": "1971-72-green-milwaukee-bucks-mitchell-ness-hardwood-classics-swingman-shorts",
+              "from_ago": "Bauru, Brazil",
+              "time_ago": "35 minutes"
+            }
+          }
+        },
+        "block_order": [
+          "1548643650260",
+          "1548643708120",
+          "1548643726643",
+          "1548643747526"
+        ],
+        "settings": {
+          "display_someone-purchased": true,
+          "display_someone-purchased_mb": true,
+          "show_someone-purchased": "right",
+          "someone_speed": "7000",
+          "text": "Someone recently bought a",
+          "time_location_text": "[time] minutes ago, from [location]"
+        }
+      },
+      "GDPR-modal": {
+        "type": "GDPR-modal",
+        "settings": {
+          "display_gdpr": true,
+          "show_gdp": "left",
+          "bg_color": "#141414",
+          "text_color": "#ffffff",
+          "privacy_policy_color": "#818181",
+          "content": "The cookie settings on this website are set to 'allow all cookies' to give you the very best experience. Please click Accept Cookies to continue to use the site.",
+          "privacy_policy_text": "privacy policy",
+          "privacy_policy_link": "https:\/\/policies.google.com\/",
+          "accept_cookies_text": "accept"
+        }
+      },
+      "1540952363851": {
+        "type": "home-slideshow",
+        "disabled": true,
+        "blocks": {
+          "1540952363851-0": {
+            "type": "image",
+            "settings": {
+              "dpl_slide_img": true,
+              "style_content": "style_1",
+              "alignment": "left",
+              "text_alignment": "center",
+              "bg_color_box": "#ffffff",
+              "color_border_box": "#bcbcbc",
+              "heading": "Cosmopolis",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "color_heading_style_4": "#10ffda",
+              "color_heading_mb": "#ffffff",
+              "sub_heading": "",
+              "font_size_sub_heading": "30px",
+              "color_sub_heading": "#ffffff",
+              "color_sub_heading_mb": "#ffffff",
+              "slide-des": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "color_des_mb": "#ffffff",
+              "button_slide": "Shop The Collection",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#ffffff",
+              "bg_button_mb": "#232323",
+              "border_button_mb": "#232323",
+              "color_button_mb": "#ffffff",
+              "lb_product_1": "",
+              "top_position_1": "10",
+              "left_position_1": "10",
+              "dots_color_1": "#ffffff",
+              "dots_bg_color_1": "#323232",
+              "dots_shadow_color_1": "#ffffff",
+              "lb_product_2": "",
+              "top_position_2": "10",
+              "left_position_2": "10",
+              "dots_color_2": "#ffffff",
+              "dots_bg_color_2": "#323232",
+              "dots_shadow_color_2": "#ffffff",
+              "lb_product_3": "",
+              "top_position_3": "10",
+              "left_position_3": "10",
+              "dots_color_3": "#ffffff",
+              "dots_bg_color_3": "#323232",
+              "dots_shadow_color_3": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "1540952363851-0"
+        ],
+        "settings": {
+          "layout": "full",
+          "bg_color": "",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 30,
+          "style_slideshow": "style_1",
+          "autoplay": true,
+          "slideshow_speed": "10000",
+          "slideshow_transition": "true",
+          "dots": "true",
+          "dots_color": "#707979",
+          "dots_active_color": "#747d7d",
+          "dots_opacity": true,
+          "bg_dots_color": "#bababa",
+          "arrow_active": true,
+          "arrow_color": "#636a6a",
+          "arrow_border_color": "#636a6a",
+          "arrow_bg_color": "rgba(0,0,0,0)",
+          "position_slick_arrow": "9.5%",
+          "min_width_banner_button": "",
+          "bg_video": "#866965",
+          "bg_overlay_opacity": 40,
+          "video_height": "38.3%",
+          "auto_playvideo": true,
+          "enable_categories": false,
+          "text_categories": "Shop by categories",
+          "label_color": "",
+          "bg_label": "",
+          "text_icon_color": "",
+          "menu": "",
+          "enable_banner": false
+        }
+      },
+      "1540984915288": {
+        "type": "home-sub-banner",
+        "disabled": true,
+        "blocks": {
+          "1540984915288-0": {
+            "type": "image",
+            "settings": {
+              "title": "Editor’s Pick",
+              "color_title": "#ffffff",
+              "link": ""
+            }
+          },
+          "1540984915288-1": {
+            "type": "image",
+            "settings": {
+              "title": "Shoes",
+              "color_title": "#ffffff",
+              "link": ""
+            }
+          },
+          "1540985049803": {
+            "type": "image",
+            "settings": {
+              "title": "Accessories",
+              "color_title": "#ffffff",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1540984915288-0",
+          "1540984915288-1",
+          "1540985049803"
+        ],
+        "settings": {
+          "display_sub_banner": true,
+          "layout": "default",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0,
+          "font_size_title": "16px",
+          "display_padding": true
+        }
+      },
+      "1541065669115": {
+        "type": "home-new-arrivals",
+        "disabled": true,
+        "settings": {
+          "layout": "default",
+          "new_arrivals_title": "New Arrivals",
+          "new_arrivals_des": "",
+          "title_style": "style_1",
+          "view_all": "",
+          "link_view_all": "",
+          "product_list_collection": "new-in",
+          "product_list_limit_all": 8,
+          "display_infinite_scrolling_homepage": true,
+          "collection_results_per_row1": "4",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 50
+        }
+      },
+      "1541402822593": {
+        "type": "home-featured-products",
+        "disabled": true,
+        "settings": {
+          "bg_color": "",
+          "layout_style": "layout_style_1",
+          "display_banner": false,
+          "banner_is": "left",
+          "banner_heading": "#CAMPAIGNS",
+          "font_size_banner_heading": "40px",
+          "color_banner_heading": "#ffffff",
+          "banner_sub_heading": "Spring Summer’08",
+          "font_size_banner_sub_heading": "13px",
+          "color_banner_sub_heading": "#ffffff",
+          "banner_des": "Phasellus lorem malesuada ligula pulvinar de cosmopolis",
+          "font_size_banner_des": "12px",
+          "color_banner_des": "#ffffff",
+          "banner_button": "Shop Now",
+          "link": "",
+          "banner_button_2": "Shop Now",
+          "link_2": "",
+          "bg_banner_button": "#ffffff",
+          "border_banner_button": "#ffffff",
+          "color_banner_button": "#232323",
+          "bg_color_box_style_2": "#ffffff",
+          "border_color_box_style_2": "#bcbcbc",
+          "featured_products_title": "Trending Now",
+          "color_text_title": "",
+          "font_size_title": "",
+          "text_alignment": "left",
+          "featured_products_des": "",
+          "featured_products_text_link": "",
+          "featured_products_link": "",
+          "color_text_link": "#ba7a2d",
+          "title_style": "style_1",
+          "show_slider_featured_collection": "milancelos",
+          "slider_featured_limit_all": 10,
+          "collection_results_per_row1": "4",
+          "featured_products_title_2": "Trending Now",
+          "featured_products_text_link_2": "",
+          "featured_products_link_2": "",
+          "show_slider_featured_collection_2": "",
+          "display_list_collection": false,
+          "text_list": "View all categories",
+          "url_list": "",
+          "margin_bottom_mb": 35,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 0
+        }
+      },
+      "1541414200176": {
+        "type": "home-custom-block-spotlight",
+        "disabled": true,
+        "blocks": {
+          "1541414200176-0": {
+            "type": "image",
+            "settings": {
+              "bg_color_column": "",
+              "title": "Lorem De Dorus",
+              "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
+              "button": "Shop Now",
+              "link": "",
+              "color_button": ""
+            }
+          },
+          "1541414200176-1": {
+            "type": "image",
+            "settings": {
+              "bg_color_column": "",
+              "title": "Milancelos Lanos",
+              "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
+              "button": "Shop Now",
+              "link": "",
+              "color_button": ""
+            }
+          },
+          "1541414200176-2": {
+            "type": "image",
+            "settings": {
+              "bg_color_column": "",
+              "title": "Como A Milano",
+              "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
+              "button": "Shop Now",
+              "link": "",
+              "color_button": ""
+            }
+          }
+        },
+        "block_order": [
+          "1541414200176-0",
+          "1541414200176-1",
+          "1541414200176-2"
+        ],
+        "settings": {
+          "layout": "default",
+          "layout_style": "layout_style_1",
+          "margin_bottom_mb": 25,
+          "margin_bottom_tab": 35,
+          "margin_bottom": 35,
+          "spotlight_block_title": "#Featured On Ella",
+          "spotlight_block_des": "",
+          "title_style": "style_1"
+        }
+      },
+      "1541559977022": {
+        "type": "home-brands",
+        "disabled": true,
+        "blocks": {
+          "1541560311488": {
+            "type": "image",
+            "settings": {
+              "title": "Loremous",
+              "link": ""
+            }
+          },
+          "1541560317185": {
+            "type": "image",
+            "settings": {
+              "title": "Isablella",
+              "link": ""
+            }
+          },
+          "1541560319232": {
+            "type": "image",
+            "settings": {
+              "title": "Loremous",
+              "link": ""
+            }
+          },
+          "1541560320472": {
+            "type": "image",
+            "settings": {
+              "title": "FERMENDS",
+              "link": ""
+            }
+          },
+          "1541560321823": {
+            "type": "image",
+            "settings": {
+              "title": "CONSEQAUR",
+              "link": ""
+            }
+          },
+          "1541560836473": {
+            "type": "image",
+            "settings": {
+              "title": "Loremous",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1541560311488",
+          "1541560317185",
+          "1541560319232",
+          "1541560320472",
+          "1541560321823",
+          "1541560836473"
+        ],
+        "settings": {
+          "layout": "default",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0,
+          "display_brand_border": true,
+          "display_bg_banner": false,
+          "bg_color_banner": "#f5f5f5",
+          "brand_title": "",
+          "brand_des": "",
+          "brands_view_all": "",
+          "brands_view_all_link": "",
+          "title_style": "style_1",
+          "brand_rows": "5"
+        }
+      },
+      "1541566560488": {
+        "type": "home-instagram",
+        "disabled": true,
+        "blocks": {
+          "1585729380684": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729405746": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729414607": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729422220": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729429667": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729437058": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729446521": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729453785": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729461676": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          },
+          "1585729471504": {
+            "type": "instagram",
+            "settings": {
+              "enable": true,
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1585729380684",
+          "1585729405746",
+          "1585729414607",
+          "1585729422220",
+          "1585729429667",
+          "1585729437058",
+          "1585729446521",
+          "1585729453785",
+          "1585729461676",
+          "1585729471504"
+        ],
+        "settings": {
+          "show_instagram": true,
+          "layout": "default",
+          "display_border_top": false,
+          "instagram_bg": "#fafafa",
+          "instagram_title": "#Ella On Instagram",
+          "instagram_des": "Phasellus lorem malesuada ligula pulvinar commodo maecenas",
+          "title_style": "style_2",
+          "display_instagram_button": true,
+          "instagram_button_text": "View Gallery",
+          "instagram_button_link": "",
+          "type_instagram": "default",
+          "embed_code": "",
+          "type_instagram_by_gallery": "popup_image",
+          "limit": "10",
+          "images_per_row": "5",
+          "slide_ins": "default_ins",
+          "display_arrow": true,
+          "slide_rows": "1"
+        }
+      },
+      "footer-4": {
+        "type": "footer-4",
+        "blocks": {
+          "1554384624838": {
+            "type": "footer_link",
+            "settings": {
+              "footer_title": "",
+              "footer_linklist": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "1554384624838"
+        ],
+        "settings": {
+          "layout": "padd_60",
+          "bg_footer_img": "none",
+          "bg_footer_color": "#fafafa",
+          "bg_footer_position_x": "left",
+          "bg_footer_position_y": "top",
+          "bg_footer_repeat": "repeat",
+          "bg_footer_attachment": "scroll",
+          "bg-footer-img": "",
+          "footer_title_color": "#232323",
+          "footer_link_color": "#707070",
+          "footer_link_hover_color": "#707070",
+          "bg_footer_line_color": "#ebebeb",
+          "display_store_location": false,
+          "footer_logo": "",
+          "footer_info_store": "",
+          "footer_social_enable": false,
+          "social_icon_color": "#232323",
+          "footer_newsletter_enable": false,
+          "footer_newsletter_title": "",
+          "footer_newsletter_des": "",
+          "guarantee_img": "",
+          "bg_newsletter_color": "#ffffff",
+          "newsletter_color": "#aaaaaa",
+          "newsletter_border_color": "#d7d7d7",
+          "bg_newsletter_button_color": "#232323",
+          "newsletter_button_color": "#ffffff",
+          "bg_footer_bottom_color": "#ffffff",
+          "footer_bottom_color": "#707070",
+          "footer_address_code": "",
+          "show_payment_icons": false,
+          "payment_display_visa": false,
+          "payment_display_visa_electron": false,
+          "payment_display_american_express": false,
+          "payment_display_master": false,
+          "payment_display_maestro": false,
+          "payment_display_solo": false,
+          "payment_display_paypal": false,
+          "payment_display_amazon_payments": false,
+          "payment_display_apple_pay": false,
+          "payment_display_bitcoin": false,
+          "payment_display_cirrus": false,
+          "payment_display_dankort": false,
+          "payment_display_diners_club": false,
+          "payment_display_discover": false,
+          "payment_display_dogecoin": false,
+          "payment_display_dwolla": false,
+          "payment_display_forbrugsforeningen": false,
+          "payment_display_interac": false,
+          "payment_display_jcb": false,
+          "payment_display_litecoin": false,
+          "payment_display_stripe": false,
+          "payment_display_sage": false,
+          "payment_display_wallet": false,
+          "icon_visa": "",
+          "icon_visa_electron": "",
+          "icon_master": "",
+          "icon_american_express": "",
+          "icon_maestro": "",
+          "icon_solo": "",
+          "icon_paypal": "",
+          "icon_amazon_payments": "",
+          "icon_apple_pay": "",
+          "icon_bitcoin": "",
+          "icon_cirrus": "",
+          "icon_dankort": "",
+          "icon_diners_club": "",
+          "icon_discover": "",
+          "icon_dogecoin": "",
+          "icon_dwolla": "",
+          "icon_forbrugsforeningen": "",
+          "icon_interac": "",
+          "icon_jcb": "",
+          "icon_litecoin": "",
+          "icon_stripe": "",
+          "icon_sage": "",
+          "icon_wallet": ""
+        }
+      },
+      "header-parallax": {
+        "type": "header-parallax",
+        "settings": {
+          "style_header": "style_1",
+          "display_header_top": true,
+          "top_message_text": "Mid-Season Sale Up to 70% OFF.",
+          "top_message_text_2": "",
+          "top_message_text_3": "",
+          "top_message_text_font_size": "12px",
+          "font_weight_bold": true,
+          "bg_header_top": "#ef6454",
+          "text_header_top_color": "#ffffff",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000000",
+          "max_height_logo_pc": "33px",
+          "max_height_logo_mb": "26px",
+          "display_parallax": true,
+          "font_weight_nav": false,
+          "menu_parallax_color": "#ffffff",
+          "text_color_lang_currency": "#000000",
+          "text_color_lang_currency_line": "#cccccc",
+          "text_color_sign_in": "#000000",
+          "search_color_icon": "#000000",
+          "bg_search_color": "#f8f8f8",
+          "search_color": "#787878",
+          "search_color_btn": "#333333",
+          "wishlist_color": "#000000",
+          "cart_color_icon": "#000000",
+          "bg_cart_color": "#1e1e1e",
+          "cart_color": "#ffffff",
+          "horizontal_linklist": "main-menu",
+          "display_fixtop_menu": true,
+          "alignment": "left",
+          "bg_menu": "#ffffff",
+          "bg_dropdown_menu": "#f8f8f8",
+          "color_menu_lv1": "#232323",
+          "hover_color_mnu_lv1": "#232323",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#ffffff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#ffffff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#ffffff",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "display_related_products": true,
+          "related_products_title": "Related Products",
+          "number_of_related_products": "8"
+        }
+      },
+      "header-supermarket": {
+        "type": "header-supermarket",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Mid-Season Sale up to 70% Off. End Ins:",
+          "countdown": "2020\/01\/7 0:0:00",
+          "bg_header_top": "#e95144",
+          "text_header_top_color": "#ffffff",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000000",
+          "max_height_logo_pc": "33px",
+          "max_height_logo_mb": "26px",
+          "bg_header_middel": "#f8f8f8",
+          "header_middel_text_color": "#5a5a5a",
+          "header_middel_icon_color": "#c3c3c3",
+          "info_icon_1": "",
+          "info_text_1": "",
+          "info_icon_2": "",
+          "info_text_2": "",
+          "display_free_shipping": true,
+          "free_shipping_text": "FREE DELIVERY WORLDWIDE",
+          "free_shipping_color": "#d64123",
+          "header-link_1_text": "Theme FAQs",
+          "header-link_1": "",
+          "header-link_2_text": "Need Help?",
+          "header-link_2": "",
+          "bg_header_bottom_color": "#ffffff",
+          "header_bottom_link_color": "#232323",
+          "header_bottom_icon_color": "#323232",
+          "bg_search_color": "#ffffff",
+          "search_color": "#323232",
+          "search_border_color": "#dcdcdc",
+          "bg_cart_color": "#e95144",
+          "cart_color": "#ffffff"
+        }
+      },
+      "navigation-supermarket": {
+        "type": "navigation-supermarket",
+        "settings": {
+          "display_fixtop_menu": true,
+          "horizontal_linklist": "main-menu",
+          "fb_like_code_text": "Like us",
+          "social_facebook_link": "",
+          "alignment": "left",
+          "display_vertical_menu": true,
+          "vertical_linklist": "main-menu",
+          "categories_title": "Categories",
+          "view_all": "View All",
+          "link_view_all": "",
+          "show_menu_at_mb": true,
+          "bg_title": "#f8f8f8",
+          "color_title": "#232323",
+          "color_view_all": "#848484",
+          "bg_menu": "#ffffff",
+          "bg_dropdown_menu": "#ffffff",
+          "color_menu_lv1": "#232323",
+          "hover_color_mnu_lv1": "#232323",
+          "font_size_mnu_lv1": "12px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#ffffff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#ffffff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#ffffff",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "1634537199079fe515": {
+        "type": "home-brands",
+        "blocks": {
+          "e9206ce5-aece-4da6-9bc0-6b2303d9e4a2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nfl-small.png",
+              "title": "",
+              "link": ""
+            }
+          },
+          "fafcf248-7b68-4ae8-889a-bc592467b0b7": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nfl-small.png",
+              "title": "Loremous",
+              "link": ""
+            }
+          },
+          "1807fd66-e453-4e50-8f1d-4fd6b56eb587": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nfl-small.png",
+              "title": "Loremous",
+              "link": ""
+            }
+          },
+          "3d6b789e-298b-4a06-a0c3-81fc8a1701e4": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nfl-small.png",
+              "title": "Loremous",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "e9206ce5-aece-4da6-9bc0-6b2303d9e4a2",
+          "fafcf248-7b68-4ae8-889a-bc592467b0b7",
+          "1807fd66-e453-4e50-8f1d-4fd6b56eb587",
+          "3d6b789e-298b-4a06-a0c3-81fc8a1701e4"
+        ],
+        "settings": {
+          "layout": "default",
+          "margin_bottom_mb": 30,
+          "margin_bottom_tab": 37,
+          "margin_bottom": 62,
+          "display_brand_border": false,
+          "display_bg_banner": true,
+          "bg_color_banner": "#0a0a0a",
+          "brand_title": "<p>Shop Your Favorite league<\/p>",
+          "brand_des": "",
+          "brands_view_all": "",
+          "brands_view_all_link": "",
+          "title_style": "style_2",
+          "brand_rows": "4"
+        }
+      },
+      "1634540174a77af39e": {
+        "type": "home-custom-block-baner",
+        "blocks": {
+          "1634540174a77af39e-0": {
+            "type": "largeImg",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/b1.png",
+              "image_mb": "shopify:\/\/shop_images\/b1.png",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "content_style": "style_1",
+              "display_bg_animation": false,
+              "color_bg_animation": "#f6f6f6",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "color_banner_heading_style2": "#10ffda",
+              "color_banner_heading_mb": "#232323",
+              "banner_sub_heading": "",
+              "font_size_banner_sub_heading": "13px",
+              "color_banner_sub_heading": "#f8f8f8",
+              "color_banner_sub_heading_mb": "#232323",
+              "banner_des": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#ffffff",
+              "color_banner_des_mb": "#ffffff",
+              "countdown": "",
+              "banner_button": "SHOP NOW",
+              "link": "shopify:\/\/collections\/new-arrivals",
+              "bg_banner_button": "rgba(0,0,0,0)",
+              "border_banner_button": "#ffffff",
+              "color_banner_button": "#ffffff",
+              "bg_banner_button_mb": "#232323",
+              "border_banner_button_mb": "#232323",
+              "color_banner_button_mb": "#ffffff",
+              "min_width_banner_button": "220px"
+            }
+          }
+        },
+        "block_order": [
+          "1634540174a77af39e-0"
+        ],
+        "settings": {
+          "layout": "full",
+          "layout_style": "layout_style_1",
+          "display_bg_banner": false,
+          "bg_color_banner": "#f5f5f5",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "img_align": "center",
+          "margin_bottom_mb": 32,
+          "margin_bottom_tab": 38,
+          "margin_bottom": 100
+        }
+      },
+      "home-brands": {
+        "type": "home-brands",
+        "settings": {
+          "layout": "default",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0,
+          "display_brand_border": true,
+          "display_bg_banner": false,
+          "bg_color_banner": "#f5f5f5",
+          "brand_title": "",
+          "brand_des": "",
+          "brands_view_all": "",
+          "brands_view_all_link": "",
+          "title_style": "style_1",
+          "brand_rows": "5"
+        }
+      },
+      "16345457269ab474fa": {
+        "type": "home-list-collections",
+        "blocks": {
+          "c5de144d-82d2-4a4e-8419-5a396910bdbf": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cool-caps.png",
+              "collection": "mitchell-ness-jacket-and-hoodies",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
+              "color_button": "#232323"
+            }
+          },
+          "4abb7225-d35b-4c7b-b270-58216fc93324": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cool-caps.png",
+              "collection": "hot-right-now",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
+              "color_button": "#232323"
+            }
+          }
+        },
+        "block_order": [
+          "c5de144d-82d2-4a4e-8419-5a396910bdbf",
+          "4abb7225-d35b-4c7b-b270-58216fc93324"
+        ],
+        "settings": {
+          "list_collection_title_size": "20",
+          "display_padding": true,
+          "display_absolute": false,
+          "position_absolute": "5.3%",
+          "block_des": "",
+          "margin_bottom_mb": 35,
+          "margin_bottom_tab": 26,
+          "margin_bottom": 63
+        }
+      },
+      "163454670817c32bb9": {
+        "type": "home-custom-block-baner",
+        "blocks": {
+          "163454670817c32bb9-0": {
+            "type": "largeImg",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/b4.png",
+              "image_mb": "shopify:\/\/shop_images\/b4.png",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "content_style": "style_1",
+              "display_bg_animation": false,
+              "color_bg_animation": "#f6f6f6",
+              "alignment": "left",
+              "banner_heading": "WEEKLY OFFER",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "color_banner_heading_style2": "#10ffda",
+              "color_banner_heading_mb": "#232323",
+              "banner_sub_heading": "",
+              "font_size_banner_sub_heading": "40px",
+              "color_banner_sub_heading": "#ffffff",
+              "color_banner_sub_heading_mb": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "color_banner_des_mb": "#232323",
+              "countdown": "",
+              "banner_button": "shop now",
+              "link": "shopify:\/\/collections\/hot-right-now",
+              "bg_banner_button": "rgba(0,0,0,0)",
+              "border_banner_button": "#f8f8f8",
+              "color_banner_button": "#ffffff",
+              "bg_banner_button_mb": "#232323",
+              "border_banner_button_mb": "#232323",
+              "color_banner_button_mb": "#ffffff",
+              "min_width_banner_button": "237px"
+            }
+          }
+        },
+        "block_order": [
+          "163454670817c32bb9-0"
+        ],
+        "settings": {
+          "layout": "full",
+          "layout_style": "layout_style_1",
+          "display_bg_banner": false,
+          "bg_color_banner": "#f5f5f5",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "img_align": "center",
+          "margin_bottom_mb": 54,
+          "margin_bottom_tab": 65,
+          "margin_bottom": 100
+        }
+      },
+      "163454779792b3b285": {
+        "type": "home-list-collections",
+        "blocks": {
+          "51203f3b-8d10-4f02-bbde-a4e50ee5defb": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/jersey_adobespark.png",
+              "collection": "accessories",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
+              "color_button": "#232323"
+            }
+          },
+          "c26022e5-8a41-444c-a55c-9189386f531d": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/jersey_adobespark.png",
+              "collection": "mlb-custom-fitted-baseball-hats-and-caps",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
+              "color_button": "#232323"
+            }
+          },
+          "74a76082-d38e-4909-8e62-02de92d8bf12": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/jersey_adobespark.png",
+              "collection": "nba-mitchell-ness-jerseys-and-shorts",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
+              "color_button": "#232323"
+            }
+          },
+          "a5940f23-52bf-4e41-9754-b9e532997909": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/jersey_adobespark.png",
+              "collection": "pin",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
+              "color_button": "#232323"
+            }
+          }
+        },
+        "block_order": [
+          "51203f3b-8d10-4f02-bbde-a4e50ee5defb",
+          "c26022e5-8a41-444c-a55c-9189386f531d",
+          "74a76082-d38e-4909-8e62-02de92d8bf12",
+          "a5940f23-52bf-4e41-9754-b9e532997909"
+        ],
+        "settings": {
+          "list_collection_title_size": "20",
+          "display_padding": true,
+          "display_absolute": false,
+          "position_absolute": "5.3%",
+          "block_des": "",
+          "margin_bottom_mb": 36,
+          "margin_bottom_tab": 53,
+          "margin_bottom": 54
+        }
+      },
+      "1634743456872800cd": {
+        "type": "home-custom-block-baner",
+        "blocks": {
+          "1634743456872800cd-0": {
+            "type": "largeImg",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/b2.png",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "content_style": "style_1",
+              "display_bg_animation": false,
+              "color_bg_animation": "#f6f6f6",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "color_banner_heading_style2": "#10ffda",
+              "color_banner_heading_mb": "#232323",
+              "banner_sub_heading": "",
+              "font_size_banner_sub_heading": "13px",
+              "color_banner_sub_heading": "#ffffff",
+              "color_banner_sub_heading_mb": "#232323",
+              "banner_des": "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos.",
+              "font_size_banner_des": "14px",
+              "color_banner_des": "#f8f8f8",
+              "color_banner_des_mb": "#232323",
+              "countdown": "",
+              "banner_button": "SHOP NOW",
+              "link": "",
+              "bg_banner_button": "rgba(0,0,0,0)",
+              "border_banner_button": "#f8f8f8",
+              "color_banner_button": "#ffffff",
+              "bg_banner_button_mb": "#232323",
+              "border_banner_button_mb": "#232323",
+              "color_banner_button_mb": "#ffffff",
+              "min_width_banner_button": "237px"
+            }
+          }
+        },
+        "block_order": [
+          "1634743456872800cd-0"
+        ],
+        "settings": {
+          "layout": "full",
+          "layout_style": "layout_style_1",
+          "display_bg_banner": false,
+          "bg_color_banner": "#f5f5f5",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "img_align": "center",
+          "margin_bottom_mb": 45,
+          "margin_bottom_tab": 43,
+          "margin_bottom": 100
+        }
+      },
+      "16347434883a3dfacb": {
+        "type": "home-custom-block-baner",
+        "blocks": {
+          "16347434883a3dfacb-0": {
+            "type": "largeImg",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/b3.png",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "content_style": "style_1",
+              "display_bg_animation": false,
+              "color_bg_animation": "#f6f6f6",
+              "alignment": "left",
+              "banner_heading": "WEEKLY OFFER HERE DROP IN",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#ffffff",
+              "color_banner_heading_style2": "#10ffda",
+              "color_banner_heading_mb": "#232323",
+              "banner_sub_heading": "",
+              "font_size_banner_sub_heading": "13px",
+              "color_banner_sub_heading": "#ffffff",
+              "color_banner_sub_heading_mb": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "color_banner_des_mb": "#232323",
+              "countdown": "",
+              "banner_button": "",
+              "link": "",
+              "bg_banner_button": "#232323",
+              "border_banner_button": "#232323",
+              "color_banner_button": "#ffffff",
+              "bg_banner_button_mb": "#232323",
+              "border_banner_button_mb": "#232323",
+              "color_banner_button_mb": "#ffffff",
+              "min_width_banner_button": "237px"
+            }
+          }
+        },
+        "block_order": [
+          "16347434883a3dfacb-0"
+        ],
+        "settings": {
+          "layout": "full",
+          "layout_style": "layout_style_1",
+          "display_bg_banner": false,
+          "bg_color_banner": "#f5f5f5",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "img_align": "center",
+          "margin_bottom_mb": 25,
+          "margin_bottom_tab": 30,
+          "margin_bottom": 100
+        }
+      },
+      "header-03": {
+        "type": "header-03",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Top Promotion Bar Description",
+          "font_weight_bold": false,
+          "bg_header_top": "#232323",
+          "text_header_top_color": "#fff",
+          "display_parallax": false,
+          "menu_parallax_color": "#fff",
+          "bg_header_bottom_color_1": "#f8f8f8",
+          "bg_header_bottom_color": "#fff",
+          "header_bottom_icon_color": "#232323",
+          "header_bottom_text_color": "#3c3c3c",
+          "display_header_social": true,
+          "display_customer_service": true,
+          "customer_service_text": "Customer Service 1.900.000.6690",
+          "display_free_shipping": true,
+          "free_shipping_text": "Mid-Season Sale Up to 70% OFF",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "37px",
+          "max_height_logo_mb": "26px",
+          "bg_search_color": "#fff",
+          "search_color": "#848484",
+          "search_border_color": "#ebebeb",
+          "bg_cart_color": "#e95144",
+          "cart_color": "#fff"
+        }
+      },
+      "header-02": {
+        "type": "header-02",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Mid-Season Sale Up to 70% OFF.",
+          "top_message_font_size": "12px",
+          "bg_header_top": "#ffe8e8",
+          "text_header_top_color": "#b05d5d",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "37px",
+          "max_height_logo_mb": "26px",
+          "bg_header_bottom_color": "#fff",
+          "header_bottom_link_color": "#3c3c3c",
+          "header_bottom_icon_color": "#232323",
+          "header_bottom_padding_top": "30px",
+          "header_bottom_padding_bottom": "8px",
+          "free_shipping_text": "Free Shipping Over $99",
+          "bg_search_color": "#fff",
+          "search_color": "#3c3c3c",
+          "search_border_color": "#7b7b7b",
+          "search_btn_color": "#232323",
+          "bg_cart_color": "#fff",
+          "cart_color": "#646464",
+          "cart_font_size": "12px"
+        }
+      },
+      "header-04": {
+        "type": "header-04",
+        "settings": {
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "30px",
+          "max_height_logo_mb": "26px",
+          "bg_search_color": "#fff",
+          "search_color": "#232323",
+          "search_color_border": "#3c3c3c",
+          "bg_cart_color": "#1e1e1e",
+          "cart_color": "#fff",
+          "horizontal_linklist": "main-menu",
+          "display_fixtop_menu": true,
+          "alignment": "left",
+          "bg_menu": "#fff",
+          "bg_dropdown_menu": "#f8f8f8",
+          "color_menu_lv1": "#232323",
+          "hover_color_mnu_lv1": "#232323",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#fff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#fff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#fff",
+          "display_header_policies": true,
+          "policies_border_color": "#a7a7a7",
+          "policies_bg_color": "#232323",
+          "policies_color": "#fff",
+          "icon_1": "",
+          "text_1": "Free Shipping on all orders *",
+          "link_1": "",
+          "icon_2": "",
+          "text_2": "Free Shipping on all orders *",
+          "link_2": "",
+          "icon_3": "",
+          "text_3": "Free Shipping on all orders *",
+          "link_3": "",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "header-05": {
+        "type": "header-05",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Mid-Season Sale Up to 70% OFF.",
+          "customer_service_text": "Customer Service 1.900.000.6690",
+          "bg_header_top": "#ffe8e8",
+          "text_header_top_color": "#fff",
+          "text_header_top_color_1": "#cad3f1",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "44px",
+          "max_height_logo_mb": "26px",
+          "free_shipping_text": "Flash Sale",
+          "free_shipping_text_link": "",
+          "bg_header_bottom_color": "#fff",
+          "header_bottom_link_color": "#232323",
+          "header_bottom_text_color": "#323232",
+          "header_bottom_border_color": "#e6e6e6",
+          "icon_search_text_color": "#505050",
+          "icon_search_color": "#202020",
+          "bg_search_color": "#eaeaea",
+          "search_text_color": "#bcbcbc",
+          "search_icon_color": "#ba7a2d",
+          "icon_wishlist_color": "#090909",
+          "icon_wishlist_line_color": "#e6e6e6",
+          "icon_cart_color": "#202020",
+          "bg_cart_color": "#ffe5e5",
+          "cart_color": "#323232"
+        }
+      },
+      "navigation-05": {
+        "type": "navigation-05",
+        "settings": {
+          "display_fixtop_menu": true,
+          "horizontal_linklist": "main-menu",
+          "alignment": "left",
+          "bg_menu": "#232323",
+          "bg_dropdown_menu": "#fff",
+          "color_menu_lv1": "#fff",
+          "hover_color_mnu_lv1": "#fff",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#fff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#fff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#fff",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "header-06": {
+        "type": "header-06",
+        "settings": {
+          "display_header_top": true,
+          "customer_service_text": "Available 24\/7 at <a href=\"tel:(018)%20900-6690\/\">(018) 900-6690<\/a>",
+          "font_size_content_2": "11px",
+          "bg_header_top": "#ffe8e8",
+          "text_header_top_color": "#fff",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "44px",
+          "max_height_logo_mb": "26px",
+          "icon_search_color": "#000000",
+          "bg_search_color": "#f8f8f8",
+          "bg_border_search_color": "#ebebee",
+          "search_text_color": "#bcbcbc",
+          "search_icon_color": "#ba7a2d",
+          "icon_account_color": "#000000",
+          "icon_wishlist_color": "#000000",
+          "icon_cart_color": "#000000",
+          "bg_cart_color": "#ffe5e5",
+          "cart_color": "#323232",
+          "text_active_color": "#202020",
+          "text_active_bg_color": "#ffffff"
+        }
+      },
+      "navigation-06": {
+        "type": "navigation-06",
+        "settings": {
+          "display_fixtop_menu": true,
+          "horizontal_linklist": "main-menu",
+          "text_sale_item": "",
+          "color_text_sale_item": "#ed4649",
+          "bg_menu": "#232323",
+          "bg_dropdown_menu": "#fff",
+          "color_menu_lv1": "#fff",
+          "hover_color_mnu_lv1": "#fff",
+          "hover_border_color_mnu_lv1": "#b9b9b9",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#fff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#fff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#fff",
+          "display_megamenu": true,
+          "border_bg_style_new": "#e0e0e1",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "header-07": {
+        "type": "header-07",
+        "settings": {
+          "display_header_top": false,
+          "top_message_text": "Mid-Season Sale Up to 70% OFF.",
+          "top_message_text_2": "",
+          "top_message_text_3": "",
+          "top_message_text_font_size": "16px",
+          "font_weight_bold": false,
+          "bg_header_top": "#f7f8fa",
+          "text_header_top_color": "#232323",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "44px",
+          "max_height_logo_mb": "26px",
+          "customer_service_text": "Customer Service 1.900.000.6690",
+          "free_shipping_text": "Flash Sale",
+          "free_shipping_text_link": "",
+          "bg_header_bottom_color": "#fff",
+          "header_bottom_text_color": "#323232",
+          "header_bottom_link_color": "#ffffff",
+          "header_bg_flash_text_color": "#307058",
+          "icon_user_text_color": "#505050",
+          "icon_search_color": "#202020",
+          "bg_border_search_color": "#e4e2e2",
+          "bg_search_color": "#fff",
+          "search_text_color": "#bcbcbc",
+          "search_icon_color": "#202020",
+          "icon_wishlist_color": "#090909",
+          "icon_wishlist_line_color": "#e6e6e6",
+          "icon_cart_color": "#202020",
+          "bg_cart_color": "transparent",
+          "cart_color": "#323232"
+        }
+      },
+      "navigation-07": {
+        "type": "navigation-07",
+        "settings": {
+          "display_fixtop_menu": true,
+          "horizontal_linklist": "main-menu",
+          "alignment": "left",
+          "bg_menu": "#232323",
+          "bg_dropdown_menu": "#fff",
+          "color_menu_lv1": "#fff",
+          "hover_color_mnu_lv1": "#fff",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#fff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#fff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#fff",
+          "display_megamenu": true,
+          "border_bg_style_new": "#f5f5f5",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "header-08": {
+        "type": "header-08",
+        "settings": {
+          "brand_type": "image",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000000",
+          "logo_pc": "shopify:\/\/shop_images\/LOGO_PNG_180x_1.png",
+          "max_height_logo_pc": "140px",
+          "logo": "shopify:\/\/shop_images\/LOGO_PNG_180x_1.png",
+          "max_height_logo_mb": "95px",
+          "bg_header_bottom_color": "#ffffff",
+          "header_bottom_link_color": "#232323",
+          "header_bottom_icon_color": "#323232",
+          "position_header_text": "right",
+          "display_free_shipping": true,
+          "free_shipping_text": "Available 24\/7 at",
+          "free_shipping_color": "#d64123",
+          "display_gift_cards": false,
+          "gift_cards_text": "Gift Cards",
+          "gift_cards_link": "",
+          "icon_search_color": "#161880",
+          "bg_search_color": "#ffffff",
+          "search_color": "#323232",
+          "style_cart": "style_1",
+          "bg_cart_color": "#e95144",
+          "cart_color": "#ffffff"
+        }
+      },
+      "navigation-08": {
+        "type": "navigation-08",
+        "blocks": {
+          "e98cdb19-67ed-4d43-a3b6-d0665da9ff47": {
+            "type": "style_2",
+            "settings": {
+              "megamenu_items_2": "MLB",
+              "banner_first_style_2": "shopify:\/\/shop_images\/b2.png",
+              "link_banner_first_style_2": "shopify:\/\/collections\/hot-right-now",
+              "banner_second_style_2": "shopify:\/\/shop_images\/jersey.png",
+              "link_banner_second_style_2": "shopify:\/\/collections\/mitchell-ness-jacket-and-hoodies",
+              "link_banner_third_style_2": "shopify:\/\/collections\/mlb-custom-fitted-baseball-hats-and-caps"
+            }
+          }
+        },
+        "block_order": [
+          "e98cdb19-67ed-4d43-a3b6-d0665da9ff47"
+        ],
+        "settings": {
+          "display_fixtop_menu": true,
+          "logo_fix": "shopify:\/\/shop_images\/LOGO_PNG_180x_1.png",
+          "horizontal_linklist": "mlb",
+          "text_help": "",
+          "text_help_link": "",
+          "color_text_right": "#ffffff",
+          "color_icon_right": "#0a6cdc",
+          "color_text_right_line": "#3e4093",
+          "display_vertical_menu": false,
+          "vertical_linklist": "mlb",
+          "bg_color_hover_menu_vertical": "#fd6506",
+          "color_hover_text_menu_vertical": "#ffffff",
+          "categories_title": "Categories",
+          "color_title": "#232323",
+          "color_title_icon": "#fd6506",
+          "color_title_line": "rgba(0,0,0,0)",
+          "bg_menu": "#363030",
+          "bg_dropdown_menu": "#ffffff",
+          "bg_dropdown_menu_item": "#f5f5f5",
+          "color_menu_lv1": "#ffffff",
+          "hover_color_mnu_lv1": "#ffffff",
+          "font_size_mnu_lv1": "24px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#ffffff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#ffffff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#ffffff",
+          "display_megamenu": true,
+          "bg_style_new_top": "#f5f5f5",
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "header-vertical": {
+        "type": "header-vertical",
+        "settings": {
+          "bg_header": "#fff",
+          "color_header": "#282828",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "33px",
+          "max_height_logo_mb": "26px",
+          "bg_search_color": "#fff",
+          "search_color": "#969696",
+          "search_color_border": "#c1c1c1",
+          "bg_cart_color": "#e95144",
+          "cart_color": "#fff",
+          "display_fixtop_menu": true,
+          "bg_menu": "#fff",
+          "bg_dropdown_menu": "#fff",
+          "color_menu_lv1": "#232323",
+          "hover_color_mnu_lv1": "#232323",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#fff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#fff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#fff",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "navigation-vertical-menu": {
+        "type": "navigation-vertical-menu",
+        "settings": {
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "max_height_logo_pc": "33px",
+          "horizontal_linklist": "main-menu",
+          "display_social": true,
+          "address_code": "Shopify themes by Halothemes",
+          "display_typography_label": true,
+          "alignment": "left",
+          "bg_menu": "#232323",
+          "bg_dropdown_menu": "#fff",
+          "color_menu_lv1": "#fff",
+          "hover_color_mnu_lv1": "#fff",
+          "font_size_mnu_lv1": "13px",
+          "color_menu_lv2": "#232323",
+          "hover_color_mnu_lv2": "#232323",
+          "font_size_mnu_lv2": "12px",
+          "color_menu_lv3": "#3c3c3c",
+          "hover_color_mnu_lv3": "#0688e2",
+          "font_size_mnu_lv3": "12px",
+          "enable_sale": true,
+          "lb_sale": "Sale",
+          "sale_item": "",
+          "bg_lb_sale": "#ef6454",
+          "color_lb_sale": "#fff",
+          "enable_new": true,
+          "lb_new": "New",
+          "new_item": "",
+          "bg_lb_new": "#06bfe2",
+          "color_lb_new": "#fff",
+          "enable_hot": true,
+          "lb_hot": "Hot",
+          "hot_item": "",
+          "bg_lb_hot": "#ffbb49",
+          "color_lb_hot": "#fff",
+          "display_megamenu": true,
+          "bg_style_new": "#eaeaea",
+          "bg_color_arrow": "#8c8c8c",
+          "color_arrow": "#ffffff"
+        }
+      },
+      "1634919786984871b5": {
+        "type": "newsletter-block",
+        "blocks": {
+          "1634919786984871b5-0": {
+            "type": "image",
+            "settings": {
+              "image_new": "shopify:\/\/shop_images\/b5.png",
+              "banner_title": "Newsletter Via email",
+              "font_size_banner_title": "20px",
+              "color_banner_title": "#ffffff",
+              "banner_heading": "Receive our latest updates about our products and promotions.",
+              "font_size_banner_heading": "12px",
+              "color_banner_heading": "#ffffff",
+              "ft_input": "#ffffff",
+              "ft_input_br": "#ffffff",
+              "ft_input_text": "#5f5f5f",
+              "ft_submit": "#0f0f0f",
+              "ft_submit_br": "#0f0f0f",
+              "ft_submit_text": "#ffffff",
+              "ft_submit_hover": "#fff",
+              "ft_submit_br_hover": "#232323",
+              "ft_submit_text_hover": "#232323"
+            }
+          }
+        },
+        "block_order": [
+          "1634919786984871b5-0"
+        ],
+        "settings": {
+          "display_block_newsletter": true,
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 31
+        }
+      },
+      "footer-parallax": {
+        "type": "footer-parallax",
+        "settings": {
+          "footer_border_top": true,
+          "bg_footer_img": "bg-footer",
+          "bg_footer_color": "#f8f8f8",
+          "bg_footer_position_x": "left",
+          "bg_footer_position_y": "top",
+          "bg_footer_repeat": "repeat",
+          "bg_footer_attachment": "scroll",
+          "footer_title_color": "#232323",
+          "footer_link_color": "#707070",
+          "footer_link_hover_color": "#707070",
+          "bg_footer_line_color": "#ebebeb",
+          "footer_social_enable": false,
+          "footer_newsletter_enable": false,
+          "footer_newsletter_title": "",
+          "des_newslette": "",
+          "bg_newsletter_color": "#fff",
+          "newsletter_color": "#acacac",
+          "newsletter_border_color": "#d7d7d7",
+          "bg_newsletter_button_color": "#232323",
+          "newsletter_button_color": "#fff",
+          "bg_footer_bottom_color": "#f8f8f8",
+          "footer_bottom_color": "#707070",
+          "footer_address_code": "",
+          "show_payment_icons": false,
+          "payment_display_visa": false,
+          "payment_display_visa_electron": false,
+          "payment_display_american_express": false,
+          "payment_display_master": false,
+          "payment_display_maestro": false,
+          "payment_display_solo": false,
+          "payment_display_paypal": false,
+          "payment_display_amazon_payments": false,
+          "payment_display_apple_pay": false,
+          "payment_display_bitcoin": false,
+          "payment_display_cirrus": false,
+          "payment_display_dankort": false,
+          "payment_display_diners_club": false,
+          "payment_display_discover": false,
+          "payment_display_dogecoin": false,
+          "payment_display_dwolla": false,
+          "payment_display_forbrugsforeningen": false,
+          "payment_display_interac": false,
+          "payment_display_jcb": false,
+          "payment_display_litecoin": false,
+          "payment_display_stripe": false,
+          "payment_display_sage": false,
+          "payment_display_wallet": false,
+          "payment_display_western": false
+        }
+      }
+    },
+    "content_for_index": [
+      "1540952363851",
+      "1634537199079fe515",
+      "1634540174a77af39e",
+      "1634743456872800cd",
+      "16347434883a3dfacb",
+      "1540984915288",
+      "1541065669115",
+      "1541402822593",
+      "1541414200176",
+      "1541559977022",
+      "1541566560488",
+      "16345457269ab474fa",
+      "163454670817c32bb9",
+      "163454779792b3b285",
+      "1634919786984871b5"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "search_placeholder": "search",
+      "mailing_list_form_action": "\/\/halothemes.us3.list-manage.com\/subscribe\/post?u=0bf85dc81d846feb53a235178&amp;id=89ea28643a",
+      "body_font_size": "12",
+      "body_color": "#3c3c3c",
+      "display_breadcrumb": true,
+      "breadcrumb_color": "#999999",
+      "breadcrumb_text_transform": "capitalize",
+      "page_title_color": "#232323",
+      "page_title_text_align": "left",
+      "display_popup_newsletter": true,
+      "popup_newsletter_title": "Join Our Mailing List",
+      "display_popup_social": true,
+      "enable_wishlist": true,
+      "product_image_border": false,
+      "product_image_border_color": "#e6e6e6",
+      "use_color_swatch": true,
+      "display_size_chart": true,
+      "display_product_reviews": true,
+      "enable_quick_view": true,
+      "display_quickview_availability": true,
+      "display_quickview_product_type": true,
+      "display_quickview_vendor": true,
+      "display_quickview_subtotal": true,
+      "show_shipping_calculator": true,
+      "shipping_calculator_heading": "Get shipping estimates",
+      "shipping_calculator_default_country": "United States",
+      "shipping_calculator_submit_button_label": "Calculate Shipping",
+      "shipping_calculator_submit_button_label_disabled": "Calculating...",
+      "enable_multiple_currencies": true,
+      "currency_1_unit": "USD",
+      "currency_2_unit": "EUR",
+      "currency_3_unit": "GBP",
+      "currency_4_unit": "CHF",
+      "checkout_use_header_image": true,
+      "checkout_banner_background_color": "#ffffff",
+      "checkout_logo": "checkout_logo.png",
+      "checkout_headline": "",
+      "checkout_accent_color": "#2d2d2d",
+      "checkout_button_color": "#000000",
+      "checkout_call_to_action_color": "#000000",
+      "customer_layout": "theme",
+      "link_color": "#0688e2"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{% assign number_of_related_products = section.settings.number_of_related_products | times:1 %}
+
+{% assign rows = section.settings.related_products_per_row %}
+
+{% if settings.product_layout == "full_with" or template.suffix == 'full-width' %}
+    {%- assign class = 'four-items verticle' -%}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col-xl-12' -%}
+
+{% elsif settings.product_layout == "grouped" or template.suffix == 'grouped' %}
+    {%- assign class = 'five-items' -%}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+{% else %}
+
+  {% if section.settings.style_moreview == 'horizontal' or settings.product_layout == 'default' or settings.product_layout == 'skin_1' %}
+    {% if settings.product_layout == 'skin_1' and settings.layout_style == 'layout_style_fullwidth' %}
+      {%- assign class = 'five-items' -%}
+      {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+    {% else %}
+      {%- assign class = 'four-items' -%}
+      {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+    {% endif %}
+  {% else %}
+    {% if settings.layout_style == 'layout_style_surfup' %}
+      {%- assign class = 'four-items' -%}
+      {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+    {% else %}
+      {%- assign class = 'five-items' -%}
+      {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+    {% endif %}
+  {% endif %}
+
+{% endif %}
+
+{% if section.settings.display_related_products %}
+<div id="product-recommendations">
+  <div class="page-width product-recommendations js-product-recomendation" data-template="{% if template.suffix == 'gallery' or template.suffix == 'full-width' %}{{ template.suffix }}{% endif %}" data-product-id="{{ product.id }}" data-limit="{{ number_of_related_products }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-related-products-slider>
+    {% if recommendations.products_count > 0 %}
+    <div class="widget-product">
+      <div class="products-grid grid grid--uniform grid--view-items row {{ class }}">
+        {% for product in recommendations.products %}
+        <div class="grid-item small--one-half medium-up--one-quarter col-12 {% if settings.product_image_border %} grid-item-border{% endif %}">
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, check_product: true, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, check_product: true, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, check_product: true, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, check_product: true, serial: forloop.index %}
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% style %}
+    #product-recommendations, #shopify-section-product-recommendations {
+        width: 100%;
+    }
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Products Recomendation",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "display_related_products",
+            "label": "Display Related Products?",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "related_products_title",
+            "label": "Title of related products block",
+            "default": "Related Products"
+        },
+        {
+            "type": "text",
+            "id": "number_of_related_products",
+            "label": "Number of related products",
+            "default": "8"
+        },
+        {
+          "type": "select",
+          "id": "related_products_per_row",
+          "label": "Products per row",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            }, 
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ],
+          "default": "5"
+        }
+  ]
+  }
+{% endschema %}

@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+      }
+    },
+    "testimonials": {
+      "type": "collection-testimonials",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "brand": {
+      "type": "brand-supermarket",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "recently-view": {
+      "type": "recently-viewed-products",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "brand",
+    "testimonials",
+    "recently-view"
+  ]
+}

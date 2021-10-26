@@ -1,0 +1,149 @@
+{% if settings.use_color_swatch %}
+<ul class="item-swatch">
+  
+    {% if option_color_swatch contains downcased_option %}
+    {% assign colorlist = '' %}
+    {% assign color = '' %}
+    {% assign option_count = 0 %}
+    {% for variant in product.variants %}
+    {% capture color %}
+    {{ variant.options[index] }}
+    {% endcapture %}
+    {% unless colorlist contains color %}
+    {% assign text = color | handleize %}
+
+    {% if option_count < 4 %}
+    <li>
+        <div class="tooltip" style="display: none;">
+            {{color}}
+        </div>
+
+        <label data-toggle="tooltip" {% if product.options_with_values.size == 1 %}data-with-one-option="{{variant.id}}" data-quantity="{% if variant.available %}1{% else %}0{% endif %}" data-price="{{ variant.price }}" data-compare_at_price="{{ variant.compare_at_price }}"{% endif %} class="{% if option_count == 0 %}active{% endif %} {% if product.options_with_values.size == 1 and variant.unavailable %}soldout{% endif %}" data-value="{{ text }}" data-title="{{color}}" title="{{color}}" data-id-product="{{variant.id}}" {% if variant.image != null %}  data-img="{{ variant.image.src | product_img_url: '800x' }}"{% endif %} style="
+          {%- if settings.color_swatch_style == 'variant' or settings.color_swatch_style == 'variant_grouped'-%}
+            {%- if variant.image != null -%}
+            {%- else -%}
+            background-color: {{ color | split: ' ' | last | handle }};
+            {%- endif -%}
+          {%- else -%}
+            {%- if text == 'white' -%}border: 1px solid #d1d1d1; {%- endif -%}
+              {% if settings.show_product_color_img %}
+                background-image: url({{ text | append: '.png' | file_url }});
+              {% endif %}
+            background-color: {{ color | split: ' ' | last | handle }};
+          {%- endif -%}
+        ">
+          {% if settings.color_swatch_style =='variant' or settings.color_swatch_style == 'variant_grouped' %}
+            {% if variant.image != null %}
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 class="lazyload"
+                 data-src="{{ variant.image.src | product_img_url: '24x'}}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ variant.image.src | product_img_url: '24x'}}"
+                 data-sizes="auto">
+            {% else %}
+              {% if settings.show_product_color_img %}
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 class="lazyload"
+                 data-src="{{ text | append: '.png' | file_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ text | append: '.png' | file_url }}"
+                 data-sizes="auto" onError="style.display = 'none';">
+              {% endif %}
+            {% endif %}
+          {% else %}
+            {% if settings.show_product_color_img %}
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 class="lazyload file_img"
+                 data-src="{{ text | append: '.png' | file_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ text | append: '.png' | file_url }}"
+                 data-sizes="auto" onError="style.display = 'none';">
+            {% endif %}
+          {% endif %}
+        </label>
+
+        {% assign option_count = option_count | plus : 1 %}
+    </li>
+    {% else %}
+
+      {% if option_count == 4 %}
+      <li class="group-swatch" style="display: none">
+      {% endif %}
+      <div>
+        <div class="tooltip" style="display: none;">
+            {{color}}
+        </div>
+
+        <label data-toggle="tooltip" {% if product.options_with_values.size == 1 %}data-with-one-option="{{variant.id}}" data-quantity="{% if variant.available %}1{% else %}0{% endif %}" data-price="{{ variant.price }}" data-compare_at_price="{{ variant.compare_at_price }}"{% endif %} data-value="{{ text }}" data-id-product="{{variant.id}}" data-title="{{color}}" title="{{color}}" {% if variant.image != null %}  data-img="{{ variant.image.src | product_img_url: '800x' }}"{% endif %} style="
+          {%- if settings.color_swatch_style == 'variant' or settings.color_swatch_style == 'variant_grouped'-%}
+          {%- if variant.image != null -%}
+          {%- else -%}
+          background-color: {{ color | split: ' ' | last | handle }};
+          {%- endif -%}
+          {%- else -%}
+          {%- if text == 'white' -%}border: 1px solid #d1d1d1; {%- endif -%}
+            {% if settings.show_product_color_img %}
+            background-image: url({{ text | append: '.png' | file_url }});
+            {% endif %}
+          background-color: {{ color | split: ' ' | last | handle }};
+          {%- endif -%}
+        ">
+          {% if settings.color_swatch_style =='variant' or settings.color_swatch_style == 'variant_grouped' %}
+            {% if variant.image != null %}
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 class="lazyload"
+                 data-src="{{ variant.image.src | product_img_url: '24x'}}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ variant.image.src | product_img_url: '24x'}}"
+                 data-sizes="auto">
+            {% else %}
+              {% if settings.show_product_color_img %}
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 class="lazyload"
+                 data-src="{{ text | append: '.png' | file_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ text | append: '.png' | file_url }}"
+                 data-sizes="auto" onError="style.display = 'none';">
+              {% endif %}
+            {% endif %}
+          {% else %}
+            {% if settings.show_product_color_img %}
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 class="lazyload file_img"
+                 data-src="{{ text | append: '.png' | file_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ text | append: '.png' | file_url }}"
+                 data-sizes="auto" onError="style.display = 'none';">
+            {% endif %}
+          {% endif %}
+        </label>
+      </div>
+
+      {% if forloop.last %}
+      </li>
+      {% endif %}
+
+      {% assign option_count = option_count | plus : 1 %}
+
+    {% endif %}
+
+    {% capture tempList %}
+    {{ colorlist | append: color | append: ' ' }}
+    {% endcapture %}
+
+    {% assign colorlist = tempList %}
+    {% endunless %}
+
+    {% endfor %}
+    {% endif %}
+    {% if option_color_swatch contains downcased_option %}
+    {% if option_count > 4 %}
+    <li class="item-swatch-more">
+        <a class="number-showmore" href="javascript:void(0)" title="More Color">
+            <span>+</span> {{ option_count | minus : 4 }}
+        </a>
+    </li>
+    {% endif %}
+    {% endif %}
+</ul>
+{% endif %}

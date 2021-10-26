@@ -1,0 +1,30 @@
+{% assign number_of_related_products = block.settings.number_of_related_products | times:1 %}
+{% assign rows = block.settings.related_products_per_row %}
+
+{% if block.settings.display_related_products %}
+<div id="shopify-section-product-recommendations">
+  <div class="related-products">
+    {% if block.settings.related_products_title %}
+    <div class="widget-title not-before">   
+      <h3 class="box-title">
+        <span class="title"> 
+          {{ block.settings.related_products_title }}
+        </span>
+      </h3>    
+    </div>
+    {% endif %}
+    <div id="product-recommendations">
+      <div class="page-width product-recommendations js-product-recomendation" data-template="{% if template.suffix == 'gallery' or template.suffix == 'full-width' %}{{ template.suffix }}{% endif %}" data-product-id="{{ product.id }}" data-limit="{{ number_of_related_products }}" data-row="{{ rows }}" data-section-id="product-recommendations" data-section-type="product-recommendations" data-related-products-slider>
+        <div class="widget-product">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% style %}
+    #product-recommendations, #shopify-section-product-recommendations {
+        width: 100%;
+    }
+{% endstyle %}

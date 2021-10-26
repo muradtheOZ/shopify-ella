@@ -1,0 +1,83 @@
+<div class="label-tab" data-toggle="dropdown" aria-expanded="false">
+
+  {% if sort_by == 'manual' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.featured"{% endif %}>
+    {{ 'collections.sorting.featured' | t }}
+  </span>
+  {% elsif sort_by == 'price-ascending' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.price_ascending"{% endif %}>
+    {{ 'collections.sorting.price_ascending' | t }}
+  </span>
+  {% elsif sort_by == 'price-descending' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.price_descending"{% endif %}>
+    {{ 'collections.sorting.price_descending' | t }}
+  </span>
+  {% elsif sort_by == 'title-ascending' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.az"{% endif %}>
+    {{ 'collections.sorting.price_ascending' | t }}
+  </span>
+  {% elsif sort_by == 'title-descending' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.za"{% endif %}>
+    {{ 'collections.sorting.za' | t }}
+  </span>
+  {% elsif sort_by == 'created-ascending' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.date_ascending"{% endif %}>
+    {{ 'collections.sorting.date_ascending' | t }}
+  </span>
+  {% elsif sort_by == 'created-descending' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.date_descending"{% endif %}>
+    {{ 'collections.sorting.date_descending' | t }}
+  </span>
+  {% elsif sort_by == 'best-selling' %}
+  <span class="label-text" {% if settings.enable_multilang %}data-translate="collections.sorting.best_selling"{% endif %}>
+    {{ 'collections.sorting.best_selling' | t }}
+  </span>
+  {% endif %}
+  <span class="icon-dropdown">
+    <i class="fa fa-angle-down"></i>
+  </span>
+</div>
+
+<ul class="dropdown-menu">
+
+  <li {% if sort_by == 'manual' %}class="active"{% endif %}>
+    <span data-href="manual" {% if settings.enable_multilang %}data-translate="collections.sorting.featured"{% endif %}>
+      {{ 'collections.sorting.featured' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'price-ascending' %}class="active"{% endif %}>
+    <span data-href="price-ascending" {% if settings.enable_multilang %}data-translate="collections.sorting.price_ascending"{% endif %}>
+      {{ 'collections.sorting.price_ascending' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'price-descending' %}class="active"{% endif %}>
+    <span data-href="price-descending" {% if settings.enable_multilang %}data-translate="collections.sorting.price_descending"{% endif %}>
+      {{ 'collections.sorting.price_descending' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'title-ascending' %}class="active"{% endif %}>
+    <span data-href="title-ascending" {% if settings.enable_multilang %}data-translate="collections.sorting.az"{% endif %}>
+      {{ 'collections.sorting.az' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'title-descending' %}class="active"{% endif %}>
+    <span data-href="title-descending" {% if settings.enable_multilang %}data-translate="collections.sorting.za"{% endif %}>
+      {{ 'collections.sorting.za' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'created-ascending' %}class="active"{% endif %}>
+    <span data-href="created-ascending" {% if settings.enable_multilang %}data-translate="collections.sorting.date_ascending"{% endif %}>
+      {{ 'collections.sorting.date_ascending' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'created-descending' %}class="active"{% endif %}>
+    <span data-href="created-descending" {% if settings.enable_multilang %}data-translate="collections.sorting.date_descending"{% endif %}>
+      {{ 'collections.sorting.date_descending' | t }}
+    </span>
+  </li>
+  <li {% if sort_by == 'best-selling' %}class="active"{% endif %}>
+    <span data-href="best-selling" {% if settings.enable_multilang %}data-translate="collections.sorting.best_selling"{% endif %}>
+      {{ 'collections.sorting.best_selling' | t }}
+    </span>
+  </li>
+</ul>

@@ -1,0 +1,189 @@
+{% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+{% assign product_per_page = cart.attributes.pagination %}
+{% else %}
+{% assign product_per_page = section.settings.collection_results_per_page %}
+{% endif %}
+
+{% paginate collection.products by product_per_page %}
+ 
+{% case section.settings.collection_results_per_row %}
+{% when '1' %}
+    {%- assign grid_item_width = 'col-12' -%}
+	{%- assign rows = 'products-list' -%}
+
+  {% when '2' %}
+    {%- assign grid_item_width = 'col-6' -%}
+	{%- assign rows = 'products-grid' -%}
+
+  {% when '3' %}
+    {%- assign grid_item_width = 'col-6 col-md-4' -%}
+	{%- assign rows = 'products-grid' -%}
+
+  {% when '4' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+	{%- assign rows = 'products-grid' -%}
+
+  {% when '5' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+	{%- assign rows = 'products-grid' -%}
+{% endcase %}
+
+<div id="shopify-section-collection-template-with-banner" class="shopify-section col-12 col-xl-9 col-main">
+  {% render 'toolbar' %}
+  <div id="CollectionProductGrid">
+    <div data-section-id="{{ section.id }}" data-section-type="collection-template" id="main-collection-product-grid" data-id="{{ section.id }}">    
+      <div class="product-collection {{ rows }} row">
+        {% if collection.products_count > 0 %}  
+        {% for product in collection.products %}
+        {% if forloop.index <= 6 %}
+        <div class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, serial: forloop.index %}
+          {% endif %}
+        </div> 
+        {% endif %}
+        
+        {% if forloop.index == 6 and section.settings.show_banner_1 and section.settings.show_banner %}
+        <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
+          <a class="animate-scale" href="{{section.settings.link_banner_1}}">
+            {% if section.settings.img_banner1 != blank %}
+            <img data-src="{{ section.settings.img_banner1 | img_url: '800x' }}"
+                 src="{{ section.settings.img_banner1 | img_url: '300x' }}" alt="{{ section.settings.img_banner1.alt }}"
+                 class="lazyautosizes lazyloaded" data-sizes="auto">
+            {% else %}
+            <div class="not_img">
+              210 x 360px
+            </div>        
+            {% endif %}
+          </a>
+        </div>
+        {% endif %}
+        
+      {% if forloop.index > 6 and forloop.index <= 11 %}
+    	<div data-gridItem class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, serial: forloop.index %}
+          {% endif %}
+        </div>     
+        {% endif %}
+        
+        {% if forloop.index == 11 and section.settings.show_banner_2 and section.settings.show_banner %}
+        <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
+          <a class="animate-scale" href="{{section.settings.link_banner_2 }}">
+            {% if section.settings.img_banner2 != blank %}
+            <img data-src="{{ section.settings.img_banner21 | img_url: '800x' }}"
+                 src="{{ section.settings.img_banner2 | img_url: '300x' }}" alt="{{ section.settings.img_banner2.alt }}"
+                 class="lazyautosizes lazyloaded" data-sizes="auto">
+            {% else %}
+            <div class="not_img">
+              210 x 360px
+            </div>        
+            {% endif %}
+          </a>
+        </div>
+        {% endif %}
+        
+        {% if forloop.index > 11 and forloop.index <= 17 %}
+    	<div data-gridItem class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, serial: forloop.index %}
+          {% endif %}
+        </div>     
+        {% endif %}
+        
+        {% if forloop.index == 17 and section.settings.show_banner_3 and section.settings.show_banner %}
+        <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
+          <a class="animate-scale" href="{{section.settings.link_banner_3 }}">
+            {% if section.settings.img_banner3 != blank %}
+            <img data-src="{{ section.settings.img_banner3 | img_url: '800x' }}"
+                 src="{{ section.settings.img_banner3 | img_url: '300x' }}" alt="{{ section.settings.img_banner3.alt }}"
+                 class="lazyautosizes lazyloaded" data-sizes="auto">
+            {% else %}
+            <div class="not_img">
+              210 x 360px
+            </div>        
+            {% endif %}
+          </a>
+        </div>
+        {% endif %}
+        
+        {% if forloop.index > 17 and  forloop.index <= 22 %}
+    	<div data-gridItem class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, serial: forloop.index %}
+          {% endif %}
+        </div>     
+        {% endif %}
+        
+        {% if forloop.index == 22 and section.settings.show_banner_4 and section.settings.show_banner %}
+        <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
+          <a class="animate-scale" href="{{section.settings.link_banner_4 }}">
+            {% if section.settings.img_banner4 != blank %}
+            <img data-src="{{ section.settings.img_banner4 | img_url: '800x' }}"
+                 src="{{ section.settings.img_banner4 | img_url: '300x' }}" alt="{{ section.settings.img_banner4.alt }}"
+                 class="lazyautosizes lazyloaded" data-sizes="auto">
+            {% else %}
+            <div class="not_img">
+              210 x 360px
+            </div>        
+            {% endif %}
+          </a>
+        </div>
+        {% endif %}
+        
+        {% if forloop.index > 22 %}
+    	<div data-gridItem class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, serial: forloop.index %}
+          {% endif %}
+        </div>     
+        {% endif %}
+        
+        {% endfor %}
+        {% else %}
+        <p class="col-12 text-center" {% if settings.enable_multilang %}data-translate="collections.general.no_matches"{% endif %}>
+          {{ 'collections.general.no_matches' | t }}
+        </p>
+        {% endif %}
+      </div>
+
+
+      {% if paginate.pages > 1 %}
+      <div class="padding">
+        {% render 'pagination-page' paginate: paginate %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endpaginate %} 

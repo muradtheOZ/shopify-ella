@@ -1,0 +1,958 @@
+{% if section.blocks.size > 0 %}
+<div class="home-custom-block {% if section.settings.layout_style == 'layout_style_2' %} layout_style_2{% endif %}" id="custom-block-{{section.id}}">
+    <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
+        {% if section.settings.widget_title != blank %}
+        <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
+            <h3 class="box-title">
+                <span class="title"> 
+                    {% render 'multilang' with section.settings.widget_title %}
+                </span>
+            </h3>
+            {% if section.settings.widget_des != blank %}
+            <p>
+                {% render 'multilang' with section.settings.widget_des %}
+            </p>        
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="row">
+            {% for block in section.blocks %}
+            
+            {% if block.type == 'smallImg' %}
+            <div class="col-12 {% if section.settings.layout_style == 'layout_style_2' %} item_style_2{% endif %}" id="custom-block-style-{{block.id}}">
+                <div class="custom-block-banner banner-small-img">
+                    <div class="row{% if block.settings.banner_is == 'right'%} flex-md-row-reverse{% endif %}">
+                        <div class="img-box col-12 col-md-6 column">
+                            {% if block.settings.image != blank %}
+                                {%- assign preview_img = block.settings.image -%}
+                                <a class="animate-scale adaptive_height" href="{{ block.settings.link }}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                                    {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+                                    <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                                    
+                                </a>
+                                {% else %}
+                                <a class="animate-scale" href="{{ block.settings.link }}">
+                                    <div class="not_img">
+                                    585 x 485px
+                                    </div>   
+                                </a>
+                            {% endif %}
+                            {% if block.settings.video_link != blank %}
+                              <div class="video-open-popup">
+                                <a data-src="{{ block.settings.video_link }}" href="javascript:void(0)">
+                                   {% render 'icons8-play' %}
+                                </a>
+                              </div>
+
+                              <style>
+                                  #custom-block-style-{{block.id}} .video-open-popup a {
+                                    color: {{ block.settings.video_icon_color }};
+                                    background-color: {{ block.settings.bg_video_icon | color_modify: 'alpha', 0.4 }};
+                                  }
+                                  
+                              </style>
+                            {% endif %}
+                        </div>
+                        
+                        {% if block.settings.banner_heading != blank or block.settings.banner_heading_sub != blank or block.settings.banner_des != blank or block.settings.banner_button != blank %}
+                        <div class="content-box col-12 col-md-6 column">               
+                            <div class="banner-content{% if block.settings.banner_is == 'left'%} right{% endif %}"
+                                style="{% if block.settings.bg_banner_content != blank %}
+                                        background-color: {{ block.settings.bg_banner_content }};
+                                        {% endif %}">
+
+                                {% if block.settings.banner_heading_sub != blank %}
+                                <h3 class="banner-sub-heading"
+                                    style="{% if block.settings.font_size_banner_heading_sub != blank %}
+                                            font-size: {{ block.settings.font_size_banner_heading_sub }} !important;
+                                            {% endif %}
+                                            {% if block.settings.color_banner_heading_sub != blank %}
+                                            color:{{ block.settings.color_banner_heading_sub }};
+                                            {% endif %}">
+                                    {% render 'multilang' with block.settings.banner_heading_sub  %}
+                                </h3>
+                                {% endif %}
+
+                                {% if block.settings.banner_heading != blank %}
+                                <h2 class="banner-heading"
+                                    style="{% if block.settings.font_size_banner_heading != blank %}
+                                                {% if section.settings.layout_style == 'layout_style_2' %}
+                                                    font-size: {{ block.settings.font_size_banner_heading }};
+                                                {% else %}
+                                                    font-size: {{ block.settings.font_size_banner_heading }} !important;
+                                                {% endif %}
+                                            {% endif %}
+                                            {% if block.settings.color_banner_heading != blank %}
+                                            color:{{ block.settings.color_banner_heading }};
+                                            {% endif %}">
+                                    <span class="line" style="background-color: {{ block.settings.color_banner_heading }};"></span>
+                                    {% render 'multilang' with block.settings.banner_heading  %}
+                                </h2>
+                                {% endif %}
+
+                                {% if block.settings.banner_des != blank %}
+                                <p class="banner-des"
+                                    style="{% if block.settings.font_size_banner_des != blank %}
+                                            font-size: {{ block.settings.font_size_banner_des }};
+                                            {% endif %}
+                                            {% if block.settings.color_banner_des != blank %}
+                                            color: {{ block.settings.color_banner_des }};
+                                            {% endif %}">
+                                    {% render 'multilang' with block.settings.banner_des  %}
+                                </p>
+                                {% endif %}
+
+                                {% if block.settings.banner_button != blank %}
+                                <a href="{{ block.settings.link }}" class="banner-button btn"
+                                    style="{% if block.settings.bg_banner_button != blank %}
+                                            background-color:{{ block.settings.bg_banner_button }};
+                                            {% endif %}
+                                            {% if block.settings.border_banner_button != blank %}
+                                            border-color:{{ block.settings.border_banner_button }};
+                                            {% endif %}
+                                            {% if block.settings.color_banner_button != blank %}
+                                            color:{{ block.settings.color_banner_button }};
+                                            {% endif %}">
+                                    {% render 'multilang' with block.settings.banner_button %}
+                                </a>
+                                {% endif %}
+                            </div>
+                            <style>
+                                #custom-block-style-{{block.id}} .banner-small-img .banner-content .banner-button:hover {
+                                    color: {{ block.settings.color_banner_button_hover }} !important;
+                                    background-color: {{ block.settings.bg_banner_button_hover }} !important;
+                                    border-color: {{ block.settings.border_banner_button_hover }} !important;
+                                    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+                                    -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+                                    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+                                }
+                            </style>
+                        </div>
+                        {% endif %}
+                    </div>          
+                </div>      
+            </div>
+            
+            {% elsif block.type == 'largeImg' %}
+            <div class="col-12 {% unless settings.layout_style == 'layout_style_flower' %}no-padd{% endunless %} {% if settings.layout_style == 'layout_style_suppermarket' and section.settings.layout == 'default' %}no-padd-custom{% endif %}" id="block-{{block.id}}">
+                <div class="custom-block-banner banner-large-img{% if block.settings.display_parallax %} banner-parallax{% endif %}">
+                    <div class="img-box">
+                        {% if block.settings.image != blank %}
+                        {%- assign preview_img = block.settings.image -%}
+                        <a href="{{ block.settings.link }}"{% unless block.settings.display_parallax %} class="adaptive_height" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%"{% endunless %}>
+                            {%- assign img_url = block.settings.image | img_url: '1920x' -%}
+
+                            {% if block.settings.display_parallax %}
+                            <div class="parallax-image{% if block.settings.image_mb != blank %} slide-pc{% endif %}" style="background-image: url({{img_url}});"></div> 
+                            {% endif %}
+
+                            <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload{% if block.settings.image_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
+
+                            {% if block.settings.image_mb != blank %}
+
+                            {%- assign img_url_mb = block.settings.image_mb | img_url: 'master' -%}
+
+                            <img data-srcset="{{ img_url_mb }}" alt="{{ block.settings.image_mb.alt | default: shop.name }}" class="lazyload slide-mobile" data-sizes="auto">
+                            {% endif %}
+                            <style type="text/css">
+                                {% if block.settings.image_mb != blank %}
+                                {%- assign preview_img_mb = block.settings.image_mb -%}
+                                @media (max-width: 767px) {
+                                    #block-{{block.id}} .adaptive_height {
+                                        padding-top: {{ 1 | divided_by: preview_img_mb.aspect_ratio | times: 100 }}%!important;
+                                    }
+                                }
+                                {% endif %}
+                            </style>                       
+                        </a>
+                        {% else %}
+                        <a href="{{ block.settings.link }}">
+                            {% if block.settings.banner_sub_heading != blank %}
+                                <div class="not_img">
+                                1370 x 600px
+                                </div> 
+                            {% else %}
+                                <div class="not_img">
+                                1880 x 720px
+                                </div>   
+                            {% endif %}
+                        </a>
+                        {% endif %} 
+
+                        {% if block.settings.countdown != blank %}
+                        <div class="sub-banner-countdown countdown-{{ block.id }}" data-countdown data-countdown-value="{{ block.settings.countdown }}">
+                        </div>
+
+                        <style>
+                        .custom-block-banner .clock-item {
+                            border-color: {{ block.settings.color_banner_heading | color_modify: 'alpha', 0.7 }};
+                            color: {{ block.settings.color_banner_heading }};
+                        }
+                        </style>
+                        {% endif %}
+                    </div>
+                
+                    {% if block.settings.banner_heading != blank or block.settings.banner_des != blank or block.settings.countdown!= blank or block.settings.banner_button != blank %}
+                    <div class="banner-content inner {% if block.settings.alignment == 'left' %}abs_left{% elsif block.settings.alignment == 'right' %}abs_right{% else %}abs_center{% endif %}{% if block.settings.content_style == 'style_2' %} content_style_2{% endif %}{% if block.settings.display_bg_animation %} display_bg_animation{% endif %}">
+
+                        {% if block.settings.banner_sub_heading != blank %}
+                        <h3 class="banner-sub-heading"
+                            style="{% if block.settings.font_size_banner_sub_heading != blank %}
+                                    font-size: {{ block.settings.font_size_banner_sub_heading }} !important;
+                                    {% endif %}
+                                    {% if block.settings.color_banner_sub_heading != blank %}
+                                    color:{{ block.settings.color_banner_sub_heading }};
+                                    {% endif %}
+                                    text-transform: uppercase;
+                                    ">
+                            {% render 'multilang' with block.settings.banner_sub_heading  %}
+                        </h3>
+                        {% endif %}
+
+                        {% if block.settings.banner_heading != blank %}
+                        <h2 class="banner-heading"
+                            style="{% if block.settings.font_size_banner_heading != blank %}
+                                font-size: {{ block.settings.font_size_banner_heading }};
+                                {% endif %}
+                                {% if block.settings.color_banner_heading != blank %}
+                                color:{{ block.settings.color_banner_heading }};
+                                {% endif %}">
+                        {% unless block.settings.banner_sub_heading != blank %}
+                            <span class="line" style="background-color: {{ block.settings.color_banner_heading }};"></span>
+                        {% endunless %}
+                        {% render 'multilang' with block.settings.banner_heading  %}
+                        </h2>
+                        {% endif %}
+
+                        {% if block.settings.banner_des != blank %}
+                        <p class="banner-des{% if block.settings.countdown != blank %} has-coundown{% endif %}"
+                            style="{% if block.settings.font_size_banner_des != blank %}
+                                    font-size: {{ block.settings.font_size_banner_des }};
+                                    {% endif %}
+                                    {% if block.settings.color_banner_des != blank %}
+                                    color: {{ block.settings.color_banner_des }};
+                                    {% endif %}">
+                        {% render 'multilang' with block.settings.banner_des  %}
+                        </p>
+                        {% endif %}
+
+                        {% if block.settings.countdown != blank %}
+                            <div class="sub-banner-countdown countdown-{{ block.id }}" data-countdown data-countdown-value="{{ block.settings.countdown }}">
+                            </div>
+
+                            <style>
+                            .custom-block-banner .clock-item {
+                                border-color: {{ block.settings.color_banner_heading | color_modify: 'alpha', 0.7 }};
+                                color: {{ block.settings.color_banner_heading }};
+                            }
+                            </style>
+                        {% endif %}
+
+                        {% if block.settings.banner_button != blank %}
+                        <a href="{{ block.settings.link }}" class="banner-button btn"
+                        style="{% if block.settings.bg_banner_button != blank %}
+                                background-color:{{ block.settings.bg_banner_button }};
+                                {% endif %}
+                                {% if block.settings.border_banner_button != blank %}
+                                border-color:{{ block.settings.border_banner_button }};
+                                {% endif %}
+                                {% if block.settings.color_banner_button != blank %}
+                                color:{{ block.settings.color_banner_button }};
+                                {% endif %}
+                                {% if block.settings.min_width_banner_button != blank %}
+                                min-width:{{ block.settings.min_width_banner_button }};
+                                {% endif %}">
+                        {% render 'multilang' with block.settings.banner_button %}
+                        </a>
+                        {% endif %}
+                    </div>
+                    {% endif %}  
+                </div>
+
+                {% if block.settings.display_parallax and block.settings.dpl_down_arrow %}
+                <a href="#" class="scroll-down" data-scroll-down style="color: {{ block.settings.color_banner_heading }};">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" zoomAndPan="disable" x="0px" y="0px" viewBox="0 0 36 18" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:none;stroke:#fff;stroke-width:1.5;}
+                        </style>
+                        <line class="st0" x1="36" y1="0" x2="18" y2="18"></line>
+                        <line class="st0" x1="0" y1="0" x2="18" y2="18"></line>
+                    </svg>
+                </a>
+                {% endif %}
+            </div>
+
+            
+            <style>
+            {% if settings.layout_home == 'layout_home_7' %}
+                .banner-content .banner-heading span:before {
+                    background: {{ block.settings.color_banner_heading_style2 }}
+                }
+                .banner-content .banner-button:before {
+                    border: 1px solid {{ block.settings.border_banner_button }}
+                }
+            {% endif %}
+
+            {% if block.settings.banner_sub_heading != blank %}
+                .banner-content .banner-sub-heading {
+                    letter-spacing: .05em;
+                }
+                .banner-content .banner-heading {
+                    margin-bottom: 5px;
+                    padding-bottom: 0;
+                    padding-top: 5px;
+                    font-weight: 900;
+                }
+                .banner-large-img .banner-content .banner-button {
+                    box-shadow: none;
+                }
+            {% endif %}
+            {% if block.settings.display_parallax %}
+            @media (min-width: 1200px) {
+                .banner-parallax .parallax-image {
+                    height: {{ block.settings.height_img_parallax }};
+                }
+            } 
+            {% endif %}
+            @media (max-width: 767px) {
+                #block-{{block.id}} .banner-content .banner-heading {
+                    color: {{ block.settings.color_banner_heading_mb }} !important;
+                }
+                #block-{{block.id}} .banner-content .banner-sub-heading {
+                    color: {{ block.settings.color_banner_sub_heading_mb }} !important;
+                }
+                #block-{{block.id}} .banner-content .banner-heading .line {
+                    background-color: {{ block.settings.color_banner_heading_mb }} !important;
+                }
+                #block-{{block.id}} .banner-content .banner-des {
+                    color: {{ block.settings.color_banner_des_mb }} !important;
+                }
+                #block-{{block.id}} .banner-content .banner-button {
+                    color: {{ block.settings.color_banner_button_mb }} !important;
+                    background-color: {{ block.settings.bg_banner_button_mb }} !important;
+                    border-color: {{ block.settings.border_banner_button_mb }} !important;
+                }
+
+                {% if settings.layout_home == 'layout_home_7' %}
+                    .banner-content .banner-button:before {
+                        border-color: {{ block.settings.border_banner_button_mb }}
+                    }
+                {% endif %}
+            }
+            #block-{{block.id}} .banner-content.content_style_2 .banner-heading strong {
+                color: {{ block.settings.color_banner_heading_style2 }};
+            }
+            /*@media (min-width: 1200px) {*/
+                {% if block.settings.display_bg_animation %}
+                    #block-{{block.id}} .custom-block-banner.banner-large-img:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: auto;
+                        right: 0;
+                        bottom: 0;
+                        background-color: {{ block.settings.color_bg_animation }};
+                        width: 30%;
+                        max-width: 420px;
+                        height: 100%;
+                        transition: all 2s ease;
+                    }
+                    #block-{{block.id}} .custom-block-banner.banner-large-img:hover:before {
+                        width: calc(50% + 15px);
+                        max-width: calc(50% + 15px);
+                    }
+                {% endif %}
+            /*}*/
+
+            </style>
+            {% endif %}        
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}  
+    
+    {% if section.settings.display_bg_banner %}
+        @media (max-width: 767px) {
+            #custom-block-{{ section.id }} {
+                padding-bottom: {{ section.settings.margin_bottom_mb }}px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+            #custom-block-{{ section.id }} {
+                padding-bottom: {{ section.settings.margin_bottom_tab }}px;
+            }
+        }
+        @media (min-width: 1200px) {
+            #custom-block-{{ section.id }} {
+                padding-bottom: {{ margin_bottom }}px;
+            }
+        }
+    {% else %}
+        @media (max-width: 767px) {
+            #custom-block-{{ section.id }} {
+                margin-bottom: {{ section.settings.margin_bottom_mb }}px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+            #custom-block-{{ section.id }} {
+                margin-bottom: {{ section.settings.margin_bottom_tab }}px;
+            }
+        }
+        @media (min-width: 1200px) {
+            #custom-block-{{ section.id }} {
+                margin-bottom: {{ margin_bottom }}px;
+            }
+        }
+    {% endif %}
+
+
+    #custom-block-{{ section.id }} .img-box {
+        text-align: {{ section.settings.img_align }};
+    }
+
+    {% if section.settings.display_bg_banner %}
+        #custom-block-{{ section.id }} {
+            background-color: {{ section.settings.bg_color_banner }};
+        }
+        #custom-block-{{ section.id }} .banner-large-img {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+    {% endif %}
+
+</style>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Custom Block Banners",
+    "class": "home-custom-block-baner-sections",
+    "max_blocks": 3,
+    "settings": [
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Banner Layout:",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "Default"
+                },
+                {
+                    "value": "full",
+                    "label": "Full Width"
+                }
+            ],
+            "default": "full"
+        },
+        {
+            "type": "select",
+            "id": "layout_style",
+            "label": "Layout Style:",
+            "options": [
+              {
+                "value": "layout_style_1",
+                "label": "Style 1" 
+              },
+              { 
+                "value": "layout_style_2",
+                "label": "Style 2" 
+              }
+            ],
+            "default": "layout_style_1"
+        },
+        {
+            "type": "checkbox",
+            "id": "display_bg_banner",
+            "label": "Display Background Color",
+            "default": false
+        },
+        {
+            "type" : "color",
+            "id" : "bg_color_banner",
+            "label" : "Background Color",
+            "default" : "#f5f5f5"
+        },
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "text",
+            "id": "widget_title",
+            "label": "Widget Title"
+        },
+        {
+            "type" : "textarea",
+            "id" : "widget_des",
+            "label" : "Description"
+        },
+        {
+            "type": "select",
+            "id": "title_style",
+            "label": "Title Style:",
+            "options": [
+                {
+                    "value": "style_1",
+                    "label": "Style 1" 
+                },
+                { 
+                    "value": "style_2",
+                    "label": "Style 2" 
+                }          
+            ],
+            "default": "style_1"
+        },
+        {
+            "type": "select",
+            "id": "img_align",
+            "label": "Image Align:",
+            "default": "center",
+            "options": [
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "left",
+                    "label": "Left"
+                },              
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ]
+        }, 
+        {
+            "type": "header",
+            "content": "Margin Bottom:"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_mb",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 25
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_tab",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 30
+        },             
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 30
+        }       
+    ],
+    "blocks": [
+        {
+            "type": "smallImg",
+            "name": "Small Image",
+            "settings": [
+            {
+                "type": "select",
+                "id": "banner_is",
+                "label": "Banner is:",
+                "default": "left",
+                "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },              
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+                ]
+            }, 
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label" : "Select Image"
+            },
+            {
+                "type": "header",
+                "content": "Banner Content"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_banner_content",
+                "label" : "Background Banner Content",
+                "default" : "#fafafa"
+            },
+            {
+                "type" : "text",
+                "id" : "banner_heading",
+                "label" : "Banner Heading",
+                "default" : "Metropolis"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_banner_heading",
+                "label" : "Heading Font Size ",
+                "default" : "20px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_banner_heading",
+                "label" : "Heading Color",
+                "default" : "#232323"
+            },
+            {
+                "type" : "text",
+                "id" : "banner_heading_sub",
+                "label" : "Banner Sub Heading"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_banner_heading_sub",
+                "label" : "Sub Heading Font Size ",
+                "default" : "14px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_banner_heading_sub",
+                "label" : "Sub Heading Color",
+                "default" : "#232323"
+            },
+            {
+                "type" : "textarea",
+                "id" : "banner_des",
+                "label" : "Banner Description",
+                "default": "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos."
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_banner_des",
+                "label" : "Description Font Size",
+                "default" : "12px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_banner_des",
+                "label" : "Description Color",
+                "default" : "#232323"
+            },
+            {
+                "type" : "text",
+                "id" : "banner_button",
+                "label" : "Button Banner",
+                "default" : "Shop Now"
+            },
+            {
+                "type" : "url",
+                "id" : "link",
+                "label" : "Banner Link"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_banner_button",
+                "label" : "Background Button",
+                "default" : "#fff"
+            },
+            {
+                "type" : "color",
+                "id" : "border_banner_button",
+                "label" : "Border Button",
+                "default" : "#5a5a5a"
+            },
+            {
+                "type" : "color",
+                "id" : "color_banner_button",
+                "label" : "Button Color",
+                "default" : "#232323"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_banner_button_hover",
+                "label" : "Background Button Hover"
+            },
+            {
+                "type" : "color",
+                "id" : "border_banner_button_hover",
+                "label" : "Border Button Hover"
+            },
+            {
+                "type" : "color",
+                "id" : "color_banner_button_hover",
+                "label" : "Button Color Hover"
+            },
+            {
+              "type": "text",
+              "id": "video_link",
+              "label": "YouTube video ID",
+              "default": "eTCtDW7O1aM",
+              "info": "[Find your YouTube video ID ](https://www.youtube.com/watch?v=liJVSwOiiwg)."
+            },
+            {
+              "type" : "color",
+              "id" : "video_icon_color",
+              "label" : "Video Icon Color",
+              "default" : "#fff"
+            },
+            {
+              "type" : "color",
+              "id" : "bg_video_icon",
+              "label" : "Video Icon Background Color",
+              "default" : "#000"
+            }
+        ]
+    },
+        {
+            "type": "largeImg",
+            "name": "Large Image",
+            "settings": [           
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label" : "Select Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_mb",
+                    "label" : "Select Image Mobile"
+                },
+                {
+                    "type": "header",
+                    "content": "Parallax"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "display_parallax",
+                    "label": "Display Parallax",
+                    "default": false
+                },
+                {
+                    "type" : "checkbox",
+                    "id" : "dpl_down_arrow",
+                    "label" : "Display icon Scroll Down",
+                    "default" : false,
+                    "info" : "(Use for Enable Display Parallax)"
+                },                
+                {
+                    "type" : "text",
+                    "id" : "height_img_parallax",
+                    "label" : "Height Parallax Image",
+                    "default" : "970px"
+                },
+                {
+                    "type": "header",
+                    "content": "Banner Content"
+                },
+                {
+                    "type": "select",
+                    "id": "content_style",
+                    "label": "Content Style:",
+                    "options": [
+                        {
+                            "value": "style_1",
+                            "label": "Style 1" 
+                        },
+                        { 
+                            "value": "style_2",
+                            "label": "Style 2" 
+                        }          
+                    ],
+                    "default": "style_1"
+                },
+                {
+                    "type" : "checkbox",
+                    "id" : "display_bg_animation",
+                    "label" : "Display Background Animation",
+                    "default" : false
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_bg_animation",
+                    "label" : "Background Color Animation",
+                    "default" : "#f6f6f6",
+                    "info" : "(Use for Enable Background Animation)"
+                }, 
+                {
+                    "type": "select",
+                    "id": "alignment",
+                    "label": "Text alignment",
+                    "default": "left",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        }
+                    ]
+                },
+                {
+                    "type" : "text",
+                    "id" : "banner_heading",
+                    "label" : "Banner Heading",
+                    "default" : "Metropólis"
+                },
+                {
+                    "type" : "text",
+                    "id" : "font_size_banner_heading",
+                    "label" : "Heading Font Size ",
+                    "default" : "40px"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_heading",
+                    "label" : "Heading Color",
+                    "default" : "#232323"
+                }, 
+                {
+                    "type" : "color",
+                    "id" : "color_banner_heading_style2",
+                    "label" : "Heading Color Style 2",
+                    "default" : "#10ffda"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_heading_mb",
+                    "label" : "Heading Color Mobile",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "text",
+                    "id" : "banner_sub_heading",
+                    "label" : "Banner Sub Heading",
+                    "default" : "Artisan Florists"
+                },
+                {
+                    "type" : "text",
+                    "id" : "font_size_banner_sub_heading",
+                    "label" : "Sub Heading Font Size ",
+                    "default" : "13px"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_sub_heading",
+                    "label" : "Sub Heading Color",
+                    "default" : "#ffffff"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_sub_heading_mb",
+                    "label" : "Sub Heading Color Mobile",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "textarea",
+                    "id" : "banner_des",
+                    "label" : "Banner Description",
+                    "default": "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos."
+                },
+                {
+                    "type" : "text",
+                    "id" : "font_size_banner_des",
+                    "label" : "Description Font Size",
+                    "default" : "12px"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_des",
+                    "label" : "Description Color",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_des_mb",
+                    "label" : "Description Color Mobile",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "textarea",
+                    "id" : "countdown",
+                    "label" : "Countdown"
+                },
+                {
+                    "type" : "text",
+                    "id" : "banner_button",
+                    "label" : "Button Banner",
+                    "default" : "Shop The Looks"
+                },
+                {
+                    "type" : "url",
+                    "id" : "link",
+                    "label" : "Banner Link"
+                },
+                {
+                    "type" : "color",
+                    "id" : "bg_banner_button",
+                    "label" : "Background Button",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "color",
+                    "id" : "border_banner_button",
+                    "label" : "Border Button",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_button",
+                    "label" : "Button Color",
+                    "default" : "#fff"
+                },
+                {
+                    "type" : "color",
+                    "id" : "bg_banner_button_mb",
+                    "label" : "Background Button Mobile",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "color",
+                    "id" : "border_banner_button_mb",
+                    "label" : "Border Button Mobile",
+                    "default" : "#232323"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_banner_button_mb",
+                    "label" : "Button Color Mobile",
+                    "default" : "#fff"
+                },
+                {
+                    "type" : "text",
+                    "id" : "min_width_banner_button",
+                    "label" : "Banner Button Min Width",
+                    "default" : "237px"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Block Banners",
+            "category": "Banner",
+            "blocks": [
+                {
+                    "type": "largeImg"
+                }         
+            ]
+        }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,17 @@
+{% assign blocks = section.blocks | where: 'type', 'recommend' %}
+{% assign block = blocks[0] %}
+<div class="product-template product-template-surfup">
+  <div class="container">
+    {% render 'breadcrumb' %}
+    <div class="halo-product-content">
+      <div class="row pro-page">
+        {% render 'product-template-surfup', product: product, enable_compare_color: enable_compare_color, show_compare_color: show_compare_color, enable_hot_stock: enable_hot_stock, option_color_swatch: option_color_swatch %}
+        {% render 'product-banner' %}
+      </div>
+
+      {% if block.settings.display_related_products %}
+        {% render 'related-products', block: block, product: product %}
+      {% endif %}
+    </div>   
+  </div>
+</div>

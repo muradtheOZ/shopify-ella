@@ -1,0 +1,19 @@
+{
+  "wrapper": "div.wrapper-content",
+  "sections": {
+    "banner1": {
+      "type": "home-custom-block-baner-collection-list",
+      "settings": {
+      }
+    },
+    "banner2": {
+      "type": "home-custom-product-collection-list",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner1",
+    "banner2"
+  ]
+}

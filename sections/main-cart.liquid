@@ -1,0 +1,170 @@
+<div class="cart-template">
+  <div class="container">
+  	{% render 'cart-template' %}  
+    {% unless settings.layout_style == 'layout_style_fullwidth' %}
+    	{% render 'cart-best-sellers' %}
+    {% endunless %}
+  </div> 
+  {% if settings.layout_style == 'layout_style_fullwidth' %}
+    {% render 'cart-best-sellers' %}
+  {% endif %} 
+</div>
+
+{% schema %}
+  {
+    "name": "Main Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes",
+        "label": "Allow customers to add notes to their order?",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Secure Shopping Guarantee"
+      },
+      {
+        "type": "textarea",
+        "id": "secure_text",
+        "label": "Secure Shopping Guarantee Text",
+        "default": "Secure Shopping Guarantee."
+      },
+      {
+        "type": "image_picker",
+        "id": "img_trust",
+        "label": "Image Trust"
+      },
+      {
+        "type": "header",
+        "content": "Cart CountDown"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_countdown_enable",
+        "label": "Enable Count Down",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "time_countdown",
+        "label": "Time Count Down",
+        "default": 30,
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "unit": "min"
+      },
+      {
+        "type": "header",
+        "content": "Coupon Code"
+      },
+      {
+        "type": "checkbox",
+        "id": "coupon_code_enable",
+        "label": "Enable?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "coupon_title",
+        "label": "Title",
+        "default": "Coupon Code:"
+      },
+      {
+        "type": "text",
+        "id": "coupon_content",
+        "label": "Content",
+        "default": "Coupon code will be applied on the checkout page"
+      },
+      {
+        "type": "header",
+        "content": "Gift card"
+      },
+      {
+        "type": "checkbox",
+        "id": "gift_card_enable",
+        "label": "Enable?",
+        "default": true
+      },
+      {
+        "type": "product",
+        "id": "product_to_use",
+        "label": "Product to use"
+      },
+      {
+        "type": "textarea",
+        "id": "gift_content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "button_gift_text",
+        "label": "Text button",
+        "default": "Add"
+      },
+
+      {
+        "type": "header",
+        "content": "Cart Best Sellers"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_cart_best_sellers_product",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Best Sellers"
+      },  	  
+      {
+        "type": "collection",
+        "id": "show_slider_featured_collection",
+        "label": "Collection to use"
+      },
+      {
+        "type": "range",
+        "id": "slider_featured_limit_all",
+        "label": "Number of new products to show",
+        "min": 3,
+        "max": 30,
+        "step": 1,
+        "default": 16
+      },
+      {
+        "type": "select",
+        "id": "collection_results_per_row1",
+        "label": "Products per row",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          },
+          {
+            "value": "6",
+            "label": "6"
+          }
+        ],
+        "default": "5"
+      }
+
+
+
+    ]
+  }
+{% endschema %}

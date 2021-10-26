@@ -1,0 +1,145 @@
+<div class="sidebar-filter" data-has-collapse>
+  {% if settings.category_layout == "right_sidebar" or settings.category_layout == "express_order" or template.suffix == 'express-order' or settings.category_layout == "mansory" or template.suffix == 'mansory' or settings.category_layout == "full_with" or template.suffix == 'fullwidth' or template.suffix == 'right-sidebar' or settings.category_layout == "with_banner" or template.suffix == 'with-banner' %}
+  <a href="javascript:void(0)" title="{{ 'cart.general.close_cart' | t }}" class="close-sidebar close">
+    {% render 'icon-close' %}    
+  </a>
+  {% endif %}
+
+  <div class="refined-widgets"{% if has_refined == false %} style="display:none"{% endif %}>
+    <div class="widget-title">
+      <h3 class="sidebar-title">
+        <span {% if settings.enable_multilang %}data-translate="collections.sidebar.refined_by"{% endif %}>
+          {{ 'collections.sidebar.refined_by' | t }}           
+        </span>
+
+        <a data-href="{{collection.url}}" href="javascript:void(0)" class="clear-all text-hover" {% if has_refined == false %}style="display:none"{% endif %} {% if settings.enable_multilang %}data-translate="collections.sidebar.clear_all"{% endif %}>
+          {{ 'collections.sidebar.clear_all' | t }}
+        </a>
+      </h3>
+    </div>
+
+    <div class="widget-content">
+      <ul class="refined">    
+        {% for t in current_tags %}
+        {% assign tag = t | strip %}
+        {% assign tag_value = tag | handleize %}
+        <li>
+          <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %}/>
+          <a data-href={{ tag | link_to_remove_tag: tag | split: "href=" | last | split: '>' | first | split: 'title' | first  }} href="{{tag_value}}" class="selected-tag">
+            <span>
+              {{tag | split: '|' | first}}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 48 48" width="144px" height="144px"><path d="M 38.982422 6.9707031 A 2.0002 2.0002 0 0 0 37.585938 7.5859375 L 24 21.171875 L 10.414062 7.5859375 A 2.0002 2.0002 0 0 0 8.9785156 6.9804688 A 2.0002 2.0002 0 0 0 7.5859375 10.414062 L 21.171875 24 L 7.5859375 37.585938 A 2.0002 2.0002 0 1 0 10.414062 40.414062 L 24 26.828125 L 37.585938 40.414062 A 2.0002 2.0002 0 1 0 40.414062 37.585938 L 26.828125 24 L 40.414062 10.414062 A 2.0002 2.0002 0 0 0 38.982422 6.9707031 z"/></svg>
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>                  
+  </div>
+
+  {% for i in (1..10) %}
+  {% capture enable %}enable_{{ i }}{% endcapture %}
+  {% capture title %}title_{{ i }}{% endcapture %}
+  {% capture list_tags %}list_tags_{{ i }}{% endcapture %}
+  {% assign more_number = 0 %}
+  {% assign check = true %}
+  {% if block.settings[enable] %}
+  <div class="widget sidebar-tags{% if style_color contains block.settings[title] %} filter-color{% endif %}{% if style_size contains block.settings[title] %} filter-size{% endif %}">
+    {% assign tags = block.settings[list_tags] | split: ',' %}
+    {% assign link_clear = canonical_url %}
+    {% for t in tags %}
+      {% assign tag = t | strip %}
+      {% if current_tags contains tag %}
+        {% assign list_remove = tag | handleize %}
+        {% assign check_first = list_remove | append: '+' %}
+        {% assign check_last = '+' | append: list_remove %}
+      
+        {% if link_clear contains check_first %}
+          {% assign link_clear = link_clear | remove: check_first %}
+        {% else %}
+          {% if link_clear contains check_last %}
+            {% assign link_clear = link_clear | remove: check_last %}
+          {% else %}
+            {% assign link_clear = link_clear | remove: list_remove %}
+          {% endif %}
+          
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if block.settings[title] != blank %}
+    <div class="widget-title open">
+      <h3 class="sidebar-title">
+        {%if section.settings.show_arrow%}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+        {% endif %}
+        {% render 'multilang' with block.settings[title] %}
+        <a data-href="{{ link_clear }}" href="javascript:void(0)" class="clear" style="display:none" {% if settings.enable_multilang %}data-translate="collections.sidebar.clear"{% endif %}>
+          {{ 'collections.sidebar.clear' | t }}
+        </a>
+      </h3>
+    </div>
+    {% endif %}
+    <div class="widget-content">
+      <ul class="list-tags">
+        {% for t in tags %}
+        {% assign tag = t | strip %}
+        {% assign tag_value = tag | handleize %}
+        {% if collection.tags contains tag %}
+          {% assign more_number = more_number | plus: 1 %}
+        {% endif %}
+        
+        {% if style_color contains block.settings[title] %}
+        {% if collection.tags contains tag %} 
+          <li class="item" {% if more_number > 10 %}style="display: none"{% endif %}>
+            <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %}/>
+            <a data-href=
+               {% if current_tags contains tag %}
+               {{ tag | link_to_remove_tag: tag | split: "href=" | last | split: '>' | first | split: 'title' | first  }}
+               {% else %}
+               {{ tag | link_to_add_tag: tag | split: "href=" | last | split: '>' | first | split: 'title' | first  }}
+               {% endif %}
+                href="javascript:void(0)" {% if current_tags contains tag %}class="active"{% endif %} title="{{tag}}" style="background-color: {{ tag_value }}; {% if settings.show_product_color_img %}background-image: url({{ tag_value | handle | append: '.png' | file_url }}){% endif %}"></a>
+          </li>
+        {% endif %}
+        {% else %}
+
+          {% if current_tags contains tag %}
+          <li class="item" {% if more_number > 10 %}style="display: none"{% endif %}>
+            
+            <a data-href={{ tag | link_to_remove_tag: tag | split: "href=" | last | split: '>' | first | split: 'title' | first  }}>
+              <input type="checkbox" value="{{ tag_value | split: '|' | first }}" checked/>
+              <label>{{ tag | split: '|' | first }}</label>
+            </a>
+          </li>
+          {% else %}
+            {% if collection.tags contains tag %}
+            <li class="item" {% if more_number > 10 %}style="display: none"{% endif %}>
+               <a href="javascript:void(0)" data-href={{ tag | link_to_add_tag: tag | split: "href=" | last | split: '>' | first | split: 'title' | first  }}>
+                 <input type="checkbox" value="{{ tag_value | split: '|' | first }}"/>
+                 <label>
+                   {{ tag | split: '|' | first }}
+                 </label>
+                </a>
+            </li>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        
+        {% if more_number == 11 and check %}
+        {% assign check = false %}
+        <li class="show-more--list_tags">
+          <span class="icon">
+            <svg id="Solid" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m192 424a23.928 23.928 0 0 1 -16.971-7.029l-144-144a24 24 0 0 1 0-33.942l144-144a24 24 0 0 1 33.942 33.942l-127.03 127.029 127.03 127.029a24 24 0 0 1 -16.971 40.971zm144.971-7.029 144-144a24 24 0 0 0 0-33.942l-144-144a24 24 0 0 0 -33.942 33.942l127.03 127.029-127.03 127.029a24 24 0 0 0 33.942 33.942z"/></svg>
+          </span>
+          {{ 'general.sidebar.more' | t }}
+        </li>
+        {% endif %}
+        
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "overlay_color": "#ffffff",
+        "overlay_opacity": "0.35",
+        "number_size": "200",
+        "subtitle": "Oops... the page you looking for clocked out!",
+        "subtitle_size": "16",
+        "text_color": "#232323",
+        "btn_bgc": "#232323",
+        "btn_txtc": "#ffffff",
+        "btn_bdc": "#232323",
+        "btn_bgc_h": "#ffffff",
+        "btn_txtc_h": "#232323",
+        "btn_bdc_h": "#232323",
+        "btn_link_1": "\/",
+        "btn_text_1": "Return to Store",
+        "btn_link_2": "shopify:\/\/collections\/all",
+        "btn_text_2": "Shop the Collections"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "4ed90ecd-740f-4425-ae39-f2b12eb555c8": {
+          "type": "sidebar_product",
+          "settings": {
+            "display_sidebar": true,
+            "show_sidebar": "left",
+            "enable_categories": true,
+            "title_categories": "",
+            "style_categories": "style_show_all",
+            "link_list": "main-menu",
+            "enable_product": true,
+            "title_product": "",
+            "collection": "",
+            "limit": "8",
+            "enable_img_1": true,
+            "link_img_1": "",
+            "enable_img_2": false,
+            "link_img_2": "",
+            "enable_custom_block": true,
+            "title_custom_block": "Custom Block",
+            "quote_custom_block": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>"
+          }
+        },
+        "16f36965-efb4-4434-895f-c48055a1d485": {
+          "type": "recommend",
+          "settings": {
+            "display_related_products": true,
+            "number_of_related_products": "8"
+          }
+        }
+      },
+      "block_order": [
+        "4ed90ecd-740f-4425-ae39-f2b12eb555c8",
+        "16f36965-efb4-4434-895f-c48055a1d485"
+      ],
+      "settings": {
+        "style_moreview": "horizontal",
+        "enable_zoom_image": true,
+        "enable_zoom_text": true,
+        "enable_payment_button": true,
+        "enable_hot_stock": true,
+        "number_stock": "3",
+        "show_sold_in": true,
+        "item_prd": "3,5,6,7,8,10,12,15",
+        "item_prds": "sold in last",
+        "hours_prs": "10,15,16,17,18,20,25,35",
+        "item_hours": "hours",
+        "display_vendor": true,
+        "text_vendor": "Vendor:",
+        "display_product_sku": true,
+        "text_product_sku": "SKU:",
+        "display_availability": true,
+        "text_availability": "Availability:",
+        "display_product_type": true,
+        "text_product_type": "Product Type:",
+        "enable_countdown": true,
+        "countdown": "countdown_1",
+        "text_countdown": "Limited-Time Offers, End in:",
+        "option_countdown": "all_product",
+        "count_down_timer": "2020-12-25 22:11:00",
+        "custombox_text": "",
+        "progressbar_1": "Please hurry, only",
+        "progressbar_2": "left in stock",
+        "total_items": "100",
+        "min_items_left": "8",
+        "max_items_left": "26",
+        "progressbar_color": "#f5f5f5",
+        "progressbar_active_color": "#69c69c",
+        "dpl_customers_view": true,
+        "title_view": "customers are viewing this product",
+        "number_view": "283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18",
+        "show_desc": "short",
+        "display_subtotal": true,
+        "display_qty": true,
+        "display_product_detail_tag": true,
+        "display_product_detail_share": true,
+        "share_text": "Share",
+        "display_trust_img": true,
+        "show_tab": "horizontal",
+        "display_product_detail_description": true,
+        "product_description_title": "Description",
+        "display_product_reviews": true,
+        "product_review_title": "Customer Reviews",
+        "display_custom_tab_1": true,
+        "custom_tab_title_1": "Custom Tab 1",
+        "custom_tab_content_1": "Custom Tab Content 1",
+        "display_custom_tab_2": true,
+        "custom_tab_title_2": "Custom Tab 2",
+        "custom_tab_content_2": "Custom Tab Content 2",
+        "display_custom_tab_3": true,
+        "custom_tab_title_3": "Custom Tab 3",
+        "custom_tab_content_3": "Custom Tab Content 3",
+        "display_custom_tab_4": true,
+        "custom_tab_title_4": "Custom Tab 4",
+        "custom_tab_content_4": "Custom Tab Content 4",
+        "display_custom_tab_5": true,
+        "custom_tab_title_5": "Custom Tab 5",
+        "custom_tab_content_5": "Custom Tab Content 5",
+        "dpl_lookbook_description": true,
+        "style_lookbook_description": "all_product",
+        "quote_title": "",
+        "quote_des": "",
+        "quote_title_2": "",
+        "quote_des_2": "",
+        "dpl_gallery_lookbook": true,
+        "style_lookbook_gallery": "all_product",
+        "dpl_grouped_product": true,
+        "grouped_product_style": "style_1",
+        "grouped_title": "Frequently Bought Together",
+        "grouped_choose_options_text": "Please choose options for all selected products",
+        "choose_options": "Choose Options",
+        "enable_bundle_discount": true,
+        "bundle_discount_text": "Get a [discount]% discount buying these products together | Erhalten Sie einen Rabatt von [discount]%, wenn Sie diese Produkte zusammen kaufen"
+      }
+    },
+    "recently-view": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "display_recently_viewed_products": true,
+        "recently_viewed_products_title": "Recently Viewed Products",
+        "number_of_recently_viewed_products": "8"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-view"
+  ]
+}

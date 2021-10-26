@@ -1,0 +1,123 @@
+{% liquid
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+  assign blocks = section.blocks | where: 'type', 'sidebar'
+  assign block = blocks[0]
+  assign style_color = block.settings.style_option_color
+  assign style_size = block.settings.style_option_size
+  paginate collection.products by 1000
+    assign size_item = paginate.items
+  endpaginate
+%}
+{% if block.settings.display_sidebar %}
+<div id="shopify-section-filter-no-sidebar" class="shopify-section col-sidebar">
+    <div class="sidebar" id="main-collection-filters" data-id="{{ section.id }}" data-filter-type-{{block.settings.filter_option}}>
+        {%- assign total_active_values = 0 -%}
+        <collection-filters-form class="facets small-hide">
+            <form id="CollectionFiltersForm" class="facets__form">
+                <a href="javascript:void(0)" title="{{ 'cart.general.close_cart' | t }}" class="close-sidebar close">
+                    {% render 'icon-close' %}    
+                </a>
+                {% if block.settings.filter_option == 'tag' %}
+                  {% render 'filter-tags-no-sidebar', block: block, 
+                                           style_color: style_color,
+                                           style_size: style_size,
+                                           has_refined: has_refined %}
+                {% else %}
+                  {% render 'filter-dynamic-no-sidebar', block: block, 
+                                              style_color: style_color,
+                                              style_size: style_size,
+                                              total_active_values: total_active_values %}
+                {% endif %}
+                
+            </form>
+        </collection-filters-form>
+    </div>
+    <div class="refined-widgets--surfup">
+        {% if settings.layout_style == 'layout_style_surfup' %}
+        <div class="widget_filter" style="opacity: 0">
+            <span class="icon-filter1">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 24 24"><path d="M19.292 1.871c.169 0 .315.063.439.186a.601.601 0 0 1 .186.439v2.5a.657.657 0 0 1-.039.225.499.499 0 0 1-.117.186l-5.469 6.074v6.641a.582.582 0 0 1-.078.293.823.823 0 0 1-.195.234l-3.75 2.5c-.052.026-.107.049-.166.068a.603.603 0 0 1-.479-.05c-.104-.052-.186-.127-.244-.225s-.088-.205-.088-.322v-9.14L3.823 5.406a.491.491 0 0 1-.117-.186.648.648 0 0 1-.039-.224v-2.5a.6.6 0 0 1 .186-.439.604.604 0 0 1 .439-.186h15zm-.625 2.89v-1.64H4.917v1.641l5.469 6.074a.507.507 0 0 1 .117.186.653.653 0 0 1 .039.225v8.203l2.5-1.66v-6.543c0-.078.013-.152.039-.225a.515.515 0 0 1 .117-.186l5.469-6.075z"></path></svg>
+            </span>
+            <span class="sidebar_more">
+                {{ 'collections.sidebar.sidebar_more' | t }}
+            </span>
+        </div>
+        {% endif %}
+        <div class="widget-content-no--filter" id="widget-content-no--filter">
+            <ul class="refined">
+            
+              {% if block.settings.filter_option == 'tag' %}
+                <li class="refined-widgets">
+                    <a data-href="{{collection.url}}" href="javascript:void(0)" class="clear-all text-hover" {% if has_refined == false %}style="display:none"{% endif %} {% if settings.enable_multilang %}data-translate="collections.sidebar.clear_all"{% endif %}>
+                      {{ 'collections.sidebar.clear_all' | t }}
+                    </a>
+                </li> 
+                {% for t in current_tags %}
+                {% assign tag = t | strip %}
+                {% assign tag_value = tag | handleize %}
+                <li>
+                  <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %}/>
+                  <a data-href={{ tag | link_to_remove_tag: tag | split: "href=" | last | split: '>' | first | split: 'title' | first  }} href="{{tag_value}}" class="selected-tag">
+                    {{tag}}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 48 48" width="144px" height="144px"><path d="M 38.982422 6.9707031 A 2.0002 2.0002 0 0 0 37.585938 7.5859375 L 24 21.171875 L 10.414062 7.5859375 A 2.0002 2.0002 0 0 0 8.9785156 6.9804688 A 2.0002 2.0002 0 0 0 7.5859375 10.414062 L 21.171875 24 L 7.5859375 37.585938 A 2.0002 2.0002 0 1 0 10.414062 40.414062 L 24 26.828125 L 37.585938 40.414062 A 2.0002 2.0002 0 1 0 40.414062 37.585938 L 26.828125 24 L 40.414062 10.414062 A 2.0002 2.0002 0 0 0 38.982422 6.9707031 z"/></svg>
+                  </a>
+                </li>
+                {% endfor %}
+              
+              {% else %}
+            <li>
+                  <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="clear-all text-hover active-facets__button button button--secondary js-facet-remove">
+                      {{ 'collections.sidebar.clear_all' | t }}
+                  </a>
+                </li> 
+                {%- for filter in collection.filters -%}
+                  {%- for value in filter.active_values -%}
+                  <li>
+                    <a class="active-facets__button active-facets__button--light button button--tertiary js-facet-remove" href="{{ value.url_to_remove }}">
+                        {{ value.label | escape }}
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 48 48" width="144px" height="144px"><path d="M 38.982422 6.9707031 A 2.0002 2.0002 0 0 0 37.585938 7.5859375 L 24 21.171875 L 10.414062 7.5859375 A 2.0002 2.0002 0 0 0 8.9785156 6.9804688 A 2.0002 2.0002 0 0 0 7.5859375 10.414062 L 21.171875 24 L 7.5859375 37.585938 A 2.0002 2.0002 0 1 0 10.414062 40.414062 L 24 26.828125 L 37.585938 40.414062 A 2.0002 2.0002 0 1 0 40.414062 37.585938 L 26.828125 24 L 40.414062 10.414062 A 2.0002 2.0002 0 0 0 38.982422 6.9707031 z"/></svg>
+                    </a>
+                  </li>
+                  {%- endfor -%}
+
+                  {% if filter.type == "price_range" %}
+
+                    {% if filter.min_value.value > 0 or filter.max_value.value < filter.range_max %}
+                      {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                      <li>
+                        <a class="active-facets__button active-facets__button--light button button--tertiary js-facet-remove" href="{{ filter.url_to_remove }}">
+                            {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 48 48" width="144px" height="144px"><path d="M 38.982422 6.9707031 A 2.0002 2.0002 0 0 0 37.585938 7.5859375 L 24 21.171875 L 10.414062 7.5859375 A 2.0002 2.0002 0 0 0 8.9785156 6.9804688 A 2.0002 2.0002 0 0 0 7.5859375 10.414062 L 21.171875 24 L 7.5859375 37.585938 A 2.0002 2.0002 0 1 0 10.414062 40.414062 L 24 26.828125 L 37.585938 40.414062 A 2.0002 2.0002 0 1 0 40.414062 37.585938 L 26.828125 24 L 40.414062 10.414062 A 2.0002 2.0002 0 0 0 38.982422 6.9707031 z"/></svg>
+                        </a>
+                      </li>
+                      {%- endif -%}
+                    {%- endif -%}
+
+                  {% endif %}
+                {%- endfor -%}
+              {% endif %}
+            </ul>
+            
+        </div>                  
+    </div>
+</div>
+
+{% endif %}
+<style> 
+    {% unless block.settings.display_sidebar %}
+    @media (max-width: 1199px) {          
+        .collection-template-no-sidebar .sidebar-label {
+            display: none !important;
+        } 
+    }
+    {% endunless %}
+
+    {% unless block.settings.display_sidebar %}
+        .collection-template-no-sidebar .bg-filter {
+            display: none;
+        }
+    {% endunless %}
+</style>
+{% unless block.settings.filter_option == 'tag' %}
+<script src="{{ 'collection-filters-form.js' | asset_url }}" defer="defer"></script> 
+{% endunless %}

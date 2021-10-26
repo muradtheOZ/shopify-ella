@@ -1,0 +1,321 @@
+{% if settings.list_collections_layout == 'collections_full' %}
+<div class="bg-breddcrumb">
+    <div class="container-padd60">
+        {% render 'breadcrumb' %}
+    </div>
+</div>
+{% endif %}
+<div class="{% if settings.list_collections_layout == 'collections_full' %}container-padd60{% else %}container{% endif %}">
+    {% unless settings.list_collections_layout == 'collections_full' %}
+        {% render 'breadcrumb' %}
+    {% endunless %}
+    <header class="page-header">
+        <h1 {% if settings.enable_multilang %}data-translate="collections.general.title"{%endif%}>
+            {{ 'collections.general.title' | t }}
+        </h1>
+    </header>
+    {% if settings.list_collections_layout == 'collections_01_grid' %}
+        <div class="list-collections list-collections-default">
+            <div class="row">
+                {% render 'sidebar-section' %}
+                {% render 'list-collections-template' %}
+            </div>
+        </div>
+    {% elsif settings.list_collections_layout == 'collections_02_list' %}
+        <div class="list-collections list-collections-02">
+            <div class="row">
+                {% render 'sidebar-section' %}
+                {% render 'list-collections-02-template' %}
+            </div>
+        </div>
+    {% elsif settings.list_collections_layout == 'collections_3' %}
+         <div class="list-collections list-collections-03">
+            <div class="row">
+                {% render 'sidebar-section' %}
+                {% render 'list-collections-03-template' %}
+            </div>
+        </div>
+    {% elsif settings.list_collections_layout == 'collections_mansory' %}
+        <div class="list-collections list-collections-mansory">
+            <div class="row">
+                {% render 'sidebar-section' %}
+                {% render 'list-collections_mansory-template' %}
+            </div>
+        </div> 
+    {% elsif settings.list_collections_layout == 'collections_full' %}
+        <div class="list-collections list-collections-full">
+            <div class="row">
+                {% render 'sidebar-section' %}
+                {% render 'list-collections-full-template' %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Main List Collections",
+    "settings": [      
+       {
+        "type": "select",
+        "id": "list_collection_results_per_row",
+        "label": "Products per row",
+        "default": "3",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "list_collection_title_size",
+        "label": "Collection Title Font Size",
+        "default": "20"
+      },
+      {
+        "type": "radio",
+        "id": "style_categories",
+        "label": "Show all \/ Only a few categories",
+        "options": [
+          {
+            "value": "style_show_all",
+            "label": "Show all"
+          },
+          {
+            "value": "style_little",
+            "label": "Only a few categories"
+          }
+        ]
+      },
+      {
+        "type" : "color",
+        "id" : "bg_color",
+        "label" : "Background Color",
+        "default" : "#fafafa",
+        "info" : "(Only use for Collections 02-List)"
+      }     
+
+    ],
+    "blocks": [
+        {
+            "type": "sidebar_product",
+            "name": "Sidebar Product",
+            "settings": [
+            {
+                "type": "checkbox",
+                "id": "display_sidebar",
+                "label": "Enable Sidebar",
+                "default": true
+            },
+            {
+                "type": "select",
+                "id": "show_sidebar",
+                "label": "Show Sidebar on:",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "right",
+                        "label": "Right"
+                    }          
+                ],
+                "default": "left",
+                "info": "Default: Left"
+            },
+            {
+                "type": "header",
+                "content": "Categories"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_categories",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "text",
+                "id": "title_categories",
+                "label": "Title"
+            },
+            {
+                "type": "radio",
+                "id": "style_categories",
+                "label": "Show all \/ Only a few categories",
+                "options": [
+                    {
+                        "value": "style_show_all",
+                        "label": "Show all"
+                    },
+                    {
+                        "value": "style_main_menu",
+                        "label": "Get Categories From Main Menu"
+                    },
+                    {
+                        "value": "style_little",
+                        "label": "Only a few categories"
+                    }                    
+                ]
+            },
+            {
+                "type": "link_list",
+                "id": "link_list",
+                "label": "Choose a menu",
+                "default": "main-menu"
+            },
+            {
+                "type": "header",
+                "content": "Product Slider"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_product",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "text",
+                "id": "title_product",
+                "label": "Title"
+            },
+            {
+                "id": "collection",
+                "type": "collection",
+                "label": "Collection"
+            },
+            {
+                "type": "text",
+                "id": "limit",
+                "label": "Number of products to show",
+                "default": "8"
+            },       
+            {
+                "type": "header",
+                "content": "Block Image 1"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_img_1",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "image_picker",
+                "id": "image_img_1",
+                "label": "Image"
+            },
+            {
+                "type": "url",
+                "id": "link_img_1",
+                "label": "Link Image",
+                "info": "Optional"
+            },
+            {
+                "type": "header",
+                "content": "Block Image 2"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_img_2",
+                "label": "Enable",
+                "default": false
+            },
+            {
+                "type": "image_picker",
+                "id": "image_img_2",
+                "label": "Image"
+            },
+            {
+                "type": "url",
+                "id": "link_img_2",
+                "label": "Link Image",
+                "info": "Optional"
+            },
+            {
+                "type": "header",
+                "content": "Custom Block"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_custom_block",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "text",
+                "id": "title_custom_block",
+                "label": "Heading",
+                "default": "Custom Block"
+            },
+            {
+                "type": "richtext",
+                "id": "quote_custom_block",
+                "label": "Text",
+                "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
+            }
+            ]
+        },
+        {
+            "type": "collection_list",
+            "name": "Collection",
+            "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "label": "Collection",
+                "id": "collection",
+                "type": "collection"
+            },
+            {
+                "type": "header",
+                "content": "Countdow"
+            },
+            {
+                "type": "checkbox",
+                "id": "display_countdow",
+                "label": "Display Countdown",
+                "default": false
+            },
+            {
+                "type" : "text",
+                "id" : "title",
+                "label" : "Title",
+                "default" : "Special Offers"
+            },
+            {
+                "type" : "textarea",
+                "id" : "des",
+                "label" : "Description",
+                "default" : "Sale up to 60% off on selected items. End ins:"
+            },
+            {
+                "type" : "textarea",
+                "id" : "countdown",
+                "label" : "Countdown",
+                "default" : "2020/01/7 0:0:00"
+            },
+            {
+                "type" : "color",
+                "id" : "color",
+                "label" : "Color",
+                "default" : "#fff"
+            }
+            ]
+        }
+    ]
+  }
+{% endschema %}

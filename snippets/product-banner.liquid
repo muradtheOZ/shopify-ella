@@ -1,0 +1,174 @@
+{% assign blocks_banner = section.blocks | where: 'type', 'product-banner' %}
+{% assign blocks_policy = section.blocks | where: 'type', 'policy' %}
+<div id="shopify-section-product-banner" class="shopify-section product-banner-sections col-12">
+{% if blocks_banner.size > 0 %}
+    {% assign block = blocks_banner[0] %}
+    {% if block.settings.display %}
+        <div class="home-custom-block" id="custom-block-{{block.id}}">
+            <div class="custom-block-banner banner-large-img">
+                <div class="img-box">
+                    {% if block.settings.image != blank %}
+                    {%- assign preview_img = block.settings.image -%}
+                    <a href="{{ block.settings.link }}" {% if block.settings.video_link != blank %}data-load-video{% endif %} class="adaptive_height" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                        {%- assign img_url = block.settings.image | img_url: '1920x' -%}
+                        <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="1920"> 
+                        {% if block.settings.video_link != blank %}
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <path style="fill:transparent;" d="M256,20C125.872,20,20,125.872,20,256s105.872,236,236,236s236-105.872,236-236S386.128,20,256,20z   M156.64,387.712V124.288l246.72,131.72L156.64,387.712z"></path>
+                            <path d="M512,256C512,114.616,397.384,0,256,0S0,114.616,0,256s114.616,256,256,256S512,397.384,512,256z   M256,492C125.872,492,20,386.128,20,256S125.872,20,256,20s236,105.872,236,236S386.128,492,256,492z"></path>
+                            <polygon points="156.64,387.712 403.36,256.008 156.64,124.288 "></polygon><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                        </svg>
+                        {% endif %}                  
+                    </a>
+                    {% if block.settings.video_link != blank %}
+                    <div class="fluid-width-video-wrapper" style="display: none;padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                        {% if block.settings.video_type == 'mp4' %}
+                            <video class="video" muted playsinline preload="none" autoplay loop>
+                                <source type="video/mp4" src="{{ block.settings.video_link }}">
+                            </video>
+                        {% else %}
+                            <iframe class="youtube-player" id="player_youtube" width="100%" height="100%" data-video-id="{{ block.settings.video_link }}" src="https://www.youtube.com/embed/{{ block.settings.video_link }}?enablejsapi=1&rel=0&autoplay=0&mute=1&controls=0" frameborder="0" allowfullscreen=""></iframe>
+                        {% endif %}
+                        {% if block.settings.video_link != blank %}
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <path style="fill:transparent;" d="M256,20C125.872,20,20,125.872,20,256s105.872,236,236,236s236-105.872,236-236S386.128,20,256,20z   M156.64,387.712V124.288l246.72,131.72L156.64,387.712z"></path>
+                            <path d="M512,256C512,114.616,397.384,0,256,0S0,114.616,0,256s114.616,256,256,256S512,397.384,512,256z   M256,492C125.872,492,20,386.128,20,256S125.872,20,256,20s236,105.872,236,236S386.128,492,256,492z"></path>
+                            <polygon points="156.64,387.712 403.36,256.008 156.64,124.288 "></polygon><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                        {% endif %}       
+                    </div>  
+                    {% endif %} 
+                    {% else %}
+                    <a href="{{ block.settings.link }}">
+                        <div class="not_img">
+                            1770 x 585px
+                        </div>
+                    </a>
+                    {% endif %} 
+                </div>
+            
+                {% if block.settings.banner_heading != blank or block.settings.banner_des != blank or block.settings.banner_button != blank %}
+                <div class="banner-content inner {% if block.settings.alignment == 'left' %}abs_left{% elsif block.settings.alignment == 'right' %}abs_right{% else %}abs_center{% endif %}">
+
+                    {% if block.settings.banner_heading_sub != blank %}
+                    <h3 class="banner-sub-heading">
+                        {{ block.settings.banner_heading_sub }}
+                    </h3>
+                    {% endif %}
+
+                    {% if block.settings.banner_heading != blank %}
+                    <h2 class="banner-heading">
+                        {{ block.settings.banner_heading }}
+                    </h2>
+                    {% endif %}
+
+                    {% if block.settings.banner_des != blank %}
+                    <p class="banner-des">
+                        {{ block.settings.banner_des }}
+                    </p>
+                    {% endif %}
+
+                    {% if block.settings.banner_button != blank %}
+                    <a href="{{ block.settings.link }}" class="banner-button btn">
+                        {{ block.settings.banner_button }}
+                    </a>
+                    {% endif %}
+                </div>
+                {% endif %}  
+            </div>
+        </div>
+        <style>
+            {% if block.settings.banner_heading_sub != blank %}
+            .home-custom-block .banner-sub-heading {
+                {% if block.settings.font_size_banner_heading_sub != blank %}
+                font-size: {{ block.settings.font_size_banner_heading_sub }} !important;
+                {% endif %}
+                {% if block.settings.color_banner_heading_sub != blank %}
+                color:{{ block.settings.color_banner_heading_sub }};
+                {% endif %}
+                text-transform: uppercase;
+            }
+            {% endif %}
+            {% if block.settings.banner_heading != blank %}
+            .home-custom-block .banner-heading {
+                {% if block.settings.font_size_banner_heading != blank %}
+                font-size: {{ block.settings.font_size_banner_heading }};
+                {% endif %}
+                {% if block.settings.color_banner_heading != blank %}
+                color:{{ block.settings.color_banner_heading }};
+                {% endif %}
+            }
+            {% endif %}
+            {% if block.settings.banner_des != blank %}
+            .home-custom-block .banner-des {
+                {% if block.settings.font_size_banner_des != blank %}
+                font-size: {{ block.settings.font_size_banner_des }};
+                {% endif %}
+                {% if block.settings.color_banner_des != blank %}
+                color: {{ block.settings.color_banner_des }};
+                {% endif %}
+            }
+            {% endif %}
+            {% if block.settings.banner_button != blank %}
+            .home-custom-block .banner-button {
+                {% if block.settings.bg_banner_button != blank %}
+                background-color:{{ block.settings.bg_banner_button }};
+                {% endif %}
+                {% if block.settings.border_banner_button != blank %}
+                border-color:{{ block.settings.border_banner_button }};
+                {% endif %}
+                {% if block.settings.color_banner_button != blank %}
+                color:{{ block.settings.color_banner_button }};
+                {% endif %}
+                {% if block.settings.min_width_banner_button != blank %}
+                min-width:{{ block.settings.min_width_banner_button }};
+                {% endif %}
+            }
+            .banner-large-img .banner-content .banner-button:hover {
+                color: {{ block.settings.color_banner_button_hover }} !important;
+                background-color: {{ block.settings.bg_banner_button_hover }} !important;
+                border-color: {{ block.settings.border_banner_button_hover }} !important;
+            }
+            {% endif %}
+        </style>
+    {% endif %}
+{% endif %}
+
+{% if blocks_policy.size %}
+    {% assign block = blocks_policy[0] %}
+    {% if block.settings.enable_policy  %}
+        <div class="policies-block">
+          <div class="bg-policies-block">
+              <div class="row policies-slider"">  
+                {% for i in (1..4) %}
+                {% capture cap_icon %}icon_{{ i }}{% endcapture %}
+                {% capture cap_text %}text_{{ i }}{% endcapture %}
+                {% capture cap_text_des %}text_des_{{ i }}{% endcapture %}
+
+                {%- assign icon = block.settings[cap_icon] -%}
+                {%- assign text = block.settings[cap_text] -%}
+                {%- assign text_des = block.settings[cap_text_des] -%}
+
+                {% unless settings.layout_style == 'layout_style_fullwidth' %}
+                    {%- assign column_size = 'col-12 col-md-6 col-lg-4 col-xl-3' -%}
+                {% endunless %}
+
+                <div class="policy-item {{ column_size }}">
+                    {% if icon != blank %}
+                    <span class="policy-icon">
+                      {{ icon }}
+                    </span>
+                    {% endif %}
+                    <span class="policy-text">
+                        <span>{{ text }}</span>
+                        <p>
+                            {{ text_des }}
+                        </p>   
+                    </span>
+                </div>
+                {% endfor %}
+              </div>
+            </div>    
+        </div>
+    {% endif %}
+{% endif %}
+</div>

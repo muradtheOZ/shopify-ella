@@ -1,0 +1,82 @@
+{% if settings.enable_shopify_payments_currencies %}
+{% form 'currency' %}
+  <select name="currency" style="display:none;">
+    {%- for currency in shop.enabled_currencies -%}
+      {%- if currency == cart.currency -%}
+        <option selected="true">{{currency.iso_code}}</option>
+      {%- else -%}
+        <option>{{currency.iso_code}}</option>
+      {%- endif -%}
+    {%- endfor -%}
+  </select>
+{% endform %}
+<div class="currency-block">
+  <label class="label-text"{% if settings.enable_multilang %} data-translate="general.currency.currency"{% endif %}>
+    {{ 'general.currency.currency' | t }}
+  </label>
+
+  <div class="btn-group currency-dropdown">
+    <label class="dropdown-toggle dropdown-label" data-currency-label>
+      {% assign currency_iso = cart.currency.iso_code %}
+      {% render 'icon_currency', currency_iso: currency_iso %}
+      <span class="text">
+        {{ cart.currency.iso_code }}
+      </span>      
+    </label>
+    <div class="dropdown-menu currency-menu" id="currencies">
+     
+      {%- for currency in shop.enabled_currencies -%}
+      <a class="dropdown-item{% if currency == cart.currency %} active {% endif %}" href="#" data-currency="{{currency.iso_code}}">
+        {% assign currency_iso = currency.iso_code %}
+        {% render 'icon_currency', currency_iso: currency_iso %}
+        <span class="text">
+          {{currency.iso_code}}
+        </span>       
+      </a>      
+      {%- endfor -%}
+    </div>
+  </div>       
+</div>
+
+{% else %}
+	{% if settings.enable_multiple_currencies %}
+<div class="currency-block">
+  <label class="label-text"{% if settings.enable_multilang %} data-translate="general.currency.currency"{% endif %}>
+    {{ 'general.currency.currency' | t }}
+  </label>
+
+  <div class="btn-group currency-dropdown">
+    <label class="dropdown-toggle dropdown-label" data-currency-label>
+      <span class="img-icon">
+        <img data-srcset="{{"i-currency-1.png" | asset_img_url: '23x'}}" alt="{{ settings.currency_1_unit }}" {% render 'lazyload' %} />
+      </span>
+      <span class="text">
+        {{ settings.currency_1_unit }}
+      </span>      
+    </label>
+
+    <div class="dropdown-menu currency-menu" id="currencies">
+      {% if settings.header_layout == '05' or settings.header_layout == '06' or settings.header_layout == '08' or settings.header_layout == 'parallax' %}
+        <h2>{{ 'general.currency.currency' | t }}</h2>
+      {% endif %}
+      {% for i in (1..10) %}
+      {% capture currency_unit %}currency_{{ i }}_unit{% endcapture %}
+      {% capture i-currency_unit %}i-currency-{{ i }}.png{% endcapture %}
+      {% assign currency_length = settings[currency_unit] | size %}
+
+      {% if currency_length > 0 %}
+      <a class="dropdown-item{% if shop.currency == settings[currency_unit] %} active {% endif %}" href="#" data-currency="{{ settings[currency_unit] }}">
+        <span class="img-icon">
+          <img data-srcset="{{i-currency_unit | asset_img_url: '23x'}}" alt="{{ settings.settings[currency_unit] }}" {% render 'lazyload' %} />
+        </span>
+        <span class="text">
+          {{ settings[currency_unit] }}
+        </span>       
+      </a>
+      {% endif %}  
+      {% endfor %}
+    </div>
+  </div>       
+</div>
+	{% endif %}
+{% endif %}

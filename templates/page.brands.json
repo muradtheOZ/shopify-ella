@@ -1,0 +1,145 @@
+{
+  "wrapper": "div.brands-page",
+  "sections": {
+    "main": {
+      "type": "brands-page",
+      "blocks": {
+        "0d7e1071-0a47-4509-9058-cf20a7b6e92f": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        },
+        "5235eba3-4519-45e2-880c-ef416cba8a2b": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        },
+        "8aa42d60-cd2f-4ca6-be46-9ec4b473d58c": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        },
+        "71cb782a-8b2b-4f16-8702-8b1420841353": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        },
+        "0f0c862d-ebd1-4361-b317-0867ec38dff3": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        },
+        "408c3400-375a-4fb8-a330-0c6b1fb5f00b": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        },
+        "d16fa18c-334b-4800-bc5d-f37d2a14b1fc": {
+          "type": "image",
+          "settings": {
+            "title": "Benjamin Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "0d7e1071-0a47-4509-9058-cf20a7b6e92f",
+        "5235eba3-4519-45e2-880c-ef416cba8a2b",
+        "8aa42d60-cd2f-4ca6-be46-9ec4b473d58c",
+        "71cb782a-8b2b-4f16-8702-8b1420841353",
+        "0f0c862d-ebd1-4361-b317-0867ec38dff3",
+        "408c3400-375a-4fb8-a330-0c6b1fb5f00b",
+        "d16fa18c-334b-4800-bc5d-f37d2a14b1fc"
+      ],
+      "settings": {
+        "display_brand": true,
+        "link_brand": "vendor"
+      }
+    },
+    "16259888694ade058e": {
+      "type": "home-custom-block-images",
+      "blocks": {
+        "16259888694ade058e-0": {
+          "type": "image",
+          "settings": {
+            "color_content": "#fff",
+            "sub_heading": "New Arrivals",
+            "font_size_sub_heading": "13px",
+            "heading": "Da Scarvéro",
+            "font_size_heading": "30px",
+            "des": "Phasellus lorem malesuada ligula pulvino commodo maecenas",
+            "font_size_des": "12px",
+            "button": "Shop Now",
+            "link": "",
+            "bg_button": "#fff",
+            "border_button": "#fff",
+            "color_button": "#232323"
+          }
+        },
+        "16259888694ade058e-1": {
+          "type": "image",
+          "settings": {
+            "color_content": "#fff",
+            "sub_heading": "New Arrivals",
+            "font_size_sub_heading": "13px",
+            "heading": "Da Scarvéro",
+            "font_size_heading": "30px",
+            "des": "Phasellus lorem malesuada ligula pulvino commodo maecenas",
+            "font_size_des": "12px",
+            "button": "Shop Now",
+            "link": "",
+            "bg_button": "#fff",
+            "border_button": "#fff",
+            "color_button": "#232323"
+          }
+        },
+        "16259888694ade058e-2": {
+          "type": "image",
+          "settings": {
+            "color_content": "#fff",
+            "sub_heading": "New Arrivals",
+            "font_size_sub_heading": "13px",
+            "heading": "Da Scarvéro",
+            "font_size_heading": "30px",
+            "des": "Phasellus lorem malesuada ligula pulvino commodo maecenas",
+            "font_size_des": "12px",
+            "button": "Shop Now",
+            "link": "",
+            "bg_button": "#fff",
+            "border_button": "#fff",
+            "color_button": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "16259888694ade058e-0",
+        "16259888694ade058e-1",
+        "16259888694ade058e-2"
+      ],
+      "settings": {
+        "layout": "default",
+        "display_padding": true,
+        "bg_color": "#f8f8f8",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 0,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16259888694ade058e"
+  ]
+}

@@ -1,0 +1,27 @@
+{% if section.settings.blog_post != blank %}
+  {% assign limit = section.settings.blog_post %}
+{% else %}
+  {% assign limit = 3 %}
+{% endif %}
+
+<div id="shopify-section-blog-template" class="shopify-section col-12 col-xl-9 col-main">
+  {% paginate blog.articles by limit %}
+  <div class="content-blog blog-default">
+    <ul class="list-blog">    
+      {% for article in blog.articles %}
+      {% render 'blog-item' with article as article %}
+      {% endfor %}
+    </ul>
+
+    {% if paginate.pages > 1 %}
+    {% render 'pagination' paginate: paginate %}
+    {% endif %}
+  </div>
+  {% endpaginate %}
+</div>
+
+<style>
+  .halo-blog-content .article-details .article-excerpt {
+    text-align: {{ section.settings.blog_text_align }};
+  }
+</style>

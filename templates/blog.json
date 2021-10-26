@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "d8f2d51c-aa5d-4da8-a276-56f0ce0c5db2": {
+          "type": "sidebar_blog",
+          "settings": {
+            "display_sidebar_blog_page": true,
+            "show_sidebar": "left",
+            "display_sidebar_link": true,
+            "sidebar_link_title": "Categories",
+            "style_categories": "style_little",
+            "link_list": "main-menu",
+            "sidebar_recent_art": true,
+            "sidebar_blog_tags": false,
+            "enable_product": true,
+            "title_product": "Featured Products",
+            "collection": "women",
+            "limit": "3",
+            "enable_img_1": true,
+            "link_img_1": "shopify:\/\/collections\/cosmopolitan",
+            "enable_img_2": true,
+            "link_img_2": "shopify:\/\/collections\/glamos",
+            "enable_custom_block": true,
+            "title_custom_block": "Custom Block",
+            "quote_custom_block": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d8f2d51c-aa5d-4da8-a276-56f0ce0c5db2"
+      ],
+      "settings": {
+        "blog_post": "3",
+        "blog_text_align": "left",
+        "blog_show_author": true,
+        "blog_show_date": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

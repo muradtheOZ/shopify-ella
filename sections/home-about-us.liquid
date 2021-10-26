@@ -1,0 +1,505 @@
+<div class="home-about-us {% if section.settings.style_title == 'style_2' %}style_2{% elsif section.settings.style_title == 'style_3' %}style_3{% endif %}{% if section.settings.title_sub != blank %} sub_title_padding{% endif %}{% if section.settings.style_about == 'style_2' %} style_about_2{% elsif section.settings.style_about == 'style_3' %} style_about_3{% elsif section.settings.style_about == 'style_4' %} style_about_4{% elsif section.settings.style_about == 'style_5' %} style_about_5{% elsif section.settings.style_about == 'style_6' %} style_about_6{% elsif section.settings.style_about == 'style_7' %} style_about_7{% endif %}" id="home-about-{{ section.id }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        {% if section.settings.title != blank %}
+            <h4 class="title">
+              {% render 'multilang' with section.settings.title %}
+            </h4>
+        {% endif %}
+
+        {% if section.settings.title_sub != blank %}
+            <h3 class="sub-title">
+              {% render 'multilang' with section.settings.title_sub %}
+            </h3>
+        {% endif %}
+        
+        {% if section.settings.des != blank and section.settings.style_about != 'style_3' %}
+            <div class="des">
+              {{ section.settings.des }}
+            </div>
+        {% endif %}
+
+        {% if section.settings.button_text != blank %}
+            <a class="btn btn-about-us" href="{{ section.settings.button_text_link }}">{{ section.settings.button_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% if section.blocks.size > 0 %}
+    <div class="list-item">
+        {% for block in section.blocks %}
+            {% if block.settings.image != blank or block.settings.content != blank %}
+            <div class="item column-{{section.blocks.size}}" id="item-{{block.id}}">
+                
+
+                {% if section.settings.style_about == 'style_5' %}
+                    <div class="content-left">
+                        {% if block.settings.icon_type == 'image' %}
+                            {% if block.settings.image != blank %}
+                            <div class="image">
+                                <img data-srcset="{{ block.settings.image | img_url: '200x' }}" class="lazyload" alt="{{ block.settings.image.alt | default: shop.name }}" />
+                            </div>
+                            {% else %}
+                                <a class="animate-scale" href="{{ block.settings.link }}">
+                                    {% if section.settings.style_about == 'style_4' %}
+                                        <div class="not_img">77 x 77px</div> 
+                                    {% else %}
+                                        <div class="not_img">48 x 48px</div> 
+                                    {% endif %}    
+                                </a>
+                            {% endif %}
+                        {% else %}
+                            {% if block.settings.text_icon != blank %}
+                            <div class="image">
+                                {{ block.settings.text_icon }}
+                            </div>
+                            {% else %}
+                                <a class="animate-scale" href="{{ block.settings.link }}">
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="content-right">
+                        {% if block.settings.content != blank %}
+                            <div class="content">
+                                {{ block.settings.content }}
+                            </div>
+                        {% endif %}
+
+                        {% if block.settings.content != blank %}
+                            <p class="desctiption">{{ block.settings.description }}</p>
+                        {% endif %}
+
+                        {% if block.settings.text_button != blank %}
+                            <a class="btn button_text" href="{{block.settings.link_icon}}">{{ block.settings.text_button }}</a>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <a {% unless block.settings.link_icon == blank %}href="{{block.settings.link_icon}}"{% endunless %}>
+                    {% if block.settings.icon_type == 'image' %}
+                        {% if block.settings.image != blank %}
+                        <div class="image">
+                            <img data-srcset="{{ block.settings.image | img_url: '200x' }}" class="lazyload" alt="{{ block.settings.image.alt | default: shop.name }}" />
+                        </div>
+                        {% else %}
+                            <a class="animate-scale" href="{{ block.settings.link }}">
+                                {% if section.settings.style_about == 'style_4' %}
+                                    <div class="not_img">77 x 77px</div> 
+                                {% elsif section.settings.style_about == 'style_6' %}
+                                    <div class="not_img">70 x 235px</div> 
+                                {% else %}
+                                    <div class="not_img">48 x 48px</div> 
+                                {% endif %}    
+                            </a>
+                        {% endif %}
+                    {% else %}
+                        {% if block.settings.text_icon != blank %}
+                        <div class="image">
+                            {{ block.settings.text_icon }}
+                        </div>
+                        {% else %}
+                            <a class="animate-scale" href="{{ block.settings.link }}">
+                            </a>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if block.settings.content != blank %}
+                    <div class="content">
+                        {{ block.settings.content }}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.content != blank %}
+                    <p class="desctiption">{{ block.settings.description }}</p>
+                    {% endif %}
+
+                    {% if block.settings.text_button != blank %}
+                    <a class="btn button_text" href="{{block.settings.link_icon}}">{{ block.settings.text_button }}</a>
+                    {% endif %}
+
+                    </a> 
+                {% endif %}
+
+                <style>
+                    #item-{{block.id}} .button_text, #item-{{block.id}} .desctiption, #item-{{block.id}} .content p, #item-{{block.id}} .content a, #item-{{block.id}} .image svg, #item-{{block.id}} .image i {
+                        color: {{ block.settings.color_content }};
+                    }
+                    .home-about-us.style_about_2 .list-item #item-{{block.id}} .content p:before {
+                        background-color: {{ block.settings.color_content }};
+                    }
+                    .home-about-us.style_about_2 .list-item #item-{{block.id}} a:hover .content p:before {
+                        background-color: {{ block.settings.color_content_hover }};
+                    }
+                    #item-{{block.id}} a:hover .content p, #item-{{block.id}} a:hover .image svg, #item-{{block.id}} a:hover .image i {
+                        color: {{ block.settings.color_content_hover }};
+                    }
+                </style>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if section.settings.des != blank and section.settings.style_about == 'style_3' %}
+        <div class="des des-bottom">
+          {{ section.settings.des }}
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+    {% assign margin_bottom =  section.settings.margin_bottom %} 
+
+    {% if section.settings.style_about == 'style_5' %}
+        {% if section.settings.bg_color != 'rgba(0,0,0,0)' or section.settings.image_bg_style_4 != blank %}
+        #home-about-{{ section.id }} .container .list-item {
+            background-color: {{ section.settings.bg_color }};
+        }
+        {% endif %}
+    {% else %}
+        {% if section.settings.bg_color != 'rgba(0,0,0,0)' or section.settings.image_bg_style_4 != blank %}
+        #home-about-{{ section.id }} {
+            {% if section.settings.image_bg_style_4 != blank %}
+                background: url({{ section.settings.image_bg_style_4 | img_url: '1920x' }});
+                background-repeat: repeat-x;
+                background-size: cover;
+            {% else %}
+                background-color: {{ section.settings.bg_color }};
+            {% endif %}
+        }
+        {% endif %}
+    {% endif %}
+
+    {% if section.settings.style_about == 'style_4' %}
+        #home-about-{{ section.id }}.style_about_4 .title {
+            margin-bottom: 0;
+        }
+    {% endif %}
+
+    {% if section.settings.style_about == 'style_3' %}
+        .home-about-us.style_2 .title {
+            font-weight: bold;
+        }
+        .home-about-us.style_about_3 {
+            padding: 56px 0 50px;
+        }
+    {% endif %}
+
+    {% if section.settings.style_title == 'style_3' %}
+        #home-about-{{ section.id }} .container .row {
+            background-color: {{ section.settings.bg_color }};
+        }
+        #home-about-{{ section.id }} .des a {
+            color: {{ section.settings.color_des }};
+        }
+
+    {% endif %}
+
+    {% if section.settings.style_about == 'style_2' or section.settings.style_about == 'style_3' %}
+        .home-about-us.style_about_2 .list-item .item {
+            border-color: {{ section.settings.border_bg_color }};
+        }
+    {% endif %}
+  
+    #home-about-{{ section.id }} .title {
+        color: {{ section.settings.color_title }};
+        font-size: {{ section.settings.font_size_title }};
+        {% if section.settings.title_sub == blank %}
+            {% if section.settings.style_about == 'style_3' %}
+                margin-bottom: 35px;
+            {% else %}
+                margin-bottom: {{ section.settings.font_size_title }};
+            {% endif %}
+        {% else %}
+            margin-bottom: 0;
+        {% endif %}
+    }
+
+    #home-about-{{ section.id }} .sub-title {
+        color: {{ section.settings.color_title_sub }};
+        font-size: {{ section.settings.font_size_title_sub }};
+    }
+    
+    #home-about-{{ section.id }} .des {
+        color: {{ section.settings.color_des }};
+        font-size: {{ section.settings.font_size_des }};
+    }
+
+    #home-about-{{ section.id }} .btn-about-us {
+        color: {{ section.settings.color_button }};
+        border-color: {{ section.settings.color_border_button }};
+        background-color: {{ section.settings.bg_color_button }};
+    }
+    
+    @media (min-width: 1200px) {
+        #home-about-{{ section.id }} {
+        margin-bottom: {{ margin_bottom }}px;
+        }
+    }   
+
+    {% unless section.settings.display_border_top %}
+    #home-about-{{ section.id }} {
+        border-top: none;
+    }
+    {% endunless %}
+
+    .home-about-us.style_about_3 .list-item .item {
+        background-color: {{ section.settings.bg_color_item_style_3 }}
+    }
+</style>
+
+
+
+{% schema %}
+    {
+        "name": "About Us",
+        "class": "home-about-us-sections",
+        "settings": [
+            {
+                "type": "select",
+                "id": "style_about",
+                "label": "About Us Style:",
+                "options": [
+                    {
+                        "value": "style_1",
+                        "label": "Style 1"
+                    },
+                    {
+                        "value": "style_2",
+                        "label": "Style 2"
+                    },
+                    {
+                        "value": "style_3",
+                        "label": "Style 3"
+                    },
+                    {
+                        "value": "style_4",
+                        "label": "Style 4"
+                    },
+                    {
+                        "value": "style_5",
+                        "label": "Style 5"
+                    },
+                    {
+                        "value": "style_6",
+                        "label": "Style 6"
+                    },
+                    {
+                        "value": "style_7",
+                        "label": "Style 7"
+                    }
+                ],
+                    "default": "style_1"
+            },
+            {
+                "type": "checkbox",
+                "id": "display_border_top",
+                "label": "Display Border Top?",
+                "default": true
+            },
+            {
+                "type" : "color",
+                "id" : "bg_color",
+                "label" : "Background Color",
+                "default" : "transparent"
+            },
+            {
+                "type" : "color",
+                "id" : "border_bg_color",
+                "label" : "Border Color Style 2",
+                "default" : "#f5f5f5"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_color_item_style_3",
+                "label" : "Background Color Item Style 3",
+                "default" : "#fff"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_bg_style_4",
+                "label": "Background Image"
+            },
+            {
+                "type": "select",
+                "id": "style_title",
+                "label": "Title Style:",
+                "options": [
+                    {
+                        "value": "style_1",
+                        "label": "Style 1"
+                    },
+                    {
+                        "value": "style_2",
+                        "label": "Style 2"
+                    },
+                    {
+                        "value": "style_3",
+                        "label": "Style 3"
+                    }
+                ],
+                    "default": "style_1"
+            },
+            {
+                "type": "textarea",
+                "id": "title",
+                "label": "Title",
+                "default": "About The Shop"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_title",
+                "label" : "Title Font Size",
+                "default" : "12px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_title",
+                "label" : "Title Color",
+                "default" : "#232323"
+            },
+            {
+                "type": "textarea",
+                "id": "title_sub",
+                "label": "Sub Title"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_title_sub",
+                "label" : "Sub Title Font Size",
+                "default" : "12px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_title_sub",
+                "label" : "Sub Title Color"
+            },
+            {
+                "type": "textarea",
+                "id": "des",
+                "label": "Descriptions"
+            },
+            {
+                "type" : "color",
+                "id" : "color_des",
+                "label" : "Description Color",
+                "default" : "#787878"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_des",
+                "label" : "Des Font Size",
+                "default" : "14px"
+            },
+            {
+                "type" : "text",
+                "id" : "button_text",
+                "label" : "Button Text"
+            },
+            {
+                "type" : "url",
+                "id" : "button_text_link",
+                "label" : "Button Link"
+            },
+            {
+                "type" : "color",
+                "id" : "color_button",
+                "label" : "Color Button",
+                "default" : "#202020"
+            },
+            {
+                "type" : "color",
+                "id" : "color_border_button",
+                "label" : "Border Color Button",
+                "default" : "#ffffff"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_color_button",
+                "label" : "Background Color Button",
+                "default" : "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "margin_bottom",
+                "label": "Margin Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "default": 30
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "Block",
+                "settings":[
+                    {
+                      "type": "radio",
+                      "id": "icon_type",
+                      "label": "Use image or text for Icon?",
+                      "options": [
+                        {
+                          "value": "text",
+                          "label": "Text"
+                        },
+                        {
+                          "value": "image",
+                          "label": "Image"
+                        }
+                      ],
+                      "default": "text"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Icon"
+                    },
+                    {
+                        "type" : "text",
+                        "id" : "text_icon",
+                        "label" : "Text Icon"
+                    },
+                    {
+                        "type": "richtext",
+                        "id":"content",
+                        "label": "Content"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "description",
+                        "label": "Descriptions"
+                    },
+                    {
+                        "type" : "text",
+                        "id" : "text_button",
+                        "label" : "Button"
+                    },
+                    {
+                        "type" : "url",
+                        "id" : "link_icon",
+                        "label" : "Link"
+                    },
+                    {
+                        "type" : "color",
+                        "id" : "color_content",
+                        "label" : "Color Content",
+                        "default" : "#000000"
+                    },
+                    {
+                        "type" : "color",
+                        "id" : "color_content_hover",
+                        "label" : "Color Hover Content",
+                        "default" : "#307058"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "About Us",
+                "category": "text"
+            }
+        ]
+    }
+{% endschema %}

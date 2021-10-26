@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-wishlist",
+      "settings": {
+      }
+    },
+    "16260090911bd7e802": {
+      "type": "home-custom-block-spotlight",
+      "blocks": {
+        "16260090911bd7e802-0": {
+          "type": "image",
+          "settings": {
+            "bg_color_column": "",
+            "title": "Lorem De Dorus",
+            "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
+            "button": "Shop Now",
+            "link": "",
+            "color_button": ""
+          }
+        },
+        "16260090911bd7e802-1": {
+          "type": "image",
+          "settings": {
+            "bg_color_column": "",
+            "title": "Lorem De Dorus",
+            "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
+            "button": "Shop Now",
+            "link": "",
+            "color_button": ""
+          }
+        },
+        "16260090911bd7e802-2": {
+          "type": "image",
+          "settings": {
+            "bg_color_column": "",
+            "title": "Lorem De Dorus",
+            "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
+            "button": "Shop Now",
+            "link": "",
+            "color_button": ""
+          }
+        }
+      },
+      "block_order": [
+        "16260090911bd7e802-0",
+        "16260090911bd7e802-1",
+        "16260090911bd7e802-2"
+      ],
+      "settings": {
+        "layout": "default",
+        "layout_style": "layout_style_1",
+        "margin_bottom_mb": 25,
+        "margin_bottom_tab": 35,
+        "margin_bottom": 35,
+        "spotlight_block_title": "#Featured On Ella",
+        "spotlight_block_des": "",
+        "title_style": "style_1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16260090911bd7e802"
+  ]
+}

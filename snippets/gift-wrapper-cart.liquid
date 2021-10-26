@@ -1,0 +1,57 @@
+<!-- cart.attributes.gift-wrapping -->
+{% assign product = all_products[section.settings.product_to_use] %}
+{% assign product_downcase = product | downcase %}
+{% assign id = product.selected_or_first_available_variant.id | minus: 0 %}
+{% if section.settings.gift_card_enable and product_downcase != 'emptydrop' %}
+
+  {% assign check = false %}
+  {% for item in cart.items %}
+    {% if item.id == id %}
+      {% assign check = true %}
+    {% endif %}
+  {% endfor %}
+  <div id="is-a-gift" {% if check %}style="display: none"{% endif %}>
+    {% if section.settings.gift_content != blank %}
+      {{section.settings.gift_content}}
+      {% if section.settings.button_gift_text %}
+        <a id="gift-wrapping" href="javascript:void(0)" data-gift-id="{{ product.selected_or_first_available_variant.id }}" data-gift-price="{{ product.selected_or_first_available_variant.price }}">
+          <span class="icon-loader" style="display: none">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-spinner" viewBox="0 0 20 20"><path d="M7.229 1.173a9.25 9.25 0 1 0 11.655 11.412 1.25 1.25 0 1 0-2.4-.698 6.75 6.75 0 1 1-8.506-8.329 1.25 1.25 0 1 0-.75-2.385z" fill="#919EAB"></path></svg>
+          </span>
+          {{section.settings.button_gift_text}}
+        </a>
+        <input type="hidden" name="attributes[gift-wrapping]" value="yes" />
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <style>
+    #update-{{ id }} { display: none; }
+    #update-{{ id }} + .remove-mobile svg {
+      top: 5px;
+    }
+    @keyframes spin {
+      0% {
+          -ms-transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+    }
+    .icon-spinner {
+        -moz-animation: spin 1000ms infinite linear;
+        -o-animation: spin 1000ms infinite linear;
+        -webkit-animation: spin 1000ms infinite linear;
+        animation: spin 1000ms infinite linear;
+        height: 15px;
+        position: relative;
+        bottom: -3px;
+        margin-right: 2px;
+    }
+  </style>
+
+{% endif %}

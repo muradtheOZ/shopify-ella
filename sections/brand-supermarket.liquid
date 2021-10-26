@@ -1,0 +1,215 @@
+<div class="shopify-section-brand-supermarket">
+  <div class="container">
+    <div class="brands-supermatket">
+      <div class="row">
+            {% if section.settings.banner_left != blank %}
+            <div class="col-left">
+              <img data-srcset="{{ section.settings.banner_left | img_url: 'master' }}" alt="{{ section.settings.banner_left.alt | default: shop.name }}" class="lazyload">
+            </div>
+            {% endif %}
+            <div class="col-right">
+              {% if section.settings.heading != blank %}
+              <div class="heading">
+                <h3>{{ section.settings.heading }}</h3>
+                {% if section.settings.title_all != blank %}
+                <a class="view-all" href="{{ section.settings.title_all }}">
+                  {{ section.settings.title_all }}
+                </a>
+                {% endif %}
+              </div>
+              {% endif %}
+              <div class="list-brand item_per_row_{{ section.settings.item_per_row }}">
+                {% for block in section.blocks %}
+                  <div class="item">
+                    <a href="{{ block.settings.link }}" title="{{ block.settings.image.alt | default: shop.name }}">
+                      {% if block.settings.image != blank %}
+                        <img data-srcset="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload">
+                      {% else %}
+                        <div class="not_img">180 x 90px</div>   
+                      {% endif %}
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+      </div>
+    </div>
+    {% if section.settings.content != blank %}
+    <div class="cms-block-custom-brand">
+      <div id="collection-des">
+        <div class="description-wrapper collapse" id="collapseSummary" style="">
+          {{section.settings.content}}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% style %}
+
+@media (max-width: 767px) {
+    .shopify-section-brand-supermarket {
+        margin-bottom: {{ section.settings.margin_bottom_mb }}px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .shopify-section-brand-supermarket {
+        margin-bottom: {{ section.settings.margin_bottom_tab }}px;
+    }
+}
+@media (min-width: 1200px) {
+    .shopify-section-brand-supermarket {
+        margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+}
+
+.brands-supermatket {
+  background-color: {{ section.settings.background_color }};
+}
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Brands Supermarket",
+    "max_blocks": 15,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brands Supermarket"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#f5f5f5"
+      },
+      {
+        "type": "header",
+        "content": "Col Left"
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_left",
+        "label": "Banner"
+      },
+      {
+        "type": "header",
+        "content": "Col Right"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Top Brands"
+      },
+      {
+        "type": "select",
+        "id": "item_per_row",
+        "label": "Item per row",
+        "options": [
+          {
+              "value": "2",
+              "label": "2"
+          },
+          {
+              "value": "3",
+              "label": "3"
+          },
+          {
+              "value": "4",
+              "label": "4"
+          },
+          {
+              "value": "5",
+              "label": "5"
+          },
+          {
+              "value": "6",
+              "label": "6"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_all",
+        "label": "Enable view All",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "title_all",
+        "label": "Title",
+        "default": "View all"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Custom CMS Block"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+          "type": "header",
+          "content": "Margin Bottom:"
+      },
+      {
+          "type": "range",
+          "id": "margin_bottom_mb",
+          "label": "Mobile",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 0
+      },
+      {
+          "type": "range",
+          "id": "margin_bottom_tab",
+          "label": "Tablet",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 0
+      },             
+      {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Desktop",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 0
+      }       
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "Optional"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+
+

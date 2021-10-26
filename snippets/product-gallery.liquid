@@ -1,0 +1,19 @@
+<div class="product-template product-template-gallery product-template-2-blocks">
+    <div class="container">
+        {% if collection %}
+        <div class="next_prev-groups">
+            {% render 'breadcrumb' %}
+            {% render 'next-prev-product' %}    
+        </div>
+        
+        {% else %}
+        {% render 'breadcrumb' %}
+        {% endif %}
+        
+        <div class="halo-product-content">
+            <div class="row pro-page">
+                {% render 'product-template-gallery', product: product, enable_compare_color: enable_compare_color, show_compare_color: show_compare_color, enable_hot_stock: enable_hot_stock, option_color_swatch: option_color_swatch %}
+            </div>
+        </div>   
+    </div>
+</div>

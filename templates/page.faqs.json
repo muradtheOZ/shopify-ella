@@ -1,0 +1,95 @@
+{
+  "wrapper": "div.faqs-page",
+  "sections": {
+    "main": {
+      "type": "faq-page",
+      "blocks": {
+        "1ecf4d3c-1dfd-45d7-88d2-ec0a35229b03": {
+          "type": "text",
+          "settings": {
+            "question_faqs": "Please help us to follow this instruction to import Skin",
+            "answer_faqs": "Please help us to follow this instruction to import Skin"
+          }
+        }
+      },
+      "block_order": [
+        "1ecf4d3c-1dfd-45d7-88d2-ec0a35229b03"
+      ],
+      "settings": {
+        "des_faqs": "Below FAQ are some common concerns of our clients before purchasing the theme, if you have other questions, please just send it to <a href=\"mailto:support@halothemes.com\" target=\"_blank\">support@halothemes.com<\/a>",
+        "contact_text": "Unable to find satisfactory answers ?",
+        "contact_link_text": "Contact Support",
+        "contact_link": "",
+        "icon_faqs": "Question",
+        "bg_icon_qs": "#ef6454",
+        "color_icon_qs": "#ffffff",
+        "bg_question": "#fafafa",
+        "color_question": "#323232",
+        "font_size_qs": "12",
+        "bg_question_acitve": "#232323",
+        "color_question_acitve": "#ffffff",
+        "icon_answer": "Answer",
+        "bg_icon_answer": "#69c69c",
+        "color_icon_answer": "#ffffff",
+        "color_question_answer": "#3c3c3c",
+        "font_size_answer": "12",
+        "color_question_link": "#0688e2",
+        "icon_show": "Show",
+        "icon_hide": "Hide"
+      }
+    },
+    "1627964096e7d243b7": {
+      "type": "home-featured-products",
+      "settings": {
+        "bg_color": "",
+        "layout_style": "layout_style_1",
+        "display_banner": false,
+        "banner_is": "left",
+        "banner_heading": "#CAMPAIGNS",
+        "font_size_banner_heading": "40px",
+        "color_banner_heading": "#fff",
+        "banner_sub_heading": "Spring Summer’08",
+        "font_size_banner_sub_heading": "13px",
+        "color_banner_sub_heading": "#fff",
+        "banner_des": "Phasellus lorem malesuada ligula pulvinar de cosmopolis",
+        "font_size_banner_des": "12px",
+        "color_banner_des": "#fff",
+        "banner_button": "Shop Now",
+        "link": "",
+        "banner_button_2": "Shop Now",
+        "link_2": "",
+        "bg_banner_button": "#fff",
+        "border_banner_button": "#fff",
+        "color_banner_button": "#232323",
+        "bg_color_box_style_2": "#ffffff",
+        "border_color_box_style_2": "#bcbcbc",
+        "featured_products_title": "Trending Now",
+        "color_text_title": "",
+        "font_size_title": "",
+        "text_alignment": "left",
+        "featured_products_des": "",
+        "featured_products_text_link": "",
+        "featured_products_link": "",
+        "color_text_link": "#ba7a2d",
+        "title_style": "style_1",
+        "show_slider_featured_collection": "collection-1",
+        "slider_featured_limit_all": 10,
+        "collection_results_per_row1": "5",
+        "featured_products_title_2": "Trending Now",
+        "featured_products_text_link_2": "",
+        "featured_products_link_2": "",
+        "show_slider_featured_collection_2": "",
+        "display_list_collection": false,
+        "text_list": "View all categories",
+        "url_list": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1627964096e7d243b7"
+  ]
+}

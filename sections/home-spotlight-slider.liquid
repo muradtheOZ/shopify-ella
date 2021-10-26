@@ -1,0 +1,433 @@
+{% if section.blocks.size > 0 %}
+<div class="home-spotlight-block home-spotlight-slider layout_{{section.settings.layout_style}} {% if section.settings.display_slider %}enable_slider{% endif %}" id="home-spotlight-slider-{{section.id}}" {% unless section.settings.layout_style == 'style_2' or section.settings.layout_style == 'style_4' or section.settings.layout_style == 'style_5' %}{% if section.blocks.size > 1 %}data-loader-script="{{ 'halo.slide-blog.js' | asset_url }}"{% endif %}{% endunless %}{% if section.settings.display_slider %}data-loader-script="{{ 'halo.slide-blog.js' | asset_url }}"{% endif %}>
+    <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_50' %}container-padd60{% else %}container-fluid{% endif %}">
+        {% if section.settings.spotlight_block_title != blank or section.settings.spotlight_block_view_all != blank %}
+        <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before {% elsif section.settings.title_style == 'style_3' %} style_3{% elsif section.settings.title_style == 'style_4' %} style_4 {% endif %}{% unless section.settings.spotlight_block_des != blank %} no-des{% endunless %}">   
+            <h3 class="box-title">
+                <span class="title"> 
+                {% render 'multilang' with section.settings.spotlight_block_title %}
+                </span>
+            </h3>
+            {% if section.settings.spotlight_block_view_all != blank and section.settings.layout_style != 'style_5' %}
+                <a class="link_all" href="{{ section.settings.spotlight_block_view_all_link }}">{{ section.settings.spotlight_block_view_all }}</a>
+            {% endif %}
+            {% if section.settings.spotlight_block_des != blank %}
+            <p>
+                {% render 'multilang' with section.settings.spotlight_block_des %}
+            </p>        
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="row spotlight-{{ section.blocks.size }}-blocks {% if section.settings.layout_style == 'style_2' %} spotlight-style-2{% elsif section.settings.layout_style == 'style_4' %} spotlight-style-4{% endif %}"
+        {% unless section.settings.layout_style == 'style_2' or section.settings.layout_style == 'style_4' or section.settings.layout_style == 'style_5' %}{% if section.blocks.size > 1 %} data-blogs-slider{% endif %}{% endunless %} data-rows="{% if settings.layout_style == 'layout_style_fullwidth' %}4{% else %}{% if section.settings.display_slider %}{% if settings.layout_style == 'layout_style_surfup' %}3{% else %}6{% endif %}{% else %}3{% endif %}{% endif %}"{% if section.settings.display_slider %} data-blogs-slider{% endif %}>
+            {% for block in section.blocks %}
+            
+            {% case section.blocks.size %}
+                {% when 1 %}
+                    {%- assign column_size = 'col-12 item' -%}
+                {% when 2 %}
+                    {%- assign column_size = 'col-12 col-md-6 item' -%}
+                {% when 3 %}
+                    {%- assign column_size = 'col-12 col-md-6 col-lg-4 item' -%}  
+                {% when 4 %}
+                    {%- assign column_size = 'col-12 col-md-6 col-lg-3 item' -%}
+                {% when 5 %}
+                    {%- assign column_size = 'col-12 col-md-6 col-5 item' -%}
+                {% when 6,7,8,9,10,11,12 %}
+                    {%- assign column_size = 'col-12 col-md-3 col-lg-2 item' -%}
+            {% endcase %}
+
+            {% if section.settings.layout_style == 'style_5' and section.settings.display_slider %}
+                {%- assign column_size = 'col-12 col-md-6 col-lg-4 item' -%}  
+            {% endif %}
+
+                
+            <div class="{{ column_size }}">
+                <div class="spotlight-item {% if section.settings.layout_style == 'style_3' %}no-shadow{% endif %}">
+                    <div class="img-box">
+                        {% if block.settings.image != blank %}
+                            {%- assign preview_img = block.settings.image -%}
+                            {% if settings.layout_home == 'layout_home_7'%}
+                                <div class="img">
+                                    <a class="animate-scale adaptive_height" href="{{ block.settings.link }}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                                        {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+                                        <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                                    </a>
+                                </div>
+                            {% else %}
+                                <a class="animate-scale adaptive_height" href="{{ block.settings.link }}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                                    {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+                                    <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                                </a>
+                            {% endif %}
+                        {% else %}
+                            <a class="animate-scale" href="{{ block.settings.link }}">
+                                {% if section.settings.layout_style == 'style_2' %}
+                                    <div class="not_img">170 x 180px</div>
+                                {% elsif section.settings.layout_style == 'style_4' %}
+                                    <div class="not_img">170 x 170px</div>
+                                {% else %}
+                                    <div class="not_img">370 x 440px</div>   
+                                {% endif %}
+                            </a>
+                        {% endif %}
+                        
+                        {% if block.settings.title != blank or block.settings.link_text != blank %}
+                        <div class="content spotlight-inner">
+                            {% if block.settings.title != blank %}
+                            <h3 class="title">
+                                {{ block.settings.title }} 
+                            </h3>
+                            {% endif %}
+                            {% if block.settings.content != blank %}
+                            <div class="shop_content">
+                                {{ block.settings.content }}
+                            </div>
+                            {% endif %}
+                            {% if block.settings.link_text != blank %}
+                            <a href="{{ block.settings.link }}" class="shop_link text-hover">
+                                {{ block.settings.link_text }}
+                            </a>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if section.settings.spotlight_block_view_all != blank and section.settings.layout_style == 'style_5' %}
+        <div class="btn-view-all">
+            <a class="btn link_all" href="{{ section.settings.spotlight_block_view_all_link }}">{{ section.settings.spotlight_block_view_all }}</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}
+
+    {% if section.settings.display_padding %}
+
+    {% if section.settings.layout_style == 'style_2' or section.settings.layout_style == 'style_4' or section.settings.layout_style == 'style_5'  %}
+        #home-spotlight-slider-{{ section.id }} {
+            padding: 5px 0 20px;
+            border-bottom: 1px solid {{ section.settings.bg_border_color }};
+            {% unless section.settings.layout_style == 'style_5' %}
+            overflow: hidden;
+            {% endunless %}
+        }
+    {% else %}
+        #home-spotlight-slider-{{ section.id }} {
+            padding: 50px 0 90px;
+            border-bottom: 1px solid {{ section.settings.bg_border_color }};
+        }
+    {% endif %}
+    
+
+    @media (max-width: 1199px) and (min-width: 768px) {
+        #home-spotlight-slider-{{ section.id }} {
+            padding: 40px 0 70px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        {% if section.settings.layout_style == 'style_2' or section.settings.layout_style == 'style_4' %}
+            #home-spotlight-slider-{{ section.id }} {
+                padding: 0px 0 0px;
+            }
+        {% endif %}
+    }
+
+    @media (max-width: 767px) {
+        {% if section.settings.layout_style == 'style_2' or section.settings.layout_style == 'style_4' %}
+            #home-spotlight-slider-{{ section.id }} {
+                padding: 0px 0 0px;
+            }
+        {% else %}
+            {% if section.settings.layout_style == 'style_5' %}
+                #home-spotlight-slider-{{ section.id }} {
+                    padding: 30px 0 30px;
+                }
+            {% else %}
+                #home-spotlight-slider-{{ section.id }} {
+                    padding: 30px 0 50px;
+                }
+            {% endif %}
+        {% endif %}
+        
+    }
+    {% endif %}
+  
+    #home-spotlight-slider-{{ section.id }} {% if section.settings.layout_style == 'style_5' %}.container{% endif %} {
+        background-color: {{ section.settings.bg_color }};  
+        {% if section.settings.layout_style == 'style_5' %}
+        padding-bottom: 80px;  
+        {% endif %}
+    }
+
+    #home-spotlight-slider-{{ section.id }} .widget-title .box-title .title {
+        background-color: {{ section.settings.bg_color }};    
+    }
+
+    {% if section.settings.display_slider %}
+        @media (max-width: 768px) {
+            .home-spotlight-slider .spotlight-style-4 {
+                display: block;
+            }
+        }
+        @media (max-width: 1199px) and (min-width: 768px) {
+            #home-spotlight-slider-{{ section.id }} {
+                {% if section.settings.layout_style == 'style_5' %}
+                    padding: 15px 0 30px;
+                {% else %}
+                    padding: 15px 0 70px;
+                {% endif %}
+            }
+        }
+    {% endif %}
+
+    {% if section.settings.title_style == 'style_4' %}
+        @media (max-width: 768px) {
+            #home-spotlight-slider-{{ section.id }} .style_4.widget-title+.spotlight-style-4 .slick-dots {
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 1199px) {
+            #home-spotlight-slider-{{ section.id }} {
+                padding-bottom: {{ section.settings.margin_bottom_mb }}px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            #home-spotlight-slider-{{ section.id }} {
+                padding-bottom: {{ margin_bottom }}px;
+            }
+        }   
+    {% else %}
+        @media (max-width: 1199px) {
+            #home-spotlight-slider-{{ section.id }} {
+                margin-bottom: {{ section.settings.margin_bottom_mb }}px;
+            }
+            #home-spotlight-slider-{{ section.id }} {% if section.settings.layout_style == 'style_5' %}.container{% endif %} {
+                {% if section.settings.layout_style == 'style_5' %}
+                padding-bottom: 60px;  
+                {% endif %}
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            #home-spotlight-slider-{{ section.id }} {
+                margin-bottom: {{ margin_bottom }}px;
+            }
+        }   
+    {% endif %}
+    
+</style>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Spotlight Slider",
+    "class": "home-spotlight-slider-sections",
+    "max_blocks": 12,
+    "settings": [      
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout:",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "Default"
+                },
+                {
+                    "value": "padd_50",
+                    "label": "Boxed"
+                },
+                {
+                    "value": "full",
+                    "label": "Full Width"
+                }
+            ],
+            "default": "default"
+        },
+        {
+            "type": "select",
+            "id": "layout_style",
+            "label": "Style Layout:",
+            "options": [
+                {
+                    "value": "style_1",
+                    "label": "Style 1"
+                },
+                {
+                    "value": "style_2",
+                    "label": "Style 2"
+                },
+                {
+                    "value": "style_3",
+                    "label": "Style 3"
+                },
+                {
+                    "value": "style_4",
+                    "label": "Style 4"
+                },
+                {
+                    "value": "style_5",
+                    "label": "Style 5"
+                }
+            ],
+            "default": "style_1"
+        },
+        {
+            "type": "checkbox",
+            "id": "display_padding",
+            "label": "Display Padding?",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "display_slider",
+            "label": "Display Slider?",
+            "default": false
+        },
+        {
+            "type" : "color",
+            "id" : "bg_color",
+            "label" : "Background Color",
+            "default" : "#f5f5f5"
+        },
+        {
+            "type" : "color",
+            "id" : "bg_border_color",
+            "label" : "Background Border Color",
+            "default" : "transparent"
+        },
+        {
+            "type": "text",
+            "id": "spotlight_block_title",
+            "label": "Title",
+            "default": "#Spotlight"
+        },
+        {
+            "type" : "textarea",
+            "id" : "spotlight_block_des",
+            "label" : "Description",
+            "default": "Phasellus lorem malesuada ligula pulvinar commodo maecenas"
+        },
+        {
+            "type": "text",
+            "id": "spotlight_block_view_all",
+            "label": "View All"
+        },
+        {
+            "type": "url",
+            "id": "spotlight_block_view_all_link",
+            "label": "Link"
+        },
+        {
+            "type": "select",
+            "id": "title_style",
+            "label": "Title Style:",
+
+            "options": [
+                {
+                    "value": "style_1",
+                    "label": "Style 1" 
+                },
+                { 
+                    "value": "style_2",
+                    "label": "Style 2" 
+                },
+                { 
+                    "value": "style_3",
+                    "label": "Style 3" 
+                },
+                { 
+                    "value": "style_4",
+                    "label": "Style 4" 
+                }          
+            ],
+            "default": "style_2"
+        },
+        {
+            "type": "header",
+            "content": "Margin Bottom:"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_mb",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0
+        },  
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0
+        }   
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [           
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Title",
+                    "default" : "Lorem De Dorus"
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "content",
+                    "label" : "Content"
+                },
+                {
+                    "type" : "text",
+                    "id" : "link_text",
+                    "label" : "Shop Now Text",
+                    "default" : "Shop Now"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link",
+                    "info": "Optional"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Spotlight Slider",
+        "category": "Advanced layout",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

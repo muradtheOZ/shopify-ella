@@ -1,0 +1,20 @@
+<div id="shopify-section-list-collections-03-template" class="shopify-section col-12 col-xl-9 col-main">
+  <div class="list-categories list-categories-03">
+    <div class="row">
+      {% if section.settings.style_categories == 'style_show_all' %}
+        {% for collection in collections %}
+          {% if collection.handle != 'frontpage' and collection.all_products_count > 0 %}
+            {% render 'list-collection-item-3', collection: collection %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          {% if block.type == 'collection_list' %}
+            {% assign collection = collections[block.settings.collection] %}
+            {% render 'list-collection-item-3', block: block, collection: collection %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

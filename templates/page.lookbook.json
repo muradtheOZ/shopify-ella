@@ -1,0 +1,104 @@
+{
+  "wrapper": "div.lookbook-page",
+  "sections": {
+    "main": {
+      "type": "lookbook",
+      "blocks": {
+        "2abc85ae-5b8d-45dd-a861-10aacbc08cf0": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/banner1_1920x_86b7ec65-cd79-4748-bdc1-55bc96c5433a.jpg",
+            "alignment": "left",
+            "heading": "Cosmopolis",
+            "font_size_heading": "40px",
+            "color_heading": "#232323",
+            "slide-des": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.",
+            "font_size_des": "12px",
+            "color_des": "#232323",
+            "button_slide": "Shop The Collection",
+            "link": "",
+            "bg_button": "#232323",
+            "border_button": "#232323",
+            "color_button": "#ffffff",
+            "lb_product_1": "de-darturien-mero-laciniados",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#ffffff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#ffffff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#ffffff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#ffffff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#ffffff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#ffffff"
+          }
+        },
+        "0131e887-fa58-4d70-9646-7bde4b8bdb4d": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/banner-kids-1_1920x_6fa4a949-d054-4676-8d05-f96c861392b2.jpg",
+            "alignment": "left",
+            "heading": "Cosmopolis",
+            "font_size_heading": "40px",
+            "color_heading": "#232323",
+            "slide-des": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.",
+            "font_size_des": "12px",
+            "color_des": "#232323",
+            "button_slide": "Shop The Collection",
+            "link": "",
+            "bg_button": "#232323",
+            "border_button": "#232323",
+            "color_button": "#ffffff",
+            "lb_product_1": "aeque-mollis-urnan-lementum",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#ffffff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#ffffff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#ffffff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#ffffff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#ffffff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "2abc85ae-5b8d-45dd-a861-10aacbc08cf0",
+        "0131e887-fa58-4d70-9646-7bde4b8bdb4d"
+      ],
+      "settings": {
+        "display_product_detail_share": true,
+        "share_text": "Share",
+        "button": "",
+        "link": "",
+        "autoplay": true,
+        "speed": "5000",
+        "transition": "true",
+        "arrow_color": "#666d6d",
+        "arrow_border_color": "#666d6d",
+        "arrow_bg_color": "#ffffff",
+        "position_slick_arrow": "-35px"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

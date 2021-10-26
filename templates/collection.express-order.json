@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "190a28fa-5238-4a44-a94e-251f505c95df": {
+          "type": "sidebar",
+          "settings": {
+            "display_sidebar": true,
+            "sidebar_style": "style_1",
+            "show_sidebar": "left",
+            "style_option_color": "Color",
+            "style_option_size": "Size",
+            "number_collapse": 5,
+            "enable_categories": true,
+            "title_categories": "",
+            "style_categories": "style_show_all",
+            "link_list": "main-menu",
+            "enable_product": true,
+            "title_product": "",
+            "collection": "",
+            "limit": "8",
+            "enable_img_1": true,
+            "link_img_1": "",
+            "enable_img_2": true,
+            "link_img_2": "",
+            "enable_custom_block": true,
+            "title_custom_block": "Custom Block",
+            "quote_custom_block": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "190a28fa-5238-4a44-a94e-251f505c95df"
+      ],
+      "settings": {
+        "limited_view": true,
+        "view_as_enable": true,
+        "sort_enable": true,
+        "collection_results_per_row": "4",
+        "collection_results_per_page": "24",
+        "color_button_more": "#ffffff",
+        "bg_color_button_more": "#ba7a2d",
+        "border_color_button_more": "#ba7a2d",
+        "show_countdown": false,
+        "text_countdown": "End ins:",
+        "show_pro_des": false,
+        "show_banner": false,
+        "show_banner_1": true,
+        "link_banner_1": "",
+        "show_banner_2": true,
+        "link_banner_2": "",
+        "show_banner_3": true,
+        "link_banner_3": "",
+        "show_banner_4": true,
+        "link_banner_4": "",
+        "pro_image": "&nbsp;",
+        "pro_name": "Product",
+        "pro_price": "Price",
+        "pro_quantity": "Qty",
+        "pro_variant_options": "Options",
+        "btn_1_bg_color": "#232323",
+        "btn_1_border_color": "#232323",
+        "btn_1_text_color": "#fff",
+        "btn_2_bg_color": "#fff",
+        "btn_2_border_color": "#323232",
+        "btn_2_text_color": "#232323",
+        "btn_3_bg_color": "#fff",
+        "btn_3_border_color": "#e6e6e6",
+        "btn_3_text_color": "#232323",
+        "btn_4_bg_color": "#69c69c",
+        "btn_4_border_color": "#69c69c",
+        "btn_4_text_color": "#fff"
+      }
+    },
+    "brand": {
+      "type": "brand-supermarket",
+      "disabled": true,
+      "settings": {
+        "background_color": "#f5f5f5",
+        "heading": "Top Brands",
+        "item_per_row": "3",
+        "enable_all": true,
+        "title_all": "View all",
+        "link": "",
+        "content": ""
+      }
+    },
+    "testimonials": {
+      "type": "collection-testimonials",
+      "disabled": true,
+      "settings": {
+        "display_customer": false
+      }
+    },
+    "recently-view": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "display_recently_viewed_products": true,
+        "recently_viewed_products_title": "Recently Viewed Products",
+        "number_of_recently_viewed_products": "8"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "brand",
+    "testimonials",
+    "recently-view"
+  ]
+}

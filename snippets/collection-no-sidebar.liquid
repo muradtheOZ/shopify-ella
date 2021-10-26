@@ -1,0 +1,19 @@
+
+<div class="collection-template collection-template-no-sidebar">
+    {% render 'collection-header' %}
+    <div class="container">
+        {% render 'breadcrumb' %}
+    </div>
+    <div class="halo-collection-content">
+        {% if collection.products_count > 0 %}
+            <div class="bg-filter">
+                <div class="container">
+                    {% render 'filter-no-sidebar' %}   
+                </div>
+            </div>
+        {% endif %}
+        <div class="container">
+            {% render 'collection-template-no-sidebar' %}
+        </div>        
+    </div>
+</div>

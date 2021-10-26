@@ -1,0 +1,66 @@
+{% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+{% assign product_per_page = cart.attributes.pagination %}
+{% else %}
+{% assign product_per_page = section.settings.collection_results_per_page %}
+{% endif %}
+
+{% paginate collection.products by product_per_page %}
+ 
+{% case section.settings.collection_results_per_row %}
+{% when '1' %}
+    {%- assign grid_item_width = 'col-12' -%}
+	{%- assign rows = 'products-list' -%}
+
+  {% when '2' %}
+    {%- assign grid_item_width = 'col-6' -%}
+	{%- assign rows = 'products-grid' -%}
+
+  {% when '3' %}
+    {%- assign grid_item_width = 'col-6 col-md-4' -%}
+	{%- assign rows = 'products-grid' -%}
+
+  {% when '4' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+	{%- assign rows = 'products-grid' -%}
+
+  {% when '5' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+	{%- assign rows = 'products-grid' -%}
+{% endcase %}
+
+<div id="shopify-section-collection-template-suppermarket" class="shopify-section col-12 col-xl-9 col-main">
+  <div id="CollectionProductGrid">
+    <div data-section-id="{{ section.id }}" data-section-type="collection-template" id="main-collection-product-grid" data-id="{{ section.id }}"> 
+      {% render 'toolbar-supermarket' %}
+      <div class="product-collection {{ rows }} row">
+        {% if collection.products_count > 0 %}  
+        {% for product in collection.products %}
+        <div class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
+          {% if settings.style_product_grid == 'style_product_grid_2' %}
+            {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_3' %}
+            {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
+          {% elsif settings.style_product_grid == 'style_product_grid_4' %}
+            {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
+          {% else %}
+            {% render 'product-grid-item' with product as product, serial: forloop.index %}
+          {% endif %}
+        </div>
+        {% endfor %}
+        {% else %}
+        <p class="col-12 text-center" {% if settings.enable_multilang %}data-translate="collections.general.no_matches"{% endif %}>
+          {{ 'collections.general.no_matches' | t }}
+        </p>
+        {% endif %}
+      </div>
+
+
+      {% if paginate.pages > 1 %}
+      <div class="padding">
+        {% render 'pagination-page' paginate: paginate %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endpaginate %}

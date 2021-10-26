@@ -1,0 +1,26 @@
+<div id="shopify-section-list-collections-full-template" class="shopify-section col-12 col-xl-9 col-main">
+  <div class="list-categories list-categories-full">
+    <div class="row">
+      {% if section.settings.style_categories == 'style_show_all' %}
+        {% for collection in collections %}
+          {% if collection.handle != 'frontpage' and collection.all_products_count > 0 %}
+            {% render 'list-collection-item-2', collection: collection %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          {% if block.type == 'collection_list' %}
+            {% assign collection = collections[block.settings.collection] %}
+            {% render 'list-collection-item-2', block: block, collection: collection %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>  
+  .collections-wrapper .collection-title {
+    font-size: {{ section.settings.list_collection_title_size }}px;
+  }
+</style>

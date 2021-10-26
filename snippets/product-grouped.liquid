@@ -1,0 +1,18 @@
+<div class="product-template product-template-grouped product-template-2-blocks">
+  <div class="container">
+    {% if collection %}
+    <div class="next_prev-groups">
+      {% render 'breadcrumb' %}
+      {% render 'next-prev-product' %}  
+    </div>
+    {% else %}
+    {% render 'breadcrumb' %}
+    {% endif %}
+       
+    <div class="halo-product-content">
+      <div class="row pro-page">
+        {% render 'product-template-grouped' %}
+      </div>
+    </div>   
+  </div>
+</div>

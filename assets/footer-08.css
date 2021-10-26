@@ -1,0 +1,308 @@
+.footer-08 .footer-top {
+    padding: 60px 0 35px 0
+}
+
+.template-index .footer-08 .footer-top {
+	padding: 270px 0 35px 0;
+}
+
+.footer-08 .footer-top .footer-newsletter {
+    text-align: center
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter-title {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter-des {
+    font-size: 14px;
+    max-width: 38%;
+    margin: 0 auto;
+    margin-bottom: 32px
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter-des a {
+    display: inline-block;
+    text-transform: capitalize;
+    text-underline-position: under;
+    text-decoration: underline
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter .input-group {
+    max-width: 550px;
+    margin: 0 auto
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter .input-group-field {
+    min-width: 400px;
+    margin-right: 10px;
+    font-size: 14px
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter .btn {
+    padding: 15px 15px 13px;
+    min-width: 140px;
+    font-size: 13px;
+    letter-spacing: .05em
+}
+
+.footer-08 .footer-top .footer-newsletter .newsletter {
+	margin-bottom: 35px;
+}
+
+.footer-08 .footer-top .social-media {
+	text-align: center;
+}
+
+.footer-08 .footer-top .social-media li a i {
+	font-size: 20px;
+}
+
+.footer-08 .footer-middle {
+    padding: 75px 0 20px 0
+}
+
+.footer-08 .footer-middle .foot-title {
+    font-weight: 900;
+    padding-bottom: 20px
+}
+
+.footer-08 .footer-middle .foot-title .logo-ft .not_img {
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.footer-08 .footer-middle .foot-link {
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 5px 0
+}
+
+.footer-08 .footer-middle .social-media .social-icons i {
+    font-size: 18px
+}
+
+.footer-08 .footer-middle .social-media .social-icons li+li {
+    margin-right: 10px
+}
+
+.footer-08 .footer-middle .social-media .social-icons li a {
+    text-align: left
+}
+
+.footer-08 .footer-middle .social-media .social-icons li:hover a {
+    background-color: transparent !important
+}
+
+.footer-08 .footer-middle .social-media .social-icons li:hover a i {
+    color: #202020 !important
+}
+
+.footer-08 .footer-middle .wrapper-payment-methods {
+    padding-top: 45px
+}
+
+.footer-08 .footer-middle .wrapper-payment-methods h3 {
+    padding-bottom: 35px
+}
+
+.footer-08 .footer-middle .wrapper-payment-methods .payment-methods li {
+    margin-right: 15px;
+    margin-bottom: 15px
+}
+
+.footer-08 .footer-middle .location_info {
+	max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-08 .footer-middle .location_info .info_store {
+	margin-bottom: 28px;
+}
+
+.footer-08 .footer-middle .location_info .address_store a {
+	display: inline-block;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+
+.footer-08 .footer-bottom {
+    text-align: center;
+    padding-bottom: 84px;
+    padding-top: 30px;
+}
+
+.footer-08 .footer-bottom .wrapper-payment-methods {
+	display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-08 .footer-bottom address {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 0
+}
+
+.footer-08 .footer-bottom address a {
+    display: inline-block;
+    text-transform: capitalize;
+    text-underline-position: under;
+    text-decoration: underline
+}
+
+.footer-08 .col-footer {
+	text-align: center;
+}
+
+.footer-08 .logo-ft img {
+	max-height: 38px;
+	margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+@media (max-width:1024px) {
+    .footer-08 .footer-top .footer-newsletter .newsletter-des {
+        max-width: 45%
+    }
+
+    .footer-08 .footer-middle .social-media .social-icons li+li {
+        margin-right: 5px
+    }
+}
+
+@media (max-width:768px) {
+    .footer-08 .footer-top .footer-newsletter .newsletter-des {
+        max-width: 60%
+    }
+    .template-index .footer-08 .footer-top {
+    	padding: 205px 0 35px 0;
+    }
+}
+
+@media (max-width:551px) {
+	.footer-08 .payment-methods li {
+		margin-right: 8px;
+	}
+	.footer-08 .logo-ft img {
+		margin-bottom: 2px;
+	}
+	.footer-08 .footer-middle .column_info {
+		margin-bottom: 22px;
+	}
+	.footer-08 .footer-middle .location_info .info_store {
+		margin-bottom: 20px;
+	}
+	.template-index .footer-08 .footer-top {
+	    padding: 173px 0 8px 0;
+	}
+    .footer-08 .footer-top {
+        padding: 30px 0 6px 0
+    }
+
+    .footer-08 .footer-top .footer-newsletter .newsletter .input-group-field {
+        min-width: auto;
+        margin-right: 5px
+    }
+
+    .footer-08 .footer-top .footer-newsletter .newsletter-des {
+        max-width: 100%
+    }
+
+    .footer-08 .footer-top .footer-newsletter .newsletter-title {
+        margin-bottom: 16px
+    }
+
+    .footer-08 .footer-top .footer-newsletter .newsletter .btn {
+        padding: 10px 15px 8px;
+        min-width: 124px
+    }
+
+    .footer-08 .footer-top .footer-newsletter .newsletter .input-group {
+        justify-content: space-between
+    }
+
+    .footer-08 .footer-middle {
+        padding: 10px 0 20px 0
+    }
+
+    .footer-08 .footer-middle .foot-title {
+        padding-bottom: 13px
+    }
+
+    .footer-08 .footer-middle .social-media .foot-title {
+        margin-top: 15px
+    }
+
+    .footer-08 .footer-middle .wrapper-payment-methods {
+        padding-top: 20px
+    }
+
+    .footer-08 .footer-middle .wrapper-payment-methods h3 {
+        padding-bottom: 20px
+    }
+
+    .footer-08 .footer-middle .wrapper-payment-methods .payment-methods li {
+        margin-right: 8px;
+        margin-bottom: 0
+    }
+
+    .footer-08 .footer-bottom {
+        padding-bottom: 50px;
+        padding-top: 0
+    }
+
+    .home-custom-instagram.layout_style_2 {
+        padding-bottom: 33px
+    }
+
+    .home-custom-instagram.layout_style_2 .infinite-scrolling-instagram a {
+        margin-top: 30px
+    }
+}
+
+@media (max-width:320px) {
+	.footer-08 .payment-methods li {
+		margin-right: 2px;
+	}
+}
+
+@media (min-width: 768px) {
+	.footer-08 .footer-middle .column_link {
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 25%;
+	    flex: 0 0 25%;
+	    max-width: 25%;
+	}
+	.footer-08 .footer-middle .column_info {
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 50%;
+	    flex: 0 0 50%;
+	    max-width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.layout_style_flower .footer-08 .container-column3 {
+		max-width: 1100px;
+	}
+	.footer-08 .footer-middle .column_info {
+	    position: relative;
+	}
+	.footer-08 .footer-middle .column_info:before {
+		content: "";
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: 1px;
+	    height: 100%;
+	}
+} 

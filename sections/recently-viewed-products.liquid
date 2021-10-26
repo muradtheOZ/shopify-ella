@@ -1,0 +1,393 @@
+{% if section.settings.display_recently_viewed_products %} 
+{{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
+{{ 'jquery.products.min.js' | asset_url | script_tag }}
+{{ 'slick.min.js' | asset_url | script_tag }}
+<div class="{% if settings.product_layout == "full_with" or settings.category_layout == "full_with" %}container-padd60{% else %}container{% endif %}">
+    <section class="recently-viewed-products" style="display: none;">
+        {% if section.settings.recently_viewed_products_title != '' %}
+        <div class="widget-title not-before">   
+          <h3 class="box-title">
+            <span class="title"> 
+              {% render 'multilang' with section.settings.recently_viewed_products_title %}
+            </span>
+          </h3>
+        </div>
+        {% endif %}
+
+        {%- assign rows = section.settings.recently_viewed_products_per_row -%}
+
+        <div class="widget-product">
+          <div class="products-grid row" data-rows="{{ rows }}" id="recently-viewed-products-grid"></div>
+        </div>
+    </section>
+</div>
+
+{% if settings.style_product_grid == 'style_product_grid_2' %}
+  {% render 'recently-viewed-products-skin-1170' %}
+{% elsif settings.style_product_grid == 'style_product_grid_3' %}
+  {% render 'recently-viewed-products-skin-fullwidth' %}
+{% elsif settings.style_product_grid == 'style_product_grid_4' %}
+  {% render 'recently-viewed-products-skin-supermarket' %}
+{% else %}
+  {% render 'recently-viewed-products-default' %}
+{% endif %}
+
+<script>
+    $('.recently-viewed-products').hide();
+
+    Shopify.Products.showRecentlyViewed({ 
+        howManyToShow: {{ section.settings.number_of_recently_viewed_products }},
+        wrapperId: 'recently-viewed-products-grid', 
+        templateId: 'recently-viewed-product-grid-template',
+        onComplete: function() {
+            var recentlyViewBlock = $('.recently-viewed-products');
+            var recentlyGrid = recentlyViewBlock.find('#recently-viewed-products-grid');
+            var productGrid = recentlyGrid.children();
+            var rows = recentlyGrid.data('rows');
+   
+            if(productGrid.length) {
+                recentlyViewBlock.show();
+
+                if(recentlyViewBlock.is(':visible')) {          
+                    {% if settings.enable_multilang %}
+                    if (translator.current_lang == 2)
+                    translator.doTranslate('.recently-viewed-products');
+                    {% endif %}
+                    
+                    if(!recentlyGrid.hasClass('slick-initialized')) {
+                    recentlyGrid.slick({
+                        infinite: true,
+                        speed: 1000,
+                        slidesToShow: rows,
+                        get dots() {
+                            if (window.layout_style == 'layout_style_surfup' || window.layout_style == 'layout_style_suppermarket') {
+                                return this.dots = true
+                
+                            } else {
+                                return this.dots = false
+                            }
+                        },
+                        slidesToScroll: rows,
+                        get nextArrow() {
+                            if ((window.layout_style == 'layout_style_1170') || (window.layout_style == 'layout_style_flower')) {
+                                return this.nextArrow = '<button type="button" aria-label="Next Product" class="slick-next"><svg viewBox="0 0 50 50"><path d="M 11.957031 13.988281 C 11.699219 14.003906 11.457031 14.117188 11.28125 14.308594 L 1.015625 25 L 11.28125 35.691406 C 11.527344 35.953125 11.894531 36.0625 12.242188 35.976563 C 12.589844 35.890625 12.867188 35.625 12.964844 35.28125 C 13.066406 34.933594 12.972656 34.5625 12.71875 34.308594 L 4.746094 26 L 48 26 C 48.359375 26.003906 48.695313 25.816406 48.878906 25.503906 C 49.058594 25.191406 49.058594 24.808594 48.878906 24.496094 C 48.695313 24.183594 48.359375 23.996094 48 24 L 4.746094 24 L 12.71875 15.691406 C 13.011719 15.398438 13.09375 14.957031 12.921875 14.582031 C 12.753906 14.203125 12.371094 13.96875 11.957031 13.988281 Z"></path></svg></button>';
+                            } else if ((window.layout_style == 'layout_style_fullwidth') || (window.layout_style == 'layout_style_suppermarket') || (window.layout_style == 'layout_style_surfup')){
+                                return this.nextArrow = '<button type="button" aria-label="Next Product" class="slick-next"><svg viewBox="0 0 478.448 478.448" class="icon icon-chevron-right" id="icon-chevron-right"><g><g><polygon points="131.659,0 100.494,32.035 313.804,239.232 100.494,446.373 131.65,478.448 377.954,239.232"></polygon></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button>';
+                            }
+                            else {
+                                return this.nextArrow = '<button type="button" aria-label="Next Product" class="slick-next"><i class="fa fa-angle-right"></i></button>';
+                            }
+                        },
+                        get prevArrow() {
+                            if ((window.layout_style == 'layout_style_1170') || (window.layout_style == 'layout_style_flower')) {
+                                return this.prevArrow = '<button type="button" aria-label="Previous Product" class="slick-prev"><svg viewBox="0 0 50 50"><path d="M 11.957031 13.988281 C 11.699219 14.003906 11.457031 14.117188 11.28125 14.308594 L 1.015625 25 L 11.28125 35.691406 C 11.527344 35.953125 11.894531 36.0625 12.242188 35.976563 C 12.589844 35.890625 12.867188 35.625 12.964844 35.28125 C 13.066406 34.933594 12.972656 34.5625 12.71875 34.308594 L 4.746094 26 L 48 26 C 48.359375 26.003906 48.695313 25.816406 48.878906 25.503906 C 49.058594 25.191406 49.058594 24.808594 48.878906 24.496094 C 48.695313 24.183594 48.359375 23.996094 48 24 L 4.746094 24 L 12.71875 15.691406 C 13.011719 15.398438 13.09375 14.957031 12.921875 14.582031 C 12.753906 14.203125 12.371094 13.96875 11.957031 13.988281 Z"></path></svg></button>';
+                            } else if ((window.layout_style == 'layout_style_fullwidth') || (window.layout_style == 'layout_style_suppermarket') || (window.layout_style == 'layout_style_surfup')){
+                                return this.prevArrow = '<button type="button" aria-label="Previous Product" class="slick-prev"><svg viewBox="0 0 370.814 370.814" class="icon icon-chevron-left" id="icon-chevron-left"><g><g><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401"></polygon></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button>';
+                            } 
+                            else {
+                                return this.prevArrow = '<button type="button" aria-label="Previous Product" class="slick-prev"><i class="fa fa-angle-left"></i></button>';
+                            }
+                        },
+                        responsive: [
+                        {
+                            breakpoint: 1450,
+                            settings: {
+                                get slidesToShow() {
+                                    if (rows > 5) {
+                                        if(window.layout_home == 'layout_home_7') {
+                                            return this.slidesToShow = rows - 2;
+                                        } else {
+                                            return this.slidesToShow = rows - 1;
+                                        }    
+                                    } else {
+                                        if(window.layout_home == 'layout_home_7') {
+                                             return this.slidesToShow = rows - 1;
+                                        } else {
+                                            return this.slidesToShow = rows;
+                                        }
+                                        
+                                    }
+                                },
+                                get slidesToScroll() {
+                                    if (rows > 5) {
+                                        if(window.layout_home == 'layout_home_7') {
+                                            return this.slidesToScroll = rows - 2;
+                                        } else {
+                                            return this.slidesToScroll = rows - 1;
+                                        }  
+                                    } else {
+                                        if(window.layout_home == 'layout_home_7') {
+                                             return this.slidesToScroll = rows - 1;
+                                        } else {
+                                            return this.slidesToScroll = rows;
+                                        }
+                                    }
+                                },
+                            }
+                        },
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                get slidesToShow() {
+                                    if (rows > 5) {
+                                        if(window.layout_home == 'layout_home_7') {
+                                            return this.slidesToShow = rows - 2;
+                                        } else {
+                                            return this.slidesToShow = rows - 1;
+                                        }  
+                                    } else {
+                                        if(window.layout_home == 'layout_home_7') {
+                                             return this.slidesToShow = rows - 1;
+                                        } else {
+                                            return this.slidesToShow = rows;
+                                        }
+                                    }
+                                },
+                                get slidesToScroll() {
+                                    if (rows > 5) {
+                                        if(window.layout_home == 'layout_home_7') {
+                                            return this.slidesToScroll = rows - 2;
+                                        } else {
+                                            return this.slidesToScroll = rows - 1;
+                                        }
+                                    } else {
+                                        if(window.layout_home == 'layout_home_7') {
+                                             return this.slidesToScroll = rows - 1;
+                                        } else {
+                                            return this.slidesToScroll = rows;
+                                        }
+                                    }
+                                },
+                            }
+                        },
+                            {
+                            breakpoint: 1200,
+                            settings: {
+                                arrows:false,
+                                dots: true,
+                                get slidesToShow() {
+                                    if (rows > 5) {
+                                        return this.slidesToShow = rows - 2;
+                                    } else {
+                                        if (rows > 4) {
+                                            return this.slidesToShow = rows - 1;
+                                        } else {
+                                            return this.slidesToShow = rows;
+                                        }
+                                    }
+                                },
+                                get slidesToScroll() {
+                                    if (rows > 5) {
+                                        return this.slidesToScroll = rows - 2;
+                                    } else {
+                                        if (rows > 4) {
+                                            return this.slidesToScroll = rows - 1;
+                                        } else {
+                                            return this.slidesToScroll = rows;
+                                        }
+                                    }
+                                },             
+                            }
+                            },
+                            {
+                            breakpoint: 992,
+                            settings: {
+                                arrows:false,
+                                dots: true,
+                                get slidesToShow() {
+                                    if (rows > 5) {
+                                        return this.slidesToShow = rows - 3;
+                                    } else {
+                                        if (rows > 4) {
+                                            return this.slidesToShow = rows - 2;
+                                        } else {
+                                             if (rows > 3) {
+                                                return this.slidesToShow = rows - 1;
+                                             } else {
+                                                return this.slidesToShow = rows;
+                                             }
+                                        }
+                                    }
+                                },
+                                get slidesToScroll() {
+                                    if (rows > 5) {
+                                        return this.slidesToScroll = rows - 3;
+                                    } else {
+                                        if (rows > 4) {
+                                            return this.slidesToScroll = rows - 2;
+                                        } else {
+                                             if (rows > 3) {
+                                                return this.slidesToScroll = rows - 1;
+                                             } else {
+                                                return this.slidesToScroll = rows;
+                                             }
+                                        }
+                                    }
+                                },              
+                            }
+                            },
+                            {
+                            breakpoint: 768,
+                            settings: {
+                                arrows:false,
+                                dots: true,
+                                get slidesToShow() {
+                                    if (rows > 5) {
+                                        return this.slidesToShow = rows - 4;
+                                    } else {
+                                        if (rows > 4) {
+                                            return this.slidesToShow = rows - 3;
+                                        } else {
+                                             if (rows > 3) {
+                                                return this.slidesToShow = rows - 2;
+                                             } else {
+                                                if (rows > 2) {
+                                                    return this.slidesToShow = rows - 1;
+                                                } else {
+                                                    return this.slidesToShow = rows;
+                                                }
+                                             }
+                                        }
+                                    }
+                                },
+                                get slidesToScroll() {
+                                    if (rows > 5) {
+                                        return this.slidesToScroll = rows - 4;
+                                    } else {
+                                        if (rows > 4) {
+                                            return this.slidesToScroll = rows - 3;
+                                        } else {
+                                             if (rows > 3) {
+                                                return this.slidesToScroll = rows - 2;
+                                             } else {
+                                                if (rows > 2) {
+                                                    return this.slidesToScroll = rows - 1;
+                                                } else {
+                                                    return this.slidesToScroll = rows;
+                                                }
+                                             }
+                                        }
+                                    }
+                                }
+                            }
+                            }
+                        ]
+                        });
+                    };      
+
+                    if($('.spr-badge').length > 0) {
+                    return window.SPR.registerCallbacks(), window.SPR.initRatingHandler(), window.SPR.initDomEls(), window.SPR.loadProducts(), window.SPR.loadBadges();
+                    }; 
+        
+                    if(window.show_multiple_currencies && Currency.currentCurrency != shopCurrency){
+                      
+                      Currency.convertAll(window.shop_currency, $('#currencies .active').attr('data-currency'), '.recently-viewed-products span.money', 'money_format');
+                    }
+
+                    $('[data-toggle="tooltip"]').tooltip();   
+                }; 
+            }
+            
+            else {
+                recentlyViewBlock.hide();
+            };
+
+            if (window.innerWidth > 1200) {
+                $('.inner-top').mouseenter(function(){
+                    var chil = $(this).find('video');
+                    var _chil = $(this).find('video').get(0);
+                    if (chil.length > 0) {
+                        _chil.play();
+                    }
+                });
+                $('.inner-top').mouseleave(function(){
+                    var chil = $(this).find('video');
+                    var _chil = $(this).find('video').get(0);
+                    if (chil.length > 0) {
+                        _chil.pause();
+                    }
+                })
+            }
+
+            var wishListItems = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+            if (!wishListItems.length) {
+                return;
+            }
+
+            for (var i = 0; i < wishListItems.length; i++) {
+                var icon = $('[data-product-handle="'+ wishListItems[i] +'"]');
+                icon.addClass('whislist-added');
+                icon.find('.wishlist-text').text(window.inventory_text.remove_wishlist);
+            };
+        }
+    });
+</script>
+
+<script>
+    Shopify.Products.recordRecentlyViewed();
+</script>
+{% endif %}
+{% style %}
+  #shopify-section-recently-viewed-products{
+    width: 100%;
+  }
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Recently Viewed Products",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_recently_viewed_products",
+        "label": "Display Recently Viewed Products?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "recently_viewed_products_title",
+        "label": "Title of recently viewed products",
+        "default": "Recently Viewed Products"
+      },
+      {
+        "type": "text",
+        "id": "number_of_recently_viewed_products",
+        "label": "Number of recently viewed products",
+        "default": "8"
+      },
+      {
+          "type": "select",
+          "id": "recently_viewed_products_per_row",
+          "label": "Products per row",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            }, 
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            }
+          ],
+          "default": "5"
+        }
+      
+    ]
+  }
+{% endschema %}

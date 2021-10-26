@@ -1,0 +1,169 @@
+.footer-06 .footer-top {
+    padding: 50px 0 35px 0;
+}
+.footer-06 .footer-top .footer-newsletter {
+    text-align: center;
+}
+.footer-06 .footer-top .footer-newsletter .newsletter-title {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.header-parallax-tpl.layout_default .footer-06 .footer-top .footer-newsletter .newsletter-title {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.footer-06 .footer-top .footer-newsletter .newsletter-des {
+    font-size: var(--font_size);
+    max-width: 38%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.footer-06 .footer-top .footer-newsletter .newsletter-des a {
+    display: inline-block;
+    text-transform: capitalize;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+.footer-06 .footer-top .footer-newsletter .newsletter .input-group {
+    max-width: 550px;
+    margin: 0 auto;
+}
+.footer-06 .footer-top .footer-newsletter .newsletter .input-group-field {
+    min-width: 400px;
+    margin-right: 10px;
+    font-size: var(--font_size);
+}
+.footer-06 .footer-top .footer-newsletter .newsletter .btn {
+    padding: 15px 15px 13px;
+    min-width: 140px;
+    font-size: var(--font_size);
+    letter-spacing: 0.05em;
+}
+.footer-06 .footer-middle {
+    padding: 75px 0 20px 0;
+}
+.footer-06 .footer-middle .foot-title {
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+.header-parallax-tpl.layout_default .footer-06 .footer-middle .foot-title {
+	font-size: var(--font_size);
+}
+
+.footer-06 .footer-middle .foot-link {
+    font-size: var(--font_size);
+    text-transform: capitalize;
+    padding: 5px 0;
+}
+.footer-06 .footer-middle .social-media .social-icons i {
+    font-size: 18px;
+}
+.footer-06 .footer-middle .social-media .social-icons li + li {
+    margin-right: 10px;
+}
+.footer-06 .footer-middle .social-media .social-icons li a {
+    text-align: left;
+}
+.footer-06 .footer-middle .social-media .social-icons li:hover a {
+    background-color: transparent !important;
+}
+.footer-06 .footer-middle .social-media .social-icons li:hover a i {
+    color: #202020 !important;
+}
+.footer-06 .footer-middle .wrapper-payment-methods {
+    padding-top: 45px;
+}
+.footer-06 .footer-middle .wrapper-payment-methods h3 {
+    padding-bottom: 35px;
+}
+.footer-06 .footer-middle .wrapper-payment-methods .payment-methods li {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.footer-06 .footer-bottom {
+    text-align: center;
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+.footer-06 .footer-bottom address {
+    font-size: var(--font_size);
+    line-height: 24px;
+    margin-bottom: 0;
+}
+.footer-06 .footer-bottom address a {
+    display: inline-block;
+    text-transform: capitalize;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+@media (max-width: 1024px) {
+    .footer-06 .footer-top .footer-newsletter .newsletter-des {
+        max-width: 45%;
+    }
+    .footer-06 .footer-middle .social-media .social-icons li + li {
+        margin-right: 5px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-06 .footer-top .footer-newsletter .newsletter-des {
+        max-width: 60%;
+    }
+}
+@media (max-width: 551px) {
+    .footer-06 .footer-top {
+        padding: 30px 0 22px 0;
+    }
+    .footer-06 .footer-top .footer-newsletter .newsletter .input-group-field {
+        min-width: auto;
+        margin-right: 5px;
+    }
+    .footer-06 .footer-top .footer-newsletter .newsletter-des {
+        max-width: 100%;
+    }
+    .footer-06 .footer-top .footer-newsletter .newsletter-title {
+        margin-bottom: 16px;
+    }
+    .footer-06 .footer-top .footer-newsletter .newsletter .btn {
+        padding: 10px 15px 8px;
+        min-width: 124px;
+    }
+    .footer-06 .footer-top .footer-newsletter .newsletter .input-group {
+        justify-content: space-between;
+    }
+    .footer-06 .footer-middle {
+        padding: 40px 0 20px 0;
+    }
+    .footer-06 .footer-middle .foot-title {
+        padding-bottom: 13px;
+    }
+    .footer-06 .footer-middle .social-media .foot-title {
+        margin-top: 15px;
+    }
+    .footer-06 .footer-middle .wrapper-payment-methods {
+        padding-top: 20px;
+    }
+    .footer-06 .footer-middle .wrapper-payment-methods h3 {
+        padding-bottom: 20px;
+    }
+    .footer-06 .footer-middle .wrapper-payment-methods .payment-methods li {
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+    .footer-06 .footer-bottom {
+        padding-bottom: 50px;
+        padding-top: 0;
+    }
+    .home-custom-instagram.layout_style_2 {
+        padding-bottom: 33px;
+    }
+    .home-custom-instagram.layout_style_2 .infinite-scrolling-instagram a {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 320px) {
+    .footer-06 .footer-middle .wrapper-payment-methods .payment-methods li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}

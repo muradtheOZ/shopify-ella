@@ -1,0 +1,83 @@
+<collection-filters-form class="facets small-hide">
+  <form id="CollectionSort_by" class="facets__form">
+    {%- for filter in collection.filters -%}
+    {% if filter.type == 'list' %}
+    {%- for value in filter.active_values -%}
+    <input type="hidden"
+           name="{{ value.param_name }}"
+           value="{{ value.value }}"
+           >
+    {% endfor %}
+    {% else %}
+    {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+    <input type="hidden" name="{{ filter.min_value.param_name }}" 
+           {% if uses_comma_decimals %}
+           value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+           {% else %}
+           value="{{ filter.min_value.value | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+           {% endif %} />
+    <input  type="hidden" name="{{ filter.max_value.param_name }}" 
+           {% if uses_comma_decimals %}
+           value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+           {% else %}
+           value="{{ filter.max_value.value | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+           {% endif %} />
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    <div class="label-tab" data-toggle="dropdown" aria-expanded="false">
+
+      {% if sort_by == 'manual' %}
+      <span class="label-text">
+        {{ 'collections.sorting.featured' | t }}
+      </span>
+      {% elsif sort_by == 'price-ascending' %}
+      <span class="label-text">
+        {{ 'collections.sorting.price_ascending' | t }}
+      </span>
+      {% elsif sort_by == 'price-descending' %}
+      <span class="label-text">
+        {{ 'collections.sorting.price_descending' | t }}
+      </span>
+      {% elsif sort_by == 'title-ascending' %}
+      <span class="label-text">
+        {{ 'collections.sorting.az' | t }}
+      </span>
+      {% elsif sort_by == 'title-descending' %}
+      <span class="label-text">
+        {{ 'collections.sorting.za' | t }}
+      </span>
+      {% elsif sort_by == 'created-ascending' %}
+      <span class="label-text">
+        {{ 'collections.sorting.date_ascending' | t }}
+      </span>
+      {% elsif sort_by == 'created-descending' %}
+      <span class="label-text">
+        {{ 'collections.sorting.date_descending' | t }}
+      </span>
+      {% elsif sort_by == 'best-selling' %}
+      <span class="label-text">
+        {{ 'collections.sorting.best_selling' | t }}
+      </span>
+      {% endif %}
+      <span class="icon-dropdown">
+        <i class="fa fa-angle-down"></i>
+      </span>
+    </div>
+
+    <ul class="dropdown-menu">
+      {%- for option in collection.sort_options -%}
+      <li {% if option.value == sort_by %}class="active"{% endif %}>
+
+        <label for="{{ option.value }}">
+          <input type="radio" id="{{ option.value }}" name="sort_by" value="{{ option.value }}" {% if option.value == sort_by %}checked{% endif %}>
+        </label>
+        <span>{{ option.name | escape }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </form>
+</collection-filters-form>
+<noscript>
+  <button type="submit" class="button button--small">{{ 'sections.collection_template.sort_button' | t }}</button>
+</noscript>

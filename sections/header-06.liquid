@@ -1,0 +1,348 @@
+{% render 'style-header-06' %}
+{% assign page_handle = page.handle %}
+{% assign template_index = template | replace: '.', ' ' | truncatewords: 1, '' | handle %}
+<header class="site-header header-default header-06" role="banner">
+    {% if section.settings.display_header_top %}
+    <div class="header-top">
+        <div class="container">
+            <div class="wrapper-header-top">
+              <div class="header-logo">
+                  {% for block in section.blocks %}
+                    {% assign page_block_handle = pages[block.settings.link_text].handle %}
+                    {% if block.settings.brand_type == 'image' and block.settings.logo_pc != bank %}
+                      <a class="logo-img {% if template.suffix == 'landing' %}{% if page_handle == page_block_handle %}active{% endif %}{% else %}{% if forloop.first %}active{% endif %}{% endif %}" href="{% if pages[block.settings.link_text].url != blank %}{{ pages[block.settings.link_text].url }}{% else %}{{ routes.cart_url | split: 'cart' | first }}{% endif %}" title="Logo" data-load-page="{{ pages[block.settings.link_text].handle }}">
+                        <img itemprop="logo" data-src="{{ block.settings.logo_pc | img_url: 'master' }}"
+                               src="{{ block.settings.logo_pc | img_url: 'master' }}"
+                               alt="{{ block.settings.logo_pc.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyloaded" data-sizes="auto">
+                      </a>
+                    {% elsif block.settings.brand_text != '' %}
+                      <a class="logo-title {% if template.suffix == 'landing' %}{% if page_handle == page_block_handle %}active{% endif %}{% else %}{% if forloop.first %}active{% endif %}{% endif %}" href="{% if pages[block.settings.link_text].url != blank %}{{ pages[block.settings.link_text].url }}{% else %}{{ routes.cart_url | split: 'cart' | first }}{% endif %}" style="width: {{ section.settings.logo_max_width }}px" data-load-page="{{ pages[block.settings.link_text].handle }}">
+                        {{ block.settings.brand_text }}
+                      </a>
+                    {% else %}
+                      <a class="logo-title {% if template.suffix == 'landing' %}{% if page_handle == page_block_handle %}active{% endif %}{% else %}{% if forloop.first %}active{% endif %}{% endif %}" href="{% if pages[block.settings.link_text].url != blank %}{{ pages[block.settings.link_text].url }}{% else %}{{ routes.cart_url | split: 'cart' | first }}{% endif %}" data-load-page="{{ pages[block.settings.link_text].handle }}">
+                        {{ shop.name }}
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+              </div>
+              <div class="top-menu-text" data-menu-tab>
+                <ul>
+                {% for block in section.blocks %}
+                    {% assign page_block_handle = pages[block.settings.link_text].handle %}
+                    <li {% if template.suffix == 'landing' %}{% if page_handle == page_block_handle %}class="active"{% endif %}{% else %}{% if forloop.first %}class="active"{% endif %}{% endif %} data-load-page="{{ pages[block.settings.link_text].handle }}">
+                        <a style="color: {{ block.settings.color_text }};background-color: {{ block.settings.bg_color_text }}" href="{% if pages[block.settings.link_text].url != blank %}{{ pages[block.settings.link_text].url }}{% else %}{{ routes.cart_url | split: 'cart' | first }}{% endif %}">{{ block.settings.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+              </div>
+              <div class="top-location">
+                <div class="cus-ser-text">
+                  {% render 'multilang' with section.settings.customer_service_text %}
+                </div>
+                {% if settings.enable_multilang_shopify or settings.enable_multiple_currencies or settings.enable_shopify_payments_currencies %}
+                  <div class="item-location">
+                    <div class="wrapper-icon">
+                      {% render 'icons8-globe' %}
+                      {% render 'icons8-sort-down' %}
+                    </div>
+                    <div class="lang-currency-groups">
+                      {% render 'new-language-picker' %}
+                      {% render 'new-currency-picker' %}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+  <div class="header-bottom" data-sticky-mb>
+    <div class="container">
+      <div class="wrapper-header-bt">
+        
+        {% render 'header-mobile-2' %}
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+    var appendPrependMenuMobile = function() {
+        var headerPC = $('.wrapper-header .header-pc'),
+            wrapperHeaderBt = $('.wrapper-header-bt'),
+            wrapperNav = $('.wrapper-navigation'),
+            areaMb = wrapperNav.find('.mb-area');
+
+        if (window.innerWidth < 1200) {
+            headerPC.appendTo(areaMb);
+            $('.wrapper-header .cus-ser-text').appendTo('.top-text-close');
+            $('.wrapper-header-top .item-location').appendTo('.wrapper-navigation .header-bottom-midle');
+            $('.wrapper-navigation .header-bottom-left .header-logo').appendTo('.wrapper-header-top');
+            $('.wrapper-navigation .header-bottom-right .nav-wishlist').insertBefore('.wrapper-navigation .header-bottom-midle .item-location');
+
+
+        } else {
+            headerPC.appendTo(wrapperHeaderBt);
+            $('.header-bottom-midle .item-location').appendTo('.wrapper-header-top .top-location');
+            $('.header-bottom-midle .cus-ser-text').insertBefore('.wrapper-header-top .top-location .item-location');
+            $('.wrapper-header-top .header-logo').appendTo('.wrapper-navigation .header-bottom-left');
+            $('.wrapper-navigation .header-bottom-midle .nav-wishlist').insertBefore('.wrapper-navigation .header-bottom-right .wrapper-top-cart');
+        };
+    };
+
+    $(document).ready(function() {
+        appendPrependMenuMobile();
+    });
+
+    $(window).on('resize', function () {
+        appendPrependMenuMobile();
+    });
+
+    window.dropdowncart_type = "{{ section.settings.dropdowncart_type }}";
+    
+    {% if settings.enable_multilang %}
+    translator.doTranslate('.site-header');
+    {% endif %}
+</script>
+
+{% schema %}
+  {
+    "name": "Header 06",
+    "settings": [
+    {
+      "type": "header",
+      "content": "Header Top"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_header_top",
+      "label": "Display Header Top?",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "customer_service_text",
+      "label": "Top Content Text 2",
+      "default": "Available 24/7 at <a href=\"tel:(018)%20900-6690/\">(018) 900-6690</a>"
+    },
+    {
+      "type" : "text",
+      "id" : "font_size_content_2",
+      "label" : "Font Size",
+      "default" : "11px",
+      "info" : "======================="
+    },
+    {
+      "type": "color",
+      "id": "bg_header_top",
+      "label": "Background Color",
+      "default": "#ffe8e8"
+    },
+    {
+      "type": "color",
+      "id": "text_header_top_color",
+      "label": "Text Color",
+      "default": "#fff"
+    },
+	  {
+  		"type": "header",
+  		"content": "Logo"
+	  },
+    {
+        "type": "range",
+        "id": "logo_max_width",
+        "label": "Custom logo width",
+        "min": 30,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "default": 50
+    },
+    {
+      "type": "color",
+      "id": "logo_text_color",
+      "label": "Logo Text Color",
+      "default": "#000"
+    },
+	  {
+      "type": "text",
+      "id": "max_height_logo_pc",
+      "label": "Max Width of Logo PC",
+      "default": "44px" 
+    },	
+    {
+      "type": "text",
+      "id": "max_height_logo_mb",
+      "label": "Max Width of Logo Mobile",
+      "default": "26px" 
+    },  
+    {
+      "type": "header",
+      "content": "Search"
+    },  
+    {
+      "type": "color",
+      "id": "icon_search_color",
+      "label": "Color Icon",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_search_color",
+      "label": "Background Color Form",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "bg_border_search_color",
+      "label": "Background Border Color Form",
+      "default": "#ebebee"
+    },      
+    {
+      "type": "color",
+      "id": "search_text_color",
+      "label": "Color Text Form",
+      "default": "#bcbcbc"
+    },
+    {
+      "type": "color",
+      "id": "search_icon_color",
+      "label": "Color Icon Form",
+      "default": "#ba7a2d"
+    },
+    {
+      "type": "header",
+      "content": "Account"
+    },
+    {
+      "type": "color",
+      "id": "icon_account_color",
+      "label": "Color Icon",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Wishlist"
+    },
+    {
+      "type": "color",
+      "id": "icon_wishlist_color",
+      "label": "Color Icon",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Cart Header"
+    },
+    {
+      "type": "color",
+      "id": "icon_cart_color",
+      "label": "Color Icon",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_cart_color",
+      "label": "Background Color Items Cart",
+      "default": "#ffe5e5"
+    },
+    {
+      "type": "color",
+      "id": "cart_color",
+      "label": "Color Items Cart",
+      "default": "#323232"
+    },
+    {
+      "type": "header",
+      "content": "Menu Tabs"
+    },
+    {
+      "type": "color",
+      "id": "text_active_color",
+      "label": "Color Active Menu Text",
+      "default": "#202020"
+    },
+    {
+      "type": "color",
+      "id": "text_active_bg_color",
+      "label": "Background Color Active Menu Text",
+      "default": "#ffffff"
+    }
+    ],
+    "blocks": [
+    {
+      "type": "text_menu",
+      "name": "Menu Text",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Logo"
+        },
+        {
+          "type": "radio",
+          "id": "brand_type",
+          "label": "Use image or text for logo?",
+          "options": [
+            {
+              "value": "text",
+              "label": "Text"
+            },
+            {
+              "value": "image",
+              "label": "Image"
+            }
+          ],
+          "default": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "brand_text",
+          "label": "Logo text"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_pc",
+          "label": "Logo image for PC",
+          "info": "95px x 44px recommended"
+        },
+        {
+         "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image for Mobile",
+          "info": "95px x 44px recommended"
+        },
+        {
+          "type" : "header",
+          "content" : "Text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menu Items",
+          "default": "Catalog"
+        },
+        {
+          "type": "page",
+          "id": "link_text",
+          "label": "Link"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Color Text",
+          "default": "#202020"
+        },
+        {
+          "type": "color",
+          "id": "bg_color_text",
+          "label": "Background Color Text",
+          "default": "#ffffff"
+        }
+      ]
+    }
+    ] 
+  }
+{% endschema %}

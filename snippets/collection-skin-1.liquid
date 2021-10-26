@@ -1,0 +1,15 @@
+<div class="collection-template collection-template-skin-1">
+  {% render 'collection-header' %}
+  <div class="container">
+    {% render 'breadcrumb' %}
+    <div class="halo-collection-content">
+      <div class="appendTo-toolbar">
+        <div class="container"></div>
+      </div>
+      <div class="row">
+        {% render 'sidebar-filter' %}
+        {% render 'collection-template-skin-1' %}
+      </div>
+    </div>   
+  </div>
+</div>

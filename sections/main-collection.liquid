@@ -1,0 +1,961 @@
+{% if template.suffix == 'right-sidebar' %}
+	{% render 'collection-right-sidebar' %}
+{% elsif template.suffix == 'fullwidth' %}
+	{% render 'collection-fullwidth' %}
+{% elsif template.suffix == 'with-banner' %}
+	{% render 'collection-with-banner' %}
+{% elsif template.suffix == 'mansory' %}
+	{% render 'collection-mansory' %}
+{% elsif template.suffix == 'express-order' %}
+	{% render 'collection-express-order' %}
+{% elsif template.suffix == 'no-sidebar' %}
+	{% render 'collection-no-sidebar' %}
+{% elsif template.suffix == 'skin-1' %}
+	{% render 'collection-skin-1' %}
+{% elsif template.suffix == 'supermarket' %}
+	{% render 'collection-supermarket' %}
+{% else %}
+	{% if settings.category_layout == "default" %} 
+		{% render 'collection-default' %}
+	{% elsif settings.category_layout == "right_sidebar" %}
+		{% render 'collection-right-sidebar' %}
+	{% elsif settings.category_layout == "full_with" %}
+		{% render 'collection-fullwidth' %}
+	{% elsif settings.category_layout == "with_banner" %}
+		{% render 'collection-with-banner' %}
+	{% elsif settings.category_layout == "mansory" %}
+		{% render 'collection-mansory' %}
+	{% elsif settings.category_layout == "express_order" %}
+		{% render 'collection-express-order' %}
+	{% elsif settings.category_layout == "no_sidebar" %}
+		{% render 'collection-no-sidebar' %}
+	{% elsif settings.category_layout == "skin_1" %}
+		{% render 'collection-skin-1' %}
+	{% elsif settings.category_layout == "supermarket" %}
+		{% render 'collection-supermarket' %}
+	{% endif %}
+{% endif %}
+<style>
+  .collection-template .padding .infinite-scrolling .btn {
+    background-color: {{ section.settings.bg_color_button_more }};
+    border-color: {{ section.settings.border_color_button_more }};
+    color: {{ section.settings.color_button_more }};
+  }
+</style>
+{% schema %}
+  {
+    "name": "Main Collection",
+    "settings": [
+	{
+		"type": "header",
+		"content": "Collection Content"
+	},
+	{
+		"type": "checkbox",
+		"id": "limited_view",
+		"label": "Enable Limited View",
+		"default": true
+	},
+	{
+		"type": "checkbox",
+		"id": "view_as_enable",
+		"label": "Enable View As",
+		"default": true
+	},
+	{
+		"type": "checkbox",
+		"id": "sort_enable",
+		"label": "Enable sorting",
+		"default": true
+	},
+	{
+		"type": "paragraph",
+		"content": "(3 above settings are not applied for Express Order page)"
+	},
+	{
+		"type": "select",
+		"id": "collection_results_per_row",
+		"label": "Products per row (grid only)",
+		"default": "4",
+		"options": [
+		  {
+		    "value": "1",
+		    "label": "List"
+		  },
+		  {
+		    "value": "2",
+		    "label": "2"
+		  },
+		  {
+		    "value": "3",
+		    "label": "3"
+		  },
+		  {
+		    "value": "4",
+		    "label": "4"
+		  },
+		  {
+		    "value": "5",
+		    "label": "5"
+		  }
+		]
+	},
+	{
+		"type": "select",
+		"id": "collection_results_per_page",
+		"label": "Products per page",
+		"default": "24",
+		"options": [
+		  {
+		    "value": "12",
+		    "label": "12"
+		  },
+		  {
+		    "value": "16",
+		    "label": "16"
+		  },
+		  {
+		    "value": "20",
+		    "label": "20"
+		  },
+		  {
+		    "value": "24",
+		    "label": "24"
+		  },
+		  {
+		    "value": "30",
+		    "label": "30"
+		  },
+		  {
+		    "value": "50",
+		    "label": "50"
+		  }
+		]
+	},
+    {
+      "type" : "color",
+      "id" : "color_button_more",
+      "label" : "Color Button",
+      "default" : "#ffffff"
+    },
+    {
+      "type" : "color",
+      "id" : "bg_color_button_more",
+      "label" : "Background Color Button",
+      "default" : "#ba7a2d"
+    },
+    {
+      "type" : "color",
+      "id" : "border_color_button_more",
+      "label" : "Border Color Button",
+      "default" : "#ba7a2d"
+    },
+	{
+		"type": "header",
+		"content": "Countdown"
+	},
+	{
+	    "type": "checkbox",
+	    "id": "show_countdown",
+	    "label": "Enable Countdown",
+	    "default": false
+	},
+	{
+	    "type": "text",
+	    "id": "text_countdown",
+	    "label": "Text Countdown",
+	    "default": "End ins:",
+	    "info": "(Use for Layout Collection Page Mansory)"
+	},
+	{
+	    "type": "checkbox",
+	    "id": "show_pro_des",
+	    "label": "Short Description for Product Grid",
+	    "default": false,
+	    "info": "(Use for Layout Collection Page Mansory)"
+	},
+	{
+	  	"type": "header",
+	  	"content": "Product Banner In Collection ",
+		"info": "(Use for Layout Collection With Banner or Collection No Sidebar)"
+	},
+	{
+		"type" : "checkbox",
+		"id" : "show_banner",
+		"label" : "Enable Banner",
+		"default" : false
+	},
+	{
+	  	"type" : "checkbox",
+	  	"id" : "show_banner_1",
+	  	"label" : "Enable Banner #1",
+	  	"default" : true
+	},	  
+	{
+		"type" : "image_picker",
+		"id" : "img_banner1",
+		"label" : "Image 1"
+	},
+	{
+		"type": "url",
+		"id": "link_banner_1",
+		"label": "Link image 1"
+	},
+	{
+		"type" : "checkbox",
+		"id" : "show_banner_2",
+		"label" : "Enable Banner #2",
+		"default" : true
+	},	  
+	{
+		"type" : "image_picker",
+		"id" : "img_banner2",
+		"label" : "Image 2"
+	},
+	{
+		"type": "url",
+		"id": "link_banner_2",
+		"label": "Link image 2"
+	},
+	{
+		"type" : "checkbox",
+		"id" : "show_banner_3",
+		"label" : "Enable Banner #3",
+		"default" : true
+	},	  
+	{
+		"type" : "image_picker",
+		"id" : "img_banner3",
+		"label" : "Image 3"
+	},
+	{
+		"type": "url",
+		"id": "link_banner_3",
+		"label": "Link image 3"
+	},
+	{
+		"type" : "checkbox",
+		"id" : "show_banner_4",
+		"label" : "Enable Banner #4",
+		"default" : true
+	},	  
+	{
+		"type" : "image_picker",
+		"id" : "img_banner4",
+		"label" : "Image 4"
+	},
+	{
+		"type": "url",
+		"id": "link_banner_4",
+		"label": "Link image "
+	},
+	{
+		"type": "header",
+		"content": "Settings Header Text",
+		"info": "(Use for Layout Collection Express order)"
+	},
+	{
+		"type" : "text",
+		"id" : "pro_image",
+		"label" : "Image",
+		"default" : "&nbsp;"
+	}, 
+	{
+		"type" : "text",
+		"id" : "pro_name",
+		"label" : "Product Name",
+		"default" : "Product"
+	},
+	{
+		"type" : "text",
+		"id" : "pro_price",
+		"label" : "Product Price",
+		"default" : "Price"
+	},
+	{
+		"type" : "text",
+		"id" : "pro_quantity",
+		"label" : "Product Quantity",
+		"default" : "Qty"
+	},
+	{
+		"type" : "text",
+		"id" : "pro_variant_options",
+		"label" : "Product Variant Options",
+		"default" : "Options"
+	},
+	{
+		"type": "paragraph",
+		"content": "The settings of 4 buttons are for Layout: Express Order"
+	},
+	{
+		"type": "header",
+		"content": "Button 1",
+		"info": "Use for Show Variants Button"
+	},
+	{
+		"type": "color",
+		"id": "btn_1_bg_color",
+		"label": "Background Color",
+		"default": "#232323",
+		"info": "Default Value: #232323"
+	},
+	{
+		"type": "color",
+		"id": "btn_1_border_color",
+		"label": "Border Color",
+		"default": "#232323",
+		"info": "Default Value: #232323"
+	},
+	{
+		"type": "color",
+		"id": "btn_1_text_color",
+		"label": "Text Color",
+		"default": "#fff",
+		"info": "Default Value: #fff"
+	},
+	{
+		"type": "header",
+		"content": "Button 2",
+		"info": "Use for Add To Cart Button"
+	},
+	{
+		"type": "color",
+		"id": "btn_2_bg_color",
+		"label": "Background Color",
+		"default": "#fff",
+		"info": "Default Value: #fff"
+	},
+	{
+		"type": "color",
+		"id": "btn_2_border_color",
+		"label": "Border Color",
+		"default": "#323232",
+		"info": "Default Value: #323232"
+	},
+	{
+		"type": "color",
+		"id": "btn_2_text_color",
+		"label": "Text Color",
+		"default": "#232323",
+		"info": "Default Value: #232323"
+	},
+	{
+		"type": "header",
+		"content": "Button 3",
+		"info": "Use for Hide Variants Button and Show Variants when hover"
+	},
+	{
+		"type": "color",
+		"id": "btn_3_bg_color",
+		"label": "Background Color",
+		"default": "#fff",
+		"info": "Default Value: #fff"
+	},
+	{
+		"type": "color",
+		"id": "btn_3_border_color",
+		"label": "Border Color",
+		"default": "#e6e6e6",
+		"info": "Default Value: #e6e6e6"
+	},
+	{
+		"type": "color",
+		"id": "btn_3_text_color",
+		"label": "Text Color",
+		"default": "#232323",
+		"info": "Default Value: #232323"
+	},
+	{
+		"type": "header",
+		"content": "Button 4",
+		"info": "Use for Add More... Button and Add To Cart when hover"
+	},
+	{
+		"type": "color",
+		"id": "btn_4_bg_color",
+		"label": "Background Color",
+		"default": "#69c69c",
+		"info": "Default Value: #69c69c"
+	},
+	{
+		"type": "color",
+		"id": "btn_4_border_color",
+		"label": "Border Color",
+		"default": "#69c69c",
+		"info": "Default Value: #69c69c"
+	},
+	{
+		"type": "color",
+		"id": "btn_4_text_color",
+		"label": "Text Color",
+		"default": "#fff",
+		"info": "Default Value: #fff"
+	}
+	],
+    "blocks": [
+        {
+            "type": "sidebar",
+            "name": "Sidebar",
+            "settings": [
+            	{
+					"type": "paragraph",
+					"content": "The settings of Sidebar only work for Collections/Category pages which have Sidebar including:"
+				},
+				{
+					"type": "paragraph",
+					"content": "- Category Default, Full Width, Mansory, Right Sidebar, Express Order, With Banner ADV, 1170, Supermarket."
+				},
+                {
+	                "type": "checkbox",
+	                "id": "display_sidebar",
+	                "label": "Enable Sidebar",
+	                "default": true
+	            },
+	            {
+	                "type": "select",
+	                "id": "sidebar_style",
+	                "label": "Sidebar Style",
+	                "options": [
+	                    {
+	                        "value": "style_1",
+	                        "label": "Style 1"
+	                    },
+	                    {
+	                        "value": "style_2",
+	                        "label": "Style 2"
+	                    }          
+	                ],
+	                "default": "style_1",
+	                "info": "Default: Style 1"
+	            },
+	            {
+	                "type": "select",
+	                "id": "show_sidebar",
+	                "label": "Show Sidebar on:",
+	                "options": [
+	                    {
+	                        "value": "left",
+	                        "label": "Left"
+	                    },
+	                    {
+	                        "value": "right",
+	                        "label": "Right"
+	                    }          
+	                ],
+	                "default": "left",
+	                "info": "Default: Left"
+	            },
+	            {
+	                "type": "header",
+	                "content": "Style settings for filter options"
+	            },
+	            {
+	                "type": "text",
+	                "id": "style_option_color",
+	                "label": "Use Swatches for Color",
+	                "default": "Color",
+	                "info": "Enter option name to activate Swatches style for Color option"
+	            },
+	            {
+	                "type": "text",
+	                "id": "style_option_size",
+	                "label": "Use Swatches for Size",
+	                "default": "Size",
+	                "info": "Enter option name to activate Swatches style for Size option"
+	            },
+	            {
+	                "type": "header",
+	                "content": "Collapse filter at"
+	            },
+	            {
+	                "type": "number",
+	                "id": "number_collapse",
+	                "label": "Number",
+	                "default": 5
+	            },
+	            {
+	                "type": "header",
+	                "content": "Categories"
+	            },
+	            {
+	                "type": "checkbox",
+	                "id": "enable_categories",
+	                "label": "Enable",
+	                "default": true
+	            },
+	            {
+	                "type": "text",
+	                "id": "title_categories",
+	                "label": "Title"
+	            },
+	            {
+	                "type": "radio",
+	                "id": "style_categories",
+	                "label": "Show all \/ Only a few categories",
+	                "options": [
+	                    {
+	                        "value": "style_show_all",
+	                        "label": "Show all"
+	                    },
+	                    {
+	                        "value": "style_main_menu",
+	                        "label": "Get Categories From Main Menu"
+	                    },
+	                    {
+	                        "value": "style_little",
+	                        "label": "Only a few categories"
+	                    }                    
+	                ]
+	            },
+	            {
+	                "type": "link_list",
+	                "id": "link_list",
+	                "label": "Choose a menu",
+	                "default": "main-menu"
+	            },
+	            {
+                  "type": "header",
+                  "content": "Filter Option"
+                },
+	        {
+                  "type": "radio",
+                  "id": "filter_option",
+                  "label": "Filter type",
+                  "options": [
+                  {
+                    "value": "tag",
+                    "label": "Filter By Tags"
+                  },
+                  {
+                    "value": "dynamic",
+                    "label": "Dynamic Product Filter"
+                  }],
+                  "default": "dynamic"
+	        },
+                {
+                  "type": "header",
+                  "content": "Filter Text 1"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_1",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_1",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_1",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 2"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_2",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_2",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_2",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 3"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_3",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_3",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_3",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 4"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_4",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_4",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_4",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 5"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_5",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_5",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_5",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 6"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_6",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_6",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_6",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 7"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_7",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_7",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_7",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 8"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_8",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_8",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_8",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 9"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_9",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_9",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_9",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+                {
+                  "type": "header",
+                  "content": "Filter Text 10"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "enable_10",
+                  "label": "Enable",
+                  "default": false
+                },
+                {
+                  "type": "text",
+                  "id": "title_10",
+                  "label": "Filter Title"
+                },
+                {
+                  "type": "textarea",
+                  "id": "list_tags_10",
+                  "label": "List Tags",
+                  "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                },
+	            {
+	                "type": "header",
+	                "content": "Product Slider"
+	            },
+	            {
+	                "type": "checkbox",
+	                "id": "enable_product",
+	                "label": "Enable",
+	                "default": true
+	            },
+	            {
+	                "type": "text",
+	                "id": "title_product",
+	                "label": "Title"
+	            },
+	            {
+	                "id": "collection",
+	                "type": "collection",
+	                "label": "Collection"
+	            },
+	            {
+	                "type": "text",
+	                "id": "limit",
+	                "label": "Number of products to show",
+	                "default": "8"
+	            },       
+	            {
+	                "type": "header",
+	                "content": "Block Image 1"
+	            },
+	            {
+	                "type": "checkbox",
+	                "id": "enable_img_1",
+	                "label": "Enable",
+	                "default": true
+	            },
+	            {
+	                "type": "image_picker",
+	                "id": "image_img_1",
+	                "label": "Image"
+	            },
+	            {
+	                "type": "url",
+	                "id": "link_img_1",
+	                "label": "Link Image",
+	                "info": "Optional"
+	            },
+
+	            {
+	                "type": "header",
+	                "content": "Block Image 2"
+	            },
+	            {
+	                "type": "checkbox",
+	                "id": "enable_img_2",
+	                "label": "Enable",
+	                "default": true
+	            },
+	            {
+	                "type": "image_picker",
+	                "id": "image_img_2",
+	                "label": "Image"
+	            },
+	            {
+	                "type": "url",
+	                "id": "link_img_2",
+	                "label": "Link Image",
+	                "info": "Optional"
+	            },
+	            {
+	                "type": "header",
+	                "content": "Custom Block"
+	            },
+	            {
+	                "type": "checkbox",
+	                "id": "enable_custom_block",
+	                "label": "Enable",
+	                "default": true
+	            },
+	            {
+	                "type": "text",
+	                "id": "title_custom_block",
+	                "label": "Heading",
+	                "default": "Custom Block"
+	            },
+	            {
+	                "type": "richtext",
+	                "id": "quote_custom_block",
+	                "label": "Text",
+	                "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
+	            }
+            ]
+        },
+        {
+            "type": "header",
+            "name": "Collection Header",
+            "settings": [
+			    {
+			        "type": "checkbox",
+			        "id": "display_collection_image",
+			        "label": "Show collection image?",
+			        "default": true
+			    },
+			    {
+			        "type": "select",
+			        "id": "collection_header_layout",
+			        "label": "Layout Collection Header",
+			        "options": [
+			        {
+			            "value": "default",
+			            "label": "Default"
+			        },
+			        {
+			            "value": "full",
+			            "label": "Full Width"
+			        }],
+			        "default": "full",
+			        "info": "Default: Full Width"
+			    },
+			    {
+			        "type": "select",
+			        "id": "collection_header_style",
+			        "label": "Style Collection Header",
+			        "options": [
+			        {
+			            "value": "style_1",
+			            "label": "Style Default"
+			        },
+			        {
+			            "value": "style_2",
+			            "label": "Style 2"
+			        }],
+			        "default": "style_1",
+			        "info": "Default: Style Default"
+			    },
+			    {
+			        "type": "image_picker",
+			        "id": "collection_image",
+			        "label": "Image Category",
+			        "info": "This image will show up when you don't add image in Collections Description"
+			    },
+			    {
+			        "type": "checkbox",
+			        "id": "display_collection_des",
+			        "label": "Display Collections Description?",
+			        "default": true
+			    },
+			    {
+			        "type" : "color",
+			        "id" : "color_wrapper",
+			        "label" : "Color Wrapper",
+			        "default" : "#202020"
+			    },
+			    {
+			        "type" : "color",
+			        "id" : "color_wrapper_mb",
+			        "label" : "Color Wrapper Mobile",
+			        "default" : "#202020"
+			    },
+			    {
+			        "type" : "color",
+			        "id" : "bg_color_content",
+			        "label" : "Background color content",
+			        "default" : "#fff",
+			        "info": "This settings only use for Style 2"
+			    },
+			    {
+			        "type" : "color",
+			        "id" : "border_color_content",
+			        "label" : "Border color content",
+			        "default" : "#bcbcbc",
+			        "info": "This settings only use for Style 2"
+			    },
+			    {
+			        "type" : "text",
+			        "id" : "height_img",
+			        "label" : "Image height",
+			        "default" : "240px"
+			    },
+			    {
+			        "type" : "header",
+			        "content" : "Sub Collection"
+			    },
+			    {
+			        "type" : "checkbox",
+			        "id" : "enable_sub",
+			        "label" : "Enable?",
+			        "default" : false
+			    },
+			    {
+			        "type" : "text",
+			        "id" : "sub_title",
+			        "label" : "Title",
+			        "default" : "Jump to:"
+			    },
+			    {
+			        "type": "select",
+			        "id": "sub_style",
+			        "label": "Style Sub Collection",
+			        "options": [
+			        {
+			            "value": "style_1",
+			            "label": "Style Default"
+			        },
+			        {
+			            "value": "style_2",
+			            "label": "Style 2"
+			        }],
+			        "default": "style_1",
+			        "info": "Default: Style Default"
+			    }
+			]
+        }
+    ]
+  }
+{% endschema %}

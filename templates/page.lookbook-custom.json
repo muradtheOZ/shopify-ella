@@ -1,0 +1,183 @@
+{
+  "wrapper": "div.lookbook-page",
+  "sections": {
+    "main": {
+      "type": "lookbook-custom",
+      "blocks": {
+        "48363c67-234d-400a-8c37-6aba365e164f": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/banner1_1920x_86b7ec65-cd79-4748-bdc1-55bc96c5433a.jpg",
+            "size_image": "large",
+            "lb_product_1": "aeque-mollis-urnan-lementum",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#ffffff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#ffffff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#ffffff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#ffffff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#ffffff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#ffffff"
+          }
+        },
+        "437d42c7-a40f-4c83-a551-00892d165c48": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/banner-kids-1_1920x_6fa4a949-d054-4676-8d05-f96c861392b2.jpg",
+            "size_image": "normal",
+            "lb_product_1": "dempus-lortis-cosmo-sapiendo",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#ffffff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#ffffff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#ffffff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#ffffff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#ffffff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#ffffff"
+          }
+        },
+        "a259e82b-9583-4ef3-b1d4-2d8b993304bd": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/person-holds-their-glasses-in-front-of-them.jpg",
+            "size_image": "normal",
+            "lb_product_1": "",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#ffffff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#ffffff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#ffffff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#ffffff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#ffffff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#ffffff"
+          }
+        },
+        "8bd41dcc-d25b-4fb2-a50c-fb74b7e5fe83": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/banner-collection.jpg",
+            "size_image": "normal",
+            "lb_product_1": "",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#fff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#fff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#fff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#fff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#fff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#fff"
+          }
+        },
+        "4e202dee-6fdb-4faf-8801-aa0111132b13": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/banner-collections-flower_9b454b9c-5090-4255-ad77-175b10417734.jpg",
+            "size_image": "normal",
+            "lb_product_1": "",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#fff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#fff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#fff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#fff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#fff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#fff"
+          }
+        },
+        "a39eaaaa-0f9a-4db7-aa23-c07129264a55": {
+          "type": "image",
+          "settings": {
+            "dpl_slide_img": true,
+            "image_slide": "shopify:\/\/shop_images\/coll-header-compressor.jpg",
+            "size_image": "normal",
+            "lb_product_1": "",
+            "top_position_1": "10",
+            "left_position_1": "10",
+            "dots_color_1": "#fff",
+            "dots_bg_color_1": "#323232",
+            "dots_shadow_color_1": "#fff",
+            "lb_product_2": "",
+            "top_position_2": "10",
+            "left_position_2": "10",
+            "dots_color_2": "#fff",
+            "dots_bg_color_2": "#323232",
+            "dots_shadow_color_2": "#fff",
+            "lb_product_3": "",
+            "top_position_3": "10",
+            "left_position_3": "10",
+            "dots_color_3": "#fff",
+            "dots_bg_color_3": "#323232",
+            "dots_shadow_color_3": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "48363c67-234d-400a-8c37-6aba365e164f",
+        "437d42c7-a40f-4c83-a551-00892d165c48",
+        "a259e82b-9583-4ef3-b1d4-2d8b993304bd",
+        "8bd41dcc-d25b-4fb2-a50c-fb74b7e5fe83",
+        "4e202dee-6fdb-4faf-8801-aa0111132b13",
+        "a39eaaaa-0f9a-4db7-aa23-c07129264a55"
+      ],
+      "settings": {
+        "display_product_detail_share": true,
+        "share_text": "Share",
+        "button": "",
+        "link": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

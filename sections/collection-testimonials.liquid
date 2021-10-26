@@ -1,0 +1,87 @@
+{% if section.settings.display_customer %}
+<div class="collection-testimonials">
+    <div class="container">
+        <div class="list-item" {% if section.blocks.size > 1 %}data-testimonials-slider data-loader-script="{{ 'halo.slide-testimonials.js' | asset_url }}" data-rows="1" data-dots="true"{% endif %}>
+            {% for block in section.blocks %}
+                {% if block.settings.enable %}
+                <div class="item">
+                    {% if block.settings.content != blank %}
+                    <div class="content">
+                        {{ block.settings.content }}
+                    </div>
+                    {% endif %}
+                    <div class="infomation">
+                        <div class="avatar">
+                            {% if block.settings.avatar != blank %}
+                            <img data-srcset="{{ block.settings.avatar | img_url: '60x60' }}" class="lazyload" />
+                            {% else %}
+                            <div class="not_img">
+                                60 x 60px
+                            </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="info">
+                            {% if block.settings.title != blank %}
+                            <h5 class="name">{{ block.settings.title }}</h5>
+                            {% endif %}
+                            {% if block.settings.info != blank %}
+                            <p class="job">{{ block.settings.info }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% schema %}
+{
+    "name": "Customer Testimonials",
+    "max_blocks": 10,
+ 	"settings": [
+        {
+            "type": "checkbox",
+            "id": "display_customer",
+            "label": "Enable",
+            "default": false
+        }
+	],
+    "blocks": [
+        {
+            "type": "customer",
+            "name": "Customer",
+            "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "enable",
+                    "label": "Enable",
+                    "default": true
+                },
+                {
+                    "type": "image_picker",
+                    "id": "avatar",
+                    "label": "Avatar"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Name"
+                },
+                {
+                    "type": "text",
+                    "id": "info",
+                    "label": "Info"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Content"
+                }
+            ]
+        }                      
+    ]
+}
+{% endschema %}

@@ -1,0 +1,183 @@
+<div class="home-announcement header-top" id="home-announcement-{{ section.id }}" style="opacity: 0">
+  <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
+    <div class="row">
+      <div class="col-12">
+        {% if section.settings.message %}
+          <div class="announcement-bar-wrapper ">
+              {% if section.settings.message_link == blank %}
+                  <div class="announcement-bar">
+              {% else %}
+                  <a href="{{ section.settings.message_link }}" class="announcement-bar announcement-bar--link" aria-label="link">
+              {% endif %}
+                  {{ section.settings.message_text }}
+              {% if section.settings.message_link == blank %}
+                  </div>
+              {% else %}
+                  </a>
+              {% endif %}
+              {% if section.settings.show_close %}
+                <a class="announcement-bar-wrapper--close" href="javascript:void(0)" aria-label="close" data-close-header-top>{% render 'icon-close' %}</a>
+              {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}  
+
+  .home-announcement {
+    background-color: {{ section.settings.bg_color_annou }}
+  }
+
+  .announcement-bar span, .announcement-bar-wrapper--close svg {
+    color: {{ section.settings.color_text }};
+  }
+
+  .announcement-bar .btn { 
+    background-color: {{ section.settings.bg_color_btn }};
+    border: 1px solid {{ section.settings.bg_color_border_btn }};
+    color: {{ section.settings.color_text_btn }};
+  }
+
+  @media (max-width: 767px) {
+      #home-announcement-{{ section.id }} {
+        margin-bottom: {{ section.settings.margin_bottom_mb }}px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      #home-announcement-{{ section.id }} {
+        margin-bottom: {{ section.settings.margin_bottom_tab }}px;
+      }
+    }
+  
+    @media (min-width: 1200px) {
+      #home-announcement-{{ section.id }} {
+        margin-bottom: {{ margin_bottom }}px;
+      }
+    }
+
+</style>
+
+{% schema %}
+    {
+        "name": "Announcement",
+        "class": "home-announcement-sections",
+        "settings": [
+            {
+              "type": "header",
+              "content": "Announcement bar"
+            },
+            {
+              "type": "checkbox",
+              "id": "message",
+              "label": "Show announcement",
+              "default": true
+            },
+            {
+              "type": "select",
+              "id": "layout",
+              "label": "Banner Layout:",
+              "options": [
+                  {
+                      "value": "default",
+                      "label": "Default"
+                  },
+                  {
+                      "value": "full",
+                      "label": "Full Width"
+                  }
+              ],
+              "default": "full"
+            },
+            {
+              "type": "html",
+              "id": "message_text",
+              "label": "Text",
+              "default": "<span><img src=\"https://cdn.shopify.com/s/files/1/0278/4434/5931/files/banner-promotion-2.png?115\" alt=\"\"></span> <span><b>BUY NOW, PAY LATER.</b> Starting at 0% APR</span> <span class=\"btn\">learn more</span>"
+            },
+            {
+              "type": "url",
+              "id": "message_link",
+              "label": "Link",
+              "info": "Optional"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_close",
+              "label": "Show Close Button",
+              "default": true
+            },
+            {
+              "type" : "color",
+              "id" : "bg_color_annou",
+              "label" : "Background Color",
+              "default" : "#f6b924"
+            },
+            {
+              "type" : "color",
+              "id" : "color_text",
+              "label" : "Color Text",
+              "default" : "#051c42"
+            },
+            {
+              "type" : "color",
+              "id" : "color_text_btn",
+              "label" : "Color Text Button",
+              "default" : "#051c42"
+            },
+            {
+              "type" : "color",
+              "id" : "bg_color_btn",
+              "label" : "Background Color Button",
+              "default" : "#f6b924"
+            },
+            {
+              "type" : "color",
+              "id" : "bg_color_border_btn",
+              "label" : "Border Color Button",
+              "default" : "#69563b"
+            },
+            {
+              "type": "header",
+              "content": "Margin Bottom:"
+            },
+            {
+              "type": "range",
+              "id": "margin_bottom_mb",
+              "label": "Mobile",
+              "min": 0,
+              "max": 100,
+              "step": 1,
+              "default": 25
+            },
+            {
+              "type": "range",
+              "id": "margin_bottom_tab",
+              "label": "Tablet",
+              "min": 0,
+              "max": 100,
+              "step": 1,
+              "default": 30
+            },             
+            {
+              "type": "range",
+              "id": "margin_bottom",
+              "label": "Desktop",
+              "min": 0,
+              "max": 100,
+              "step": 1,
+              "default": 30
+            }   
+        ],
+        "presets": [
+            {
+                "name": "Announcement",
+                "category": "text"
+            }
+        ]
+    }
+{% endschema %}

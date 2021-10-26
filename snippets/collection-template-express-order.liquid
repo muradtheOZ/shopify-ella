@@ -1,0 +1,87 @@
+{% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+{% assign product_per_page = cart.attributes.pagination %}
+{% else %}
+{% assign product_per_page = section.settings.collection_results_per_page %}
+{% endif %}
+
+{% paginate collection.products by product_per_page %}
+
+<div id="shopify-section-collection-template-express-order" class="shopify-section col-12 col-xl-9 col-main">
+    <div id="CollectionProductGrid">
+        <div data-section-id="{{ section.id }}" data-section-type="collection-template" id="main-collection-product-grid" data-id="{{ section.id }}">  
+            <div class="coll-express-order">
+                {% if collection.products_count > 0 %}  
+                <div class="express-order-header t-header">
+                    <h4 class="column col-img col-title text-center">
+                        {% render 'multilang' with section.settings.pro_image %}
+                    </h4>        
+
+                    <h4 class="column col-prod col-title">
+                        {% render 'multilang' with section.settings.pro_name %}
+                    </h4>
+
+                    <h4 class="column col-price col-title text-center">
+                        {% render 'multilang' with section.settings.pro_price %}
+                    </h4>
+
+                    <h4 class="column col-qtt col-title text-center">
+                        {% render 'multilang' with section.settings.pro_quantity %}
+                    </h4>
+
+                    <h4 class="column col-options col-title text-center">
+                        {% render 'multilang' with section.settings.pro_variant_options %}
+                    </h4>
+                </div>
+                
+                <div class="express-order-content t-body product-collection">
+                    {% for product in collection.products %}
+                    <div class="grid-item">   
+                        {% render 'product-express-order-item', product: product %}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                {% else %}
+                    <p class="col-12 text-center" {% if settings.enable_multilang %}data-translate="collections.general.no_matches"{% endif %}>
+                        {{ 'collections.general.no_matches' | t }}
+                    </p>
+                {% endif %}
+            </div>
+            {% if paginate.pages > 1 %}
+            <div class="padding">
+                {% render 'pagination-page' paginate: paginate %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endpaginate %}   
+
+<style>
+    .coll-express-order .show-options-btn {
+        background: {{ section.settings.btn_1_bg_color }};
+        color: {{ section.settings.btn_1_text_color }};
+        border-color: {{ section.settings.btn_1_border_color }};
+    }
+    
+    .coll-express-order .show-options-btn:hover,
+    .coll-express-order .hide-options-btn,
+    .coll-express-order .hide-options-btn:hover {
+        background: {{ section.settings.btn_3_bg_color }};
+        color: {{ section.settings.btn_3_text_color }};
+        border-color: {{ section.settings.btn_3_border_color }};
+    }
+    
+    .coll-express-order .add-to-cart-btn {
+        background: {{ section.settings.btn_2_bg_color }};
+        color: {{ section.settings.btn_2_text_color }};
+        border-color: {{ section.settings.btn_2_border_color }};
+    }
+    
+    .coll-express-order .add-to-cart-btn:hover,
+    .coll-express-order .add-to-cart-btn.add_more {
+        background: {{ section.settings.btn_4_bg_color }};
+        color: {{ section.settings.btn_4_text_color }};
+        border-color: {{ section.settings.btn_4_border_color }};
+    }
+</style>

@@ -1,0 +1,239 @@
+<div class="sidebar-filter" data-has-collapse-no-sidebar>
+  <div class="widget_filter" style="display: none;">
+    <span class="icon-filter1">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 24 24"><path d="M19.292 1.871c.169 0 .315.063.439.186a.601.601 0 0 1 .186.439v2.5a.657.657 0 0 1-.039.225.499.499 0 0 1-.117.186l-5.469 6.074v6.641a.582.582 0 0 1-.078.293.823.823 0 0 1-.195.234l-3.75 2.5c-.052.026-.107.049-.166.068a.603.603 0 0 1-.479-.05c-.104-.052-.186-.127-.244-.225s-.088-.205-.088-.322v-9.14L3.823 5.406a.491.491 0 0 1-.117-.186.648.648 0 0 1-.039-.224v-2.5a.6.6 0 0 1 .186-.439.604.604 0 0 1 .439-.186h15zm-.625 2.89v-1.64H4.917v1.641l5.469 6.074a.507.507 0 0 1 .117.186.653.653 0 0 1 .039.225v8.203l2.5-1.66v-6.543c0-.078.013-.152.039-.225a.515.515 0 0 1 .117-.186l5.469-6.075z"></path></svg>
+    </span>
+    <span class="sidebar_more">
+      {{ 'collections.sidebar.sidebar_more' | t }}
+    </span>
+  </div>      
+  {% if block.settings.enable_categories and block.settings.title_categories != blank %}
+  <div class="widget sidebar-links">
+    {% if block.settings.title_categories != blank %}
+    <div class="widget-title">
+      <h3 class="sidebar-title">
+        {% render 'multilang' with block.settings.title_categories %}
+      </h3>
+    </div>
+    {% endif %}
+
+    <div class="widget-content">
+      <div class="scroll-content">
+        <ul>
+          {% if block.settings.style_categories == 'style_show_all' %}
+          {% for category in collections %}
+          <li>
+            <a href="{{ category.url }}" {% if collection.handle == category.handle %}class="active"{% endif %}>              
+              {% render 'multilang' with category.title %}
+            </a>
+          </li>     
+          {% endfor %}
+
+          {% else %}
+          {% assign cat_link_list = block.settings.link_list | handleize %}
+
+          {% for link in linklists[cat_link_list].links %}
+          <li class="sidebar-link-lv1{% if linklists[link.handle] != empty %} dropdown{% if collection.handle == link.handle %} open{% endif %}{% endif %}">
+            <a href="{{ link.url }}" {% if collection.handle == link.handle %}class="active"{% endif %}>
+              {% render 'multilang' with link.title %}
+            </a>
+
+            {% if linklists[link.handle] != empty %}
+            <span class="icon-dropdown">
+              <i class="fa fa-angle-down"></i>
+            </span>
+            {% assign link_child = link.handle %}
+            {% render 'dropdown-cat' with link_child as link_child %}
+            {% endif %}
+          </li>        
+          {% endfor %}        
+          {% endif %}
+        </ul>
+      </div>                
+    </div>
+  </div>
+  {% endif %}
+  {% if collection.current_vendor or collection.current_type %}
+  <input type="hidden" name="q" value="{{ collection.current_vendor }}{{ collection.current_type }}">
+  {% endif %}
+  {%- for filter in collection.filters -%}
+  {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
+  {% case filter.type %}
+  {% when 'list' %}
+  <div class="js-filter widget sidebar-tags {% if style_color contains filter.label %}filter-color{% endif %} {% if style_size contains filter.label %}filter-size{% endif %}" data-index="{{ forloop.index }}">
+    <div class="widget-title">
+      <h3 class="sidebar-title">
+        <span>
+          {{ filter.label | escape }}
+          <span class="count-bubble">
+            {%- if filter.active_values.size > 0 -%}{{ filter.active_values.size }}{%- endif -%}
+          </span>
+        </span>
+      </h3>
+    </div>
+    <div class="widget-content">
+      <ul class="list-tags">
+        {%- for value in filter.values -%}
+        {% assign tag = value.value | strip %}
+        {% assign tag_value = tag | handleize %} 
+        <li class="white list-menu__item facets__item" {% if forloop.index > 10 %}style="display: none"{% endif %}>
+          <input type="checkbox"
+                 name="{{ value.param_name }}"
+                 value="{{ value.value }}"
+                 id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                 {% if value.active %}checked{% endif %}
+                 {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                 />
+          {% if style_color contains filter.label %}
+          <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %} {% if value.count == 0 and value.active %}active{% endif %}" title="{{tag}}"
+                 style="background-color: {{ tag_value }}; {% if settings.show_product_color_img %}background-image: url({{ tag_value | handle | append: '.png' | file_url }}){% endif %}">
+          </label>
+          {% else %}
+          <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
+            {{ value.label | escape }} <span class="count_value">{{ value.count }}</span>
+          </label>
+          {% endif %}
+        </li>
+
+        {% if forloop.index == 11 %}
+        <li class="show-more--list_tags">
+          <span class="icon">
+            <svg id="Solid" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m192 424a23.928 23.928 0 0 1 -16.971-7.029l-144-144a24 24 0 0 1 0-33.942l144-144a24 24 0 0 1 33.942 33.942l-127.03 127.029 127.03 127.029a24 24 0 0 1 -16.971 40.971zm144.971-7.029 144-144a24 24 0 0 0 0-33.942l-144-144a24 24 0 0 0 -33.942 33.942l127.03 127.029-127.03 127.029a24 24 0 0 0 33.942 33.942z"/></svg>
+          </span>
+           {{ 'general.sidebar.more' | t }}
+        </li>
+        {% endif %}
+
+        {% endfor %}
+
+        {%- for option in collection.sort_options -%}
+        {% if option.value == sort_by %}
+        <input type="radio" id="{{ option.value }}" name="sort_by" value="{{ option.value }}" {% if option.value == sort_by %}checked{% endif %} style="display: none;">
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+  {% when 'price_range' %}
+  {% liquid
+                        assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                        assign uses_comma_decimals = false
+                        if currencies_using_comma_decimals contains cart.currency.iso_code
+                          assign uses_comma_decimals = true
+                        endif
+                      %}
+  <div class="js-filter widget sidebar-tags" data-index="{{ forloop.index }}">
+    <div class="widget-title">
+      <h3 class="sidebar-title">
+        <span>{{ filter.label | escape }}{%- if filter.active_values.size > 0 -%}{{ filter.active_values.size }}{%- endif -%}</span>
+      </h3>
+    </div>
+
+    <div class="widget-content">
+      <price-range class="facets__price">
+        <div class="range_price--box">
+          <div class="price-slider">
+            <div class="box-slide {{uses_comma_decimals}}">
+              <label>
+                <span class="field__currency">{{ cart.currency.symbol }}</span>
+                <input class="field__input filter__price filter__min"
+                       name="{{ filter.min_value.param_name }}"
+                       id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                       {%- if filter.min_value.value -%}
+                       {%- if uses_comma_decimals -%}
+                       value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+                       {%- else -%}
+                       value="{{ filter.min_value.value | money_without_currency | replace: ',', '' | replace: '.00', '' }}"
+                       {% endif %}
+                       {%- endif -%}
+                       type="number"
+                       value="0"
+                       min="0"
+                       {% if uses_comma_decimals %}
+                       max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+                       {% else %}
+                       max="{{ filter.range_max | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+                       {% endif %}
+                       />
+              </label>
+              <span class="slide_price--to">to</span>
+              <label>
+                <span class="field__currency">{{ cart.currency.symbol }}</span>
+                <input class="field__input filter__price filter__max"
+                       name="{{ filter.max_value.param_name }}"
+                       id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                       {%- if filter.max_value.value -%}
+                       {%- if uses_comma_decimals -%}
+                       value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+                       {%- else -%}
+                       value="{{ filter.max_value.value | money_without_currency | replace: ',', '' | replace: '.00', '' }}"
+                       {% endif %}
+                       {%- else -%}
+                       {%- if uses_comma_decimals -%}
+                       value="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', ''  }}"
+                       {% else %}
+                       value="{{ filter.range_max | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+                       {% endif %}
+                       {%- endif -%}
+                       type="number"
+                       min="0"
+                       {%- if uses_comma_decimals -%}
+                       max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', ''  }}"
+                       {%- else -%}
+                       max="{{ filter.range_max | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+                       {% endif %}     
+                       />
+              </label>
+            </div>
+            <label class="apply__button" for="apply__button--price">
+              <input class="apply__button--price" type="checkbox" id="apply__button--price" />
+              {{ 'cart.general.apply' | t }}
+            </label>
+            <input min="0" 
+                   {%- if uses_comma_decimals -%}
+                   max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', ''  }}"
+                   {%- else -%}
+                   max="{{ filter.range_max | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+                   {% endif %}
+                   step="1" type="range" 
+                   {%- if filter.min_value.value -%}
+                   {%- if uses_comma_decimals -%}
+                   value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+                   {%- else -%}
+                   value="{{ filter.min_value.value | money_without_currency | replace: ',', '' | replace: '.00', '' }}"
+                   {% endif %}
+                   {%- else -%}
+                   value="0"
+                   {%- endif -%} />
+            <input min="0" 
+                   {%- if uses_comma_decimals -%}
+                   max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', ''  }}"
+                   {%- else -%}
+                   max="{{ filter.range_max | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+                   {% endif %} 
+                   step="1" type="range" 
+                   {%- if filter.max_value.value -%}
+                   {%- if uses_comma_decimals -%}
+                   value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', '' }}"
+                   {%- else -%}
+                   value="{{ filter.max_value.value | money_without_currency | replace: ',', '' | replace: '.00', '' }}"
+                   {% endif %}
+                   {%- else -%}
+                   {%- if uses_comma_decimals -%}
+                   value="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '' | replace: '00', ''  }}"
+                   {% else %}
+                   value="{{ filter.range_max | money_without_currency | replace: ',', '' | replace: '.00', ''  }}"
+                   {% endif %}
+                   {%- endif -%} />
+          </div>
+        </div>
+      </price-range>
+    </div>
+  </div>
+  {% endcase %}
+  {%- endfor -%}
+  <noscript>
+    <button type="submit" class="facets__button button">{{ 'sections.collection_template.filter_button' | t }}</button>
+  </noscript>
+</div>

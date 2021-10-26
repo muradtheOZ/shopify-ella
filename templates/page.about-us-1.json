@@ -1,0 +1,66 @@
+{
+  "wrapper": "div.page-tpl.about-us-1",
+  "sections": {
+    "slider": {
+      "type": "about-us-1-slideshow",
+      "blocks": {
+        "4b1c8688-907c-464d-b5bc-9679fa7ed40d": {
+          "type": "content",
+          "settings": {
+            "title": "Cosmopolis de Milance",
+            "content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros. Vivamus pellentesque dui ex, a interdum orci dignissim vel.",
+            "dpl_qoute": true,
+            "qoute_heading": "Managing Director",
+            "name": "Anne.l",
+            "qoute_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies...",
+            "button_text": "Meet The Team",
+            "button_link": ""
+          }
+        },
+        "6415519d-1d85-4eee-ad4d-05a9c343f126": {
+          "type": "content",
+          "settings": {
+            "title": "Cosmopolis de Milance",
+            "content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros. Vivamus pellentesque dui ex, a interdum orci dignissim vel.",
+            "dpl_qoute": true,
+            "qoute_heading": "Managing Director",
+            "name": "Anne.l",
+            "qoute_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies...",
+            "button_text": "Meet The Team",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "4b1c8688-907c-464d-b5bc-9679fa7ed40d",
+        "6415519d-1d85-4eee-ad4d-05a9c343f126"
+      ],
+      "settings": {
+        "autoplay": true,
+        "slideshow_speed": "5000",
+        "background_image": "shopify:\/\/shop_images\/banner-kids-1_1920x_6fa4a949-d054-4676-8d05-f96c861392b2.jpg",
+        "text_color": "#fff",
+        "title_size": "40",
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#fff",
+        "button_bd_color": "#fff",
+        "button_bg_color_h": "rgba(0,0,0,0)",
+        "button_text_color_h": "#fff",
+        "button_bd_color_h": "#fff"
+      }
+    },
+    "main": {
+      "type": "about-us-1-content",
+      "settings": {
+        "left_heading": "About Store",
+        "left_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros. Vivamus pellentesque duiex a interdum.  1",
+        "right_heading": "Contact Us",
+        "right_content": "Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous. Nullam sit amet orci rutrum risus laoreet semper vel non magna. Mauris vel sem a lectus vehicula ultricies. Etiam semper sollicitudin lectus indous scelerisque. Curabitur vel tristique lacus. Nam risus mauris, accumsan et eleifend vitae, dignissim at eros. Vivamus pellentesque duiex a interdum.  2"
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "main"
+  ]
+}

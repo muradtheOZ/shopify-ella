@@ -1,0 +1,112 @@
+{% render '404-section' %}
+
+{% schema %}
+{
+  "name": "Main 404",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"background",
+      "label":"Background"
+    },
+    {
+      "type":"color",
+      "id":"overlay_color",
+      "label":"Overlay Layer Background Color",
+      "default":"#fff"
+    },
+    {
+      "type":"text",
+      "id":"overlay_opacity",
+      "label":"Overlay Layer Opacity",
+      "default":"0.35",
+      "info":"From 0 to 1"
+    },
+    {
+      "type":"text",
+      "id":"number_size",
+      "label":"Number 404 Size",
+      "default":"200"
+    },
+    {
+      "type":"text",
+      "id":"subtitle",
+      "label":"Subtitle",
+      "default":"Oops... the page you looking for clocked out!"
+    },
+    {
+      "type":"text",
+      "id":"subtitle_size",
+      "label":"Subtitle Size",
+      "default":"16"
+    },
+    {
+      "type":"color",
+      "id":"text_color",
+      "label":"Text Color",
+      "default":"#232323"
+    },
+    {
+      "type":"color",
+      "id":"btn_bgc",
+      "label":"Button Background Color",
+      "default":"#232323"
+    },
+    {
+      "type":"color",
+      "id":"btn_txtc",
+      "label":"Button Text Color",
+      "default":"#fff"
+    },
+    {
+      "type":"color",
+      "id":"btn_bdc",
+      "label":"Button Border Color",
+      "default":"#232323"
+    },
+    {
+      "type":"color",
+      "id":"btn_bgc_h",
+      "label":"Button Background Color Hover",
+      "default":"#fff"
+    },
+    {
+      "type":"color",
+      "id":"btn_txtc_h",
+      "label":"Button Text Color Hover",
+      "default":"#232323"
+    },
+    {
+      "type":"color",
+      "id":"btn_bdc_h",
+      "label":"Button Border Color Hover",
+      "default":"#232323"
+    },
+    {
+      "type":"url",
+      "id":"btn_link_1",
+      "label":"Button Link 1",
+      "default":"/"
+    },
+    {
+      "type":"text",
+      "id":"btn_text_1",
+      "label":"Button Text 1",
+      "default":"Return to Store"
+    },
+    {
+      "type":"url",
+      "id":"btn_link_2",
+      "label":"Button Link 2",
+      "default":"/collections/all"
+    },
+    {
+      "type":"text",
+      "id":"btn_text_2",
+      "label":"Button Text 2",
+      "default":"Shop the Collections"
+    }
+
+  ]
+}
+{% endschema %}

@@ -1,0 +1,49 @@
+{
+  "wrapper": "div.page-tpl.about-us-2",
+  "sections": {
+    "header": {
+      "type": "page-header",
+      "settings": {
+        "background": "shopify:\/\/shop_images\/person-holds-their-glasses-in-front-of-them.jpg",
+        "text_color": "",
+        "menu": "main-menu",
+        "menu_bar_background": "",
+        "menu_bar_border": "",
+        "menu_item_background": "",
+        "menu_item_text_color": "",
+        "menu_item_background_color_h": "",
+        "menu_item_text_color_h": ""
+      }
+    },
+    "main": {
+      "type": "contact-us-2-template",
+      "settings": {
+        "contact_title": "Drop Us A Line",
+        "contact_text_desc": "",
+        "form_title": "Send us an email:",
+        "form_subtitle": "ASK US ANYTHING! WE'LL GET BACK TO YOU WITHIN 24-48 HOURS.",
+        "contact_your_name": "",
+        "contact_phone_number": "",
+        "contact_your_email": "",
+        "display_location": true,
+        "background_color": "#fafafa",
+        "top_title": "Chat with us:",
+        "top_content": "IF YOU HAVE AN ISSUE OR QUESTION THAT REQUIRES IMMEDIATE ASSISTANCE, YOU CAN CLICK BELOW TO CHAT LIVE WITH A CUSTOMER SERVICE REPRESENTATIVE. IF WE AREN'T AVAILABLE, DROP US AN EMAIL TO THE LEFT AND WE'LL RESPOND WITHIN 24-48 HOURS.",
+        "email_button": "Message us",
+        "email": "",
+        "email_button_bgc": "rgba(250,250,250,0)",
+        "email_button_txtc": "#232323",
+        "email_button_bdc": "#232323",
+        "email_button_bgc_h": "#232323",
+        "email_button_txtc_h": "#fff",
+        "email_button_bdc_h": "#232323",
+        "bot_title": "Chat with us:",
+        "bot_content": ""
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
+}

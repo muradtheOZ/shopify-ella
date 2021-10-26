@@ -1,0 +1,19 @@
+<script> 
+(function($) { 
+  $(document).on('page:load page:change', function () {  
+    if (localStorage.getItem('storedDiscount')){  
+      var discountStored = localStorage.getItem('storedDiscount');   
+      $('input[name="discount"]').val(localStorage.getItem('storedDiscount'));  
+    }  
+    $('form[action="/cart"]').on('submit', function(){ 
+      var $discountCode = $('input[name="discount"]').val(); 
+      localStorage.setItem('storedDiscount', $discountCode);  
+    });   
+  });   
+})(jQuery);   
+</script> 
+<div class="discount-code-field"> 
+  <label for="discount">{{ section.settings.coupon_title }}</label> 
+  <input autocomplete="off" type="text" name="discount" /> 
+  <p>{{ section.settings.coupon_content }}</p>
+</div>

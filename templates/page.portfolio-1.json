@@ -1,0 +1,85 @@
+{
+  "wrapper": "div.page-tpl",
+  "sections": {
+    "main": {
+      "type": "portfolio-1-section",
+      "blocks": {
+        "c9dd0835-07f2-47cb-b117-ca9f15e8e66b": {
+          "type": "images",
+          "settings": {
+            "categories": "all",
+            "thumbernail": "shopify:\/\/shop_images\/person-holds-their-glasses-in-front-of-them.jpg",
+            "title": "Habitasse Molateas",
+            "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+            "link_to": "shopify:\/\/collections\/all",
+            "image_1": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
+            "image_2": "shopify:\/\/shop_images\/banner-kids-1_1920x_6fa4a949-d054-4676-8d05-f96c861392b2.jpg",
+            "image_3": "shopify:\/\/shop_images\/banner1_1920x_86b7ec65-cd79-4748-bdc1-55bc96c5433a.jpg",
+            "image_4": "shopify:\/\/shop_images\/banner-kids-1_1920x_6fa4a949-d054-4676-8d05-f96c861392b2.jpg",
+            "image_5": "shopify:\/\/shop_images\/person-holds-their-glasses-in-front-of-them.jpg",
+            "image_6": "shopify:\/\/shop_images\/banner1_1920x_86b7ec65-cd79-4748-bdc1-55bc96c5433a.jpg",
+            "image_7": "shopify:\/\/shop_images\/banner-kids-1_1920x_6fa4a949-d054-4676-8d05-f96c861392b2.jpg",
+            "image_8": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
+            "image_9": "shopify:\/\/shop_images\/person-holds-their-glasses-in-front-of-them.jpg",
+            "image_10": "shopify:\/\/shop_images\/banner1_1920x_86b7ec65-cd79-4748-bdc1-55bc96c5433a.jpg"
+          }
+        },
+        "5118c67c-574f-4a50-9672-8639bf433f41": {
+          "type": "images",
+          "settings": {
+            "categories": "",
+            "title": "Habitasse Molateas",
+            "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+            "link_to": "shopify:\/\/collections\/all"
+          }
+        },
+        "19d05f35-69bc-407c-a15d-a1166fa39567": {
+          "type": "images",
+          "settings": {
+            "categories": "",
+            "title": "Habitasse Molateas",
+            "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+            "link_to": "shopify:\/\/collections\/all"
+          }
+        },
+        "ee634efe-d2bc-45ca-81c3-836208153655": {
+          "type": "images",
+          "settings": {
+            "categories": "",
+            "title": "Habitasse Molateas",
+            "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+            "link_to": "shopify:\/\/collections\/all"
+          }
+        },
+        "129fb501-d30d-4102-b0aa-c64c6792e995": {
+          "type": "images",
+          "settings": {
+            "categories": "",
+            "title": "Habitasse Molateas",
+            "subtitle": "Dosuere an morci lobortis scelerisque blandit cosmopolis.",
+            "link_to": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "c9dd0835-07f2-47cb-b117-ca9f15e8e66b",
+        "5118c67c-574f-4a50-9672-8639bf433f41",
+        "19d05f35-69bc-407c-a15d-a1166fa39567",
+        "ee634efe-d2bc-45ca-81c3-836208153655",
+        "129fb501-d30d-4102-b0aa-c64c6792e995"
+      ],
+      "settings": {
+        "header_text_color": "",
+        "page_description": "",
+        "display_filter": true,
+        "filter_list": "Kall 1, Kall 2, Kall 3",
+        "text_color": "#fff",
+        "overlay_color": "#232323",
+        "overlay_opacity": "0.7"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

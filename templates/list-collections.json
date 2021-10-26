@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "307ce11e-4d2b-4852-a057-df936d11e6d7": {
+          "type": "sidebar_product",
+          "settings": {
+            "display_sidebar": false,
+            "show_sidebar": "left",
+            "enable_categories": true,
+            "title_categories": "",
+            "style_categories": "style_show_all",
+            "link_list": "main-menu",
+            "enable_product": true,
+            "title_product": "Featured Product",
+            "collection": "collection-1",
+            "limit": "8",
+            "enable_img_1": true,
+            "link_img_1": "",
+            "enable_img_2": true,
+            "link_img_2": "",
+            "enable_custom_block": true,
+            "title_custom_block": "Custom Block",
+            "quote_custom_block": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>"
+          }
+        },
+        "a41b1061-7460-4eb7-8afe-40c5f260dd4b": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "cosmopolis",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "26f450bd-ad83-4513-8d20-34b652a7c5de": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "suito",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "5b921185-959a-425c-94ff-34a47e3af093": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "milancelos",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "6d9d0e3f-857a-42ee-a2a3-8e39985f8446": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "blazero",
+            "display_countdow": true,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "9b471744-8a01-4d16-9825-9bf3276d32e8": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "glamos",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "00e41c7b-6f27-446d-a5d8-3b4128d07da0": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "metropolis",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "6e183af8-20a4-4a9e-9678-c0f05f383631": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "valkyrio",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#fff"
+          }
+        },
+        "1067d629-245a-4169-a257-1744429518ea": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "scarvero",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#fff"
+          }
+        },
+        "1e6c3edb-ed9a-4648-946e-de70582832eb": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "congue",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "307ce11e-4d2b-4852-a057-df936d11e6d7",
+        "a41b1061-7460-4eb7-8afe-40c5f260dd4b",
+        "26f450bd-ad83-4513-8d20-34b652a7c5de",
+        "5b921185-959a-425c-94ff-34a47e3af093",
+        "6d9d0e3f-857a-42ee-a2a3-8e39985f8446",
+        "9b471744-8a01-4d16-9825-9bf3276d32e8",
+        "00e41c7b-6f27-446d-a5d8-3b4128d07da0",
+        "6e183af8-20a4-4a9e-9678-c0f05f383631",
+        "1067d629-245a-4169-a257-1744429518ea",
+        "1e6c3edb-ed9a-4648-946e-de70582832eb"
+      ],
+      "settings": {
+        "list_collection_results_per_row": "3",
+        "list_collection_title_size": "20",
+        "style_categories": "style_little",
+        "bg_color": "#fafafa"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
