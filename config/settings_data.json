@@ -2162,8 +2162,8 @@
         "settings": {
           "list_collection_title_size": "20",
           "display_padding": true,
-          "display_absolute": false,
-          "position_absolute": "5.3%",
+          "display_absolute": true,
+          "position_absolute": ".2%",
           "block_des": "",
           "margin_bottom_mb": 36,
           "margin_bottom_tab": 53,
