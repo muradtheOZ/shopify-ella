@@ -2669,7 +2669,7 @@
         "settings": {
           "display_fixtop_menu": true,
           "logo_fix": "shopify:\/\/shop_images\/LOGO_PNG_180x_1.png",
-          "horizontal_linklist": "mlb",
+          "horizontal_linklist": "mega-menu",
           "text_help": "",
           "text_help_link": "",
           "color_text_right": "#ffffff",
